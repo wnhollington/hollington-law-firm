@@ -1,6 +1,0 @@
-0000000000000000000000000000000000000000 c3c0607cb34aebd0bd6d734c11f2f56dde9d4176 Neal Hollington <neal.hollington@gmail.com> 1691627336 -0600	clone: from github.com:wnhollington/wright-auto-care.git
-c3c0607cb34aebd0bd6d734c11f2f56dde9d4176 c3c0607cb34aebd0bd6d734c11f2f56dde9d4176 Neal Hollington <neal.hollington@gmail.com> 1691627722 -0600	Branch: renamed refs/heads/main to refs/heads/main
-c3c0607cb34aebd0bd6d734c11f2f56dde9d4176 c3c0607cb34aebd0bd6d734c11f2f56dde9d4176 Neal Hollington <neal.hollington@gmail.com> 1691627867 -0600	Branch: renamed refs/heads/main to refs/heads/main
-c3c0607cb34aebd0bd6d734c11f2f56dde9d4176 14294b3324375c2b2e7458b2d4458b8a4e4c69f8 Neal Hollington <neal.hollington@gmail.com> 1691631699 -0600	commit: first commit
-14294b3324375c2b2e7458b2d4458b8a4e4c69f8 cb1aa294cb33b371543f046d2ab4963272d8e4b7 Neal Hollington <neal.hollington@gmail.com> 1691672738 -0600	commit: format index pg.
-cb1aa294cb33b371543f046d2ab4963272d8e4b7 da40ac612d30d754e1f935de33a80c4fa5c77d98 Neal Hollington <neal.hollington@gmail.com> 1691673956 -0600	commit: update about and testimonial section, remove irrelevant photographs

@@ -14,10 +14,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('../images/heroImage.jpg')"
+        'hero': "url('../images/homepage-hero-background-img.jpg')"
       },
       colors: {
-        primary: colors.blue
+        primary: "#6E0A05",
+        secondary: "#767769"
       },
     },
   },

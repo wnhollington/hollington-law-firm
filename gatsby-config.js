@@ -4,16 +4,17 @@
 require('dotenv').config();
 module.exports = {
   siteMetadata: {
-    title: `Stellar Property Services LLC`,
+    title: `Hollington Law Firm, LLC`,
     siteUrl: `https://www.yourdomain.tld`,
-    description: `Providing stellar service in everything we do.`,
+    description: ``,
     contact: {
-      phone: "303-909-1227",
-      email: "tyler@stellarpsllc.com"
+      phone: "",
+      email: ""
     },
     social: {
       facebook: ``,
       youtube: ``,
+      instagram: ``,
     }
   },
   plugins: 
@@ -23,7 +24,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/logo.webp"
+        "icon": "src/images/web-icon.png"
       }
     }, 
     "gatsby-transformer-remark", 
