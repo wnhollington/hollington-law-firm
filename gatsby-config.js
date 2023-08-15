@@ -49,14 +49,6 @@ module.exports = {
       __key: "pages"
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "lightbox",
-        "path": "./src/images/lightbox"
-      },
-      __key: "lightbox"
-    },
-    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

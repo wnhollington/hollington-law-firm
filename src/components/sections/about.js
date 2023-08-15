@@ -19,7 +19,7 @@ const About = () => {
                         </p>
                     </div>
                     <StaticImage 
-                        src="../../images/profileImage.jpg"
+                        src=""
                         placeholder="blurred"
                         className="rounded-lg"
                     />

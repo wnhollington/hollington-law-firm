@@ -1,17 +1,38 @@
 import * as React from "react"
-import { useInView } from "react-intersection-observer"
 import Desktop from "./menus/desktop"
 import Mobile from "./menus/mobile"
+import { useEffect, useState } from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
-    const { ref, inView } = useInView({
-        threshold: 0
-    })
+    // Set Scroll State
+    const [scrolled, setScrolled] = useState(false)
+
+    // Change State on Scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 50;
+            if (isScrolled !== scrolled) {
+                setScrolled(!scrolled)
+            }
+        }
+        document.addEventListener('scroll', handleScroll, {passive: true})
+
+        return () => {
+            // Clean up event handler when the component unmounts
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [scrolled])
+
     return (
-        <header ref={ref}>
-            <div className={`inset-x-0 top-0 z-50 bg-white shadow-md  ${inView ? "relative" : "fixed"}`}>
-                <Desktop/>
-                <Mobile/>
+        <header data-active={scrolled}>
+            <div className={`inset-x-0 top-0 z-50 bg-white shadow-md  ${scrolled === false ? "relative" : "fixed"}`}>
+                <div className="flex justify-between items-center py-6 px-2">
+                    <Link to="/"><StaticImage src="../images/logo-web.png"/></Link>
+                    <Desktop/>
+                    <Mobile/>
+                </div>
             </div>
         </header>
     )
