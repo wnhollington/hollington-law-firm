@@ -26,8 +26,8 @@ const Header = () => {
     }, [scrolled])
 
     return (
-        <header data-active={scrolled}>
-            <div className={`inset-x-0 top-0 z-50 bg-white shadow-md  ${scrolled === false ? "relative" : "fixed"}`}>
+        <header>
+            <div className={`inset-x-0 top-0 z-50 bg-white shadow-lg transition-all ease-in-out delay-150 ${scrolled === false ? "relative" : "fixed"}`}>
                 <div className="flex justify-between items-center py-6 px-2">
                     <Link to="/"><StaticImage src="../images/logo-web.png"/></Link>
                     <Desktop/>
