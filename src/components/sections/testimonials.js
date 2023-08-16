@@ -26,7 +26,7 @@ const Testimonials = () => {
                             isIntrinsicHeight={true}
                             totalSlides={testimonials.length}
                             isPlaying={true}
-                            infinite={true}
+                            infinite={false}
                         >
                             <Slider>                            
                                 {

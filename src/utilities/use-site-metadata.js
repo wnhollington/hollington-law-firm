@@ -14,6 +14,11 @@ export const useSiteMetadata = () => {
                             phone
                             email
                         }
+                        social {
+                            facebook
+                            youtube
+                            instagram
+                        }
                     }
                 }
             }
