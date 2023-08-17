@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import Hero from "../components/sections/hero"
 import Accolades from "../components/sections/accolades"
 import Testimonials from "../components/sections/testimonials"
+import Schedule from "../components/sections/schedule"
 
 const IndexPage = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Hero />
       <Accolades />
       <Testimonials />
+      <Schedule />
     </Layout>
   )
 }
