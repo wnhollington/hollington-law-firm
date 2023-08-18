@@ -6,7 +6,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 const Testimonials = () => {
     const testimonials = [
-        {id: 1, author: "Emilia Rodriguez", review: "I would like to appreciate all the hard work that you have put into completing my case. I am very grateful to you. Before I contacted you, I was hopeless. I have no words to express my gratitude to you."},
+        {id: 1, author: "Emilia Rodriguez", review: "I appreciate all the hard work that you have put into completing my case. I am very grateful to you. Before I contacted you, I was hopeless. I have no words to express my gratitude to you."},
     ]
     const { ref, inView } = useInView({
         threshold: .1,

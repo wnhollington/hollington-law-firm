@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/sections/hero"
 import Accolades from "../components/sections/accolades"
+import WhatSetsUsApart from "../components/sections/whatSetsUsApart"
 import Testimonials from "../components/sections/testimonials"
 import Schedule from "../components/sections/schedule"
 
@@ -13,6 +14,7 @@ const IndexPage = () => {
     <Layout>
       <Hero />
       <Accolades />
+      <WhatSetsUsApart />
       <Testimonials />
       <Schedule />
     </Layout>
