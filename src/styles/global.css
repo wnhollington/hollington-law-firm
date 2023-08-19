@@ -85,3 +85,8 @@ header .phone svg {
     -webkit-animation-name: fadeInUp;
     visibility: block;
 }
+
+/* SVG Icons */
+.svg-icons svg {
+    max-height: 100px;
+}
