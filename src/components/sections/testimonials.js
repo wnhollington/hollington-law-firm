@@ -31,6 +31,7 @@ const Testimonials = () => {
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl font-semibold mb-2">Client Stories</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
+                window width: {windowWidth}
                 <CarouselProvider
                     isIntrinsicHeight={true}
                     totalSlides={testimonials.length}
