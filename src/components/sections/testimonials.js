@@ -44,9 +44,9 @@ const Testimonials = () => {
                                 return (
                                     <Slide 
                                         index={1}
-                                        className="items-center justify-center shadow-lg m-4 p-4"
+                                        className="items-center justify-center rounded-lg shadow-lg p-4"
                                     >
-                                        <p class="mt-6 text-gray-500 text-lg"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.review}</p>
+                                        <p class="mt-6 text-gray-900 text-lg"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.review}</p>
                                         <h3 class="mt-6 text-lg text-center font-medium text-primary">{testimonial.author}</h3>
                                     </Slide>
                                 )

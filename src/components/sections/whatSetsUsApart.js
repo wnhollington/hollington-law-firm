@@ -66,7 +66,7 @@ const WhatSetsUsApart = () => {
                             process.map((step, index) => {
                                 return (
                                     <Slide index={1}>
-                                        <div className="items-center justify-center block m-4 p-6 shadow-lg">
+                                        <div className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
                                             <div className="svg-icons">{svgIcons(index)}</div>
                                             <h3 class="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
                                             <p class="mt-6 text-gray-900 text-lg">{step.caption}</p>
