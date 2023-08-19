@@ -1,16 +1,26 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { BsFillTelephoneFill } from "react-icons/bs"
+import { BsFillTelephoneFill, BsChevronDoubleDown } from "react-icons/bs"
+import { Dropdown } from "flowbite-react"
 
 const Desktop = () => {
     return (            
         <>
-            <nav className="flex items-center justify-between gap-6 lg:gap-12">
+            <nav className="flex items-center justify-between gap-6 lg:gap-12 header-navigation">
 
                 <div className="hidden lg:flex lg:gap-x-12">
-                    <Link to="/#about" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
-                    <Link to="/#services" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Services</Link>
-                    <Link to="/#testimonials" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Testimonials</Link>  
+                    <Link to="/about" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
+                    <Dropdown
+                        inline
+                        label="Cases We Handle"
+                    >
+                    </Dropdown>
+                    <Dropdown
+                        inline
+                        label="Resources"
+                    >
+                    </Dropdown>
+                    <Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Contact</Link>
                 </div>
                 
             </nav>

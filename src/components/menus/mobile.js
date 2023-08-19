@@ -1,7 +1,8 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
-import { BsFillTelephoneFill } from "react-icons/bs"
+import { BsFillTelephoneFill} from "react-icons/bs"
+import { Dropdown } from "flowbite-react"
 
 const Mobile = () => {
     const [isOpen, setIsOpen] = React.useState(false)
@@ -36,18 +37,28 @@ const Mobile = () => {
 
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className="space-y-2 py-6 mb-6">
-                                <Link to="/#about" className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</Link>
-
-                                <Link to="/#services" className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Services</Link>
-
-                                <Link to="/#testimonials" className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Testimonials</Link>
-
+                            <div className="space-y-2 py-6 mb-6 header-navigation">
+                                <Link to="/about" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
+                                <Dropdown
+                                    inline
+                                    label="Cases We Handle"
+                                    placement="right-start"
+                                >
+                                </Dropdown>
+                                <Dropdown
+                                    inline
+                                    label="Resources"
+                                    placement="right-start"
+                                >
+                                </Dropdown>
+                                <Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Contact</Link>
                             </div>
                             <div className="my-6 py-6">
                                 <div className="flex flex-row justify-center phone">
-                                    <BsFillTelephoneFill size={22}/>
-                                    <a href="tel:303.909.1227" className="text-md font-semibold leading-6 text-gray-900 hover:text-primary ml-2">303-909-1227</a>
+                                    <a href="tel:303.909.1227" className="flex gap-2 bg-primary p-3 rounded-lg phone text-md font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">
+                                        <BsFillTelephoneFill size={"1.25em"} className="fill-gray-100"/>
+                                        <span>303-909-1127</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
