@@ -4,12 +4,10 @@ import { useInView } from "react-intersection-observer"
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useWindowWidth } from "../../utilities/use-window-width";
+import { testimonials } from "../../utilities/testimonials";
 
 const Testimonials = () => {
-    const testimonials = [
-        {id: 1, author: "Emilia Rodriguez", review: "I appreciate all the hard work that you have put into completing my case. I am very grateful to you. Before I contacted you, I was hopeless. I have no words to express my gratitude to you."},
-        {id: 2, author: "Peter Mink", review: "Neal is a very strong professional with great insight and fortitude. He blends a distinct style of finding solutions for short and long term problems that produce results. With an experienced and well-rounded background in legal studies and work positions, Neal is a great asset to any team. "}
-    ]
+    const clientTestimonials = testimonials
     
     const { ref, inView } = useInView({
         threshold: .1,
@@ -33,14 +31,14 @@ const Testimonials = () => {
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <CarouselProvider
                     isIntrinsicHeight={true}
-                    totalSlides={testimonials.length}
+                    totalSlides={clientTestimonials.length}
                     isPlaying={true}
                     infinite={true}
                     visibleSlides={setCarouselSliders(windowWidth)}
                 >
                     <Slider>                            
                         {
-                            testimonials.map((testimonial) => {
+                            clientTestimonials.map((testimonial) => {
                                 return (
                                     <Slide 
                                         index={1}

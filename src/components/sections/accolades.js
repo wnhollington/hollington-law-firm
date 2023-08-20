@@ -19,7 +19,7 @@ const Accolades = () => {
     `)
     return (
         <section>
-            <div className="md:container flex gap-8 overflow-x-scroll my-2 py-6 items-center justify-between">
+            <div className="md:container flex gap-8 overflow-x-scroll my-2 py-6 items-center justify-between z-10">
                 {
                     data.allFile.edges.map((edge) => {
                         return(

@@ -18,7 +18,14 @@ const HeaderMenu = ({placement}) => {
                 placement={placement}
             >
             </Dropdown>
-            <Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Contact</Link>
+            <Dropdown
+                inline
+                label="Contact"
+                placement={placement}
+            >
+                <Dropdown.Item><Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Contact</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/schedule-consultation" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Schedule Consultation</Link></Dropdown.Item>
+            </Dropdown>
         </>
 
     )

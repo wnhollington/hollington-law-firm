@@ -14,7 +14,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('../images/homepage-hero-background-img.jpg')"
+        'hero': "url('../images/homepage-hero-background-img.jpg')",
+        'profile': "url('../images/neal.png')"
       },
       colors: {
         primary: "#6E0A05",
