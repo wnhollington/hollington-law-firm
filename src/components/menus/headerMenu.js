@@ -17,6 +17,9 @@ const HeaderMenu = ({placement}) => {
                 label="Resources"
                 placement={placement}
             >
+                <Dropdown.Item>Articles</Dropdown.Item>
+                <Dropdown.Item>Videos</Dropdown.Item>
+                <Dropdown.Item>E-Books</Dropdown.Item>
             </Dropdown>
             <Dropdown
                 inline

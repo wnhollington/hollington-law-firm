@@ -33,7 +33,8 @@ const Header = () => {
             <div className={`inset-x-0 top-0 z-50 bg-white shadow-lg transition-all ease-in-out delay-150 ${scrolled === false ? "relative" : "fixed"}`}>
                 <div className="flex justify-between items-center py-6 px-2">
                     
-                    <Link to="/"><StaticImage src="../images/logo-web.png"/></Link>
+                    {/* <Link to="/"><StaticImage src="../images/logo-web.png"/></Link> */}
+                    <Link to="/" className="header-logo text-4xl pl-4">W. Neal Hollington</Link>
                     <Desktop/>
                     <Mobile/>
                 </div>
