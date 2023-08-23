@@ -28,7 +28,6 @@ module.exports = {
         "icon": "src/images/web-icon.png"
       }
     }, 
-    "gatsby-transformer-remark", 
     "gatsby-plugin-sharp", 
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
@@ -50,6 +49,14 @@ module.exports = {
       __key: "pages"
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "mdx-pages",
+        "path": "./src/content/"
+      },
+      __key: "mdx-pages"
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -64,28 +71,22 @@ module.exports = {
     //     apiKey: process.env.GOGGLE_API_KEY,
     //   },
     // },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -200
-      }
-    },
     'gatsby-plugin-sitemap',
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          process.env.GA_TRACKING_ID
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       process.env.GA_TRACKING_ID
+    //     ],
+    //     gtagConfig: {
+    //       anonymize_ip: true,
+    //       cookie_expires: 0,
+    //     },
+    //     pluginConfig: {
+    //       head: false,
+    //       respectDNT: true,
+    //     },
+    //   },
+    // },
   ]
 };
