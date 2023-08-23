@@ -1,0 +1,16 @@
+- Disclaimer
+- Home page sections (pastor, amplify, solution)
+- Pages to node
+- about
+- practice areas
+    - Construction Defect
+    - Nondisclosure & Fraud
+    - Contract Disputes
+    - Insurance Coverage (Bad Faith)
+    - Property Contamination
+    - Wage, Hour, & Classification
+    - Construction Accidents (Workers Comp. & PI)
+    - Collections (Liens, Trust Fund, etc.)
+    - Qui Tam/Whistleblower
+    - Creditor Rights/Bankruptcy
+- Algolia (articles & videos)

@@ -4,9 +4,9 @@
 require('dotenv').config();
 module.exports = {
   siteMetadata: {
-    title: `W. Neal Hollington`,
-    tagline: `Handling Colorado construction and business disputes`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Colorado Construction Attorney`,
+    tagline: `W. Neal Hollington`,
+    siteUrl: `https://hollington.law`,
     description: ``,
     contact: {
       phone: "",
