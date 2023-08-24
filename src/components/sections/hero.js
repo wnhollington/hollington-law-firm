@@ -13,13 +13,13 @@ const Hero = () => {
             <div className="relative isolate bg-hero bg-cover bg-no-repeat 2xl:h-screen">
                 <div className="h-full max-w-full flex flex-col-reverse sm:flex-row items-center md:justify-around p-2 md:gap-10">
                     <div className="text-center">
-                        <h1 className="text-2xl lg:text-3xl xl:text-4xl">{siteMetaData.title}</h1>
-                        <p className="text-2xl lg:text-3xl xl:text-4xl">{siteMetaData.tagline}</p>
+                        <h1 className="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">{siteMetaData.title}</h1>
+                        <p className="text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">{siteMetaData.tagline}</p>
                     </div>
                     <div className="flex flex-col justify-center">
                         <StaticImage 
                             src="../../images/neal.png"
-                            className=""
+                            className="relative top-8"
                         />
                         <BsPlayCircle size={64} className="text-primary animate-pulse hover:cursor-pointer mx-auto relative bottom-48" onClick={() => setToggler(!toggler)}/>
                     </div>

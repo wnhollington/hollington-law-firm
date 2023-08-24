@@ -8,7 +8,7 @@ const HeaderMenu = ({placement}) => {
             <Link to="/about" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
             <Dropdown
                 inline
-                label="Cases We Handle"
+                label="Practice Areas"
                 placement={placement}
             >
             </Dropdown>

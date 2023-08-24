@@ -1,5 +1,4 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { BsFillTelephoneFill} from "react-icons/bs"
 import HeaderMenu from "./headerMenu"
 
@@ -24,15 +23,12 @@ const Mobile = () => {
 
                 <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     
-                    <div className="flex items-center justify-between">
-                        <StaticImage src="../../images/logo-web.png"/>
-                        <button type="button" className="-m-4 rounded-md text-gray-700" onClick={toggleMenu}>
-                            <span className="sr-only">Close menu</span>
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
+                    <button type="button" className="-m-4 rounded-md text-gray-700 float-right relative top-6" onClick={toggleMenu}>
+                        <span className="sr-only">Close menu</span>
+                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
 
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
