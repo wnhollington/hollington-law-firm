@@ -11,11 +11,11 @@ import { useWindowWidth } from "../../utilities/use-window-width"
 
 const WhatSetsUsApart = () => {
     const process = [
-        {id: 1, heading: "1. You are the Priority", caption: "At Hollington Law Firm, LLC, you are the priority. We will walk you through every step of the process with compassion and individual attention and dedication to your legal matter."},
-        {id: 2, heading: "2. We Explain the Process", caption: "A lot of firms like to overcomplicate things. Not us. We'll clearly and honestly explain the claim and litigation process, you are informed and comfortable every step of the way."},
-        {id: 3, heading: "3. You Won't Wait on Us", caption: "In fact, we'll come to you - your home or virtually via Zoom, Facetime, or Video Chat. Whether it's returning a call, answering a question, or just checking in, we are always available."},
-        {id: 4, heading: "4. Our Team Handles Everything", caption: "It's easy to feel overwhelmed and we understand that. We will take on your stress by collecting documents, negotiating with the other party, and fighting on your behalf."},
-        {id: 5, heading: "5. We'll Get You Great Results", caption: "Our team has a track record of getting clients great outcomes. We will pursue full and complete justice on your behalf, regardless of any obstacles along the way."},
+        {id: 1, heading: "1. You are the Priority", caption: "When you work with me, you are the priority. I will walk you through every step of the process with compassion, individual attention, and dedication to your legal matter."},
+        {id: 2, heading: "2. I'll Explain the Process", caption: "A lot of attorneys like to overcomplicate things. Not me. I'll clearly and honestly explain the process, so you will be informed and comfortable every step of the way."},
+        {id: 3, heading: "3. You Won't Wait on Me", caption: "In fact, I'll come to you - your home or virtually via Zoom, Facetime, or Video Chat. Whether it's returning a call, answering a question, or just checking in, I am always available."},
+        {id: 4, heading: "4. I'll Handle Everything", caption: "It's easy to feel overwhelmed and I understand that. I'll take on your stress by collecting documents, negotiating with the other party, and fighting on your behalf."},
+        {id: 5, heading: "5. I'll Get You Great Results", caption: "My team has a track record of getting clients great outcomes. We will pursue full and complete justice on your behalf, regardless of any obstacles along the way."},
     ]
     const { ref, inView } = useInView({
         threshold: .1,
@@ -52,7 +52,7 @@ const WhatSetsUsApart = () => {
     return (
         <section id="what-sets-us-apart" ref={ref}>
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <h2 className="text-center text-3xl font-semibold mb-2">What Sets Us Apart</h2>
+                <h2 className="text-center text-3xl mb-2 font-medium">What Sets Me Apart</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <CarouselProvider
                     isIntrinsicHeight={true}
@@ -69,7 +69,7 @@ const WhatSetsUsApart = () => {
                                         <div className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
                                             <div className="svg-icons">{svgIcons(index)}</div>
                                             <h3 class="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
-                                            <p class="mt-6 text-gray-900 text-lg">{step.caption}</p>
+                                            <p class="mt-6 text-gray-900 text-xl text-justify">{step.caption}</p>
                                         </div>
                                     </Slide>
                                 )

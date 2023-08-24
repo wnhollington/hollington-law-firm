@@ -27,7 +27,7 @@ const Testimonials = () => {
     return (
         <section id="testimonials" ref={ref}>
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <h2 className="text-center text-3xl font-semibold mb-2">Client Stories</h2>
+                <h2 className="text-center text-3xl mb-2 font-medium">Client Stories</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <CarouselProvider
                     isIntrinsicHeight={true}
@@ -44,7 +44,7 @@ const Testimonials = () => {
                                         index={1}
                                         className="items-center justify-center rounded-lg shadow-lg p-4"
                                     >
-                                        <p class="mt-6 text-gray-900 text-lg"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.review}</p>
+                                        <p class="mt-6 text-gray-900 text-xl text-justify"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.review}</p>
                                         <h3 class="mt-6 text-lg text-center font-medium text-primary">{testimonial.author}</h3>
                                     </Slide>
                                 )

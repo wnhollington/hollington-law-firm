@@ -52,7 +52,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "mdx-pages",
-        "path": "./src/content/"
+        "path": "./src/content/pages"
       },
       __key: "mdx-pages"
     },
@@ -64,13 +64,6 @@ module.exports = {
         }
       }
     },
-    // {
-    //   resolve: `gatsby-source-google-reviews-en`,
-    //   options: {
-    //     placeId: process.env.GOOGLE_PLACES_ID,
-    //     apiKey: process.env.GOGGLE_API_KEY,
-    //   },
-    // },
     'gatsby-plugin-sitemap',
     // {
     //   resolve: `gatsby-plugin-google-gtag`,

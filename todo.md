@@ -1,6 +1,4 @@
-- Disclaimer
 - Home page sections (pastor, amplify, solution)
-- Pages to node
 - about
 - practice areas
     - Construction Defect
