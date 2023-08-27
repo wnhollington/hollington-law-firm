@@ -57,6 +57,14 @@ module.exports = {
       __key: "mdx-pages"
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "posts",
+        "path": "./src/content/posts"
+      },
+      __key: "posts"
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

@@ -12,6 +12,7 @@ p, span {
 
 article p {
     text-align: justify;
+    hyphens: auto;
 }
 
 article h1 {
