@@ -22,11 +22,11 @@ const Testimonials = () => {
         if (isMobile) {
             return 1
         } 
-        else if (!isMobile && windowWidth.width < 1500 ) {
-            return 1
+        else if (!isMobile && windowWidth.width > 1500 ) {
+            return 2
         } 
         else {
-            return 2
+            return 1
         }
     }
     return (
@@ -34,6 +34,7 @@ const Testimonials = () => {
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">Client Stories</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
+                {isMobile ? "mobile device detected" : "mobile device not detected"}
                 <CarouselProvider
                     isIntrinsicHeight={true}
                     totalSlides={clientTestimonials.length}
