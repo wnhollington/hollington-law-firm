@@ -12,7 +12,7 @@ const HeaderMenu = ({placement}) => {
                 placement={placement}
             >
             </Dropdown>
-            <Dropdown
+            {/* <Dropdown
                 inline
                 label="Resources"
                 placement={placement}
@@ -20,7 +20,7 @@ const HeaderMenu = ({placement}) => {
                 <Dropdown.Item>Articles</Dropdown.Item>
                 <Dropdown.Item>Videos</Dropdown.Item>
                 <Dropdown.Item>E-Books</Dropdown.Item>
-            </Dropdown>
+            </Dropdown> */}
             <Dropdown
                 inline
                 label="Contact"

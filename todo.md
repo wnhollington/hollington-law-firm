@@ -1,4 +1,3 @@
-- Home page sections (pastor, amplify, solution)
 - about
 - practice areas
     - Construction Defect
@@ -12,3 +11,5 @@
     - Qui Tam/Whistleblower
     - Creditor Rights/Bankruptcy
 - Algolia (articles & videos)
+- Mailchimp signup
+- Rss Feed

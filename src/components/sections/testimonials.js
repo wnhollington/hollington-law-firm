@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer"
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useWindowWidth } from "../../utilities/use-window-width";
+import { checkMobile } from "../../utilities/check-mobile";
 import { testimonials } from "../../utilities/testimonials";
 
 const Testimonials = () => {
@@ -14,14 +15,18 @@ const Testimonials = () => {
         triggerOnce: true
     })
 
-    // Calculate Window Width & Set Visible Slides for Carousel
+    // Check Mobile, Calculate Window Width & Set Visible Slides for Carousel
+    const isMobile = checkMobile();
     const windowWidth = useWindowWidth();
-    const setCarouselSliders = (windowWidth) => {
-        if (windowWidth > 1500) {
-            return 2
+    const setCarouselSliders = (windowWidth, isMobile) => {
+        if (isMobile) {
+            return 1
+        } 
+        else if (!isMobile && windowWidth.width < 1500 ) {
+            return 1
         } 
         else {
-            return 1
+            return 2
         }
     }
     return (

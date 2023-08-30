@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react"
+import { window } from "browser-monads"
 
 export const useWindowWidth = () => {
-    const isBrowser = typeof window !== 'undefined'
-    const [width, setWidth] = useState(isBrowser ? window.innerWidth : 0)
+    const [windowWidth, setWindowWidth] = useState({
+      width: undefined
+    })
   
     useEffect(() => {
-      if (!isBrowser) return false
-  
-      const handleResize = () => setWidth(window.innerWidth)
+
+      const handleResize = () => setWindowWidth({
+        width: window.innerWidth
+      })
       window.addEventListener('resize', handleResize)
   
       return () => {
@@ -15,5 +18,5 @@ export const useWindowWidth = () => {
       }
     })
   
-    return width
+    return windowWidth
   }

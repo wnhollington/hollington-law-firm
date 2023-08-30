@@ -8,6 +8,7 @@ import Talk from "../../images/svg/talk.svg"
 import Wait from "../../images/svg/wait.svg"
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useWindowWidth } from "../../utilities/use-window-width"
+import { checkMobile } from "../../utilities/check-mobile";
 
 const WhatSetsUsApart = () => {
     const process = [
@@ -37,17 +38,21 @@ const WhatSetsUsApart = () => {
                 break;
         }
     }
-    // Calculate Window Width & Set Visible Slides for Carousel
+    // Check Mobile, Calculate Window Width & Set Visible Slides for Carousel
+    const isMobile = checkMobile();
     const windowWidth = useWindowWidth();
     const setCarouselSliders = (windowWidth) => {
 
-        if (windowWidth > 1550) {
-            return 3
-        } else if ((windowWidth > 1025) && (windowWidth < 1550)) {
-            return 2
-        } else {
+        if (isMobile || windowWidth.width < 1025) {
             return 1
         }
+        else if((windowWidth.width > 1025) && (windowWidth.width < 1550)) {
+            return 2
+        }
+        else if (windowWidth.width > 1550){
+            return 3
+        }
+        else return 2
     }
     return (
         <section id="what-sets-us-apart" ref={ref}>
