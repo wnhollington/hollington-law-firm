@@ -3,6 +3,9 @@
  */
 require('dotenv').config();
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: `Colorado Construction Attorney`,
     tagline: `W. Neal Hollington`,

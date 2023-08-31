@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useInView } from "react-intersection-observer"
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import Priority from "../../images/svg/priority.svg"
 import Handle from "../../images/svg/handle.svg"
 import Results from "../../images/svg/results.svg"
@@ -8,7 +8,7 @@ import Talk from "../../images/svg/talk.svg"
 import Wait from "../../images/svg/wait.svg"
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useWindowWidth } from "../../utilities/use-window-width"
-import { checkMobile } from "../../utilities/check-mobile";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs"
 
 const WhatSetsUsApart = () => {
     const process = [
@@ -38,22 +38,23 @@ const WhatSetsUsApart = () => {
                 break;
         }
     }
-    // Check Mobile, Calculate Window Width & Set Visible Slides for Carousel
-    const isMobile = checkMobile();
-    const windowWidth = useWindowWidth();
-    const setCarouselSliders = (windowWidth) => {
+    // Calculate Window Width & Set Visible Slides for Carousel
+    let windowWidth = useWindowWidth();
+    const setCarouselSlides = (windowWidth) => {
 
-        if (isMobile || windowWidth.width < 1025) {
+        if (windowWidth < 1025) {
             return 1
         }
-        else if((windowWidth.width > 1025) && (windowWidth.width < 1550)) {
+        else if((windowWidth > 1025) && (windowWidth < 1550)) {
             return 2
         }
-        else if (windowWidth.width > 1550){
+        else if (windowWidth > 1550){
             return 3
         }
         else return 2
     }
+    let carouselSlides = setCarouselSlides(windowWidth)
+
     return (
         <section id="what-sets-us-apart" ref={ref}>
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
@@ -62,9 +63,9 @@ const WhatSetsUsApart = () => {
                 <CarouselProvider
                     isIntrinsicHeight={true}
                     totalSlides={process.length}
-                    isPlaying={true}
+                    isPlaying={false}
                     infinite={false}
-                    visibleSlides={setCarouselSliders(windowWidth)}
+                    visibleSlides={carouselSlides}
                 >
                     <Slider>                            
                         {
@@ -81,6 +82,10 @@ const WhatSetsUsApart = () => {
                             })
                         }
                     </Slider>
+                    <div className="flex gap-4 mx-6 justify-center">
+                        <ButtonBack> <BsFillArrowLeftCircleFill size={36} color="#6E0A05"/> </ButtonBack>
+                        <ButtonNext> <BsFillArrowRightCircleFill size={36} color="#6E0A05"/> </ButtonNext>
+                    </div>
                 </CarouselProvider>
 
             </div>

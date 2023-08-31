@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer"
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useWindowWidth } from "../../utilities/use-window-width";
-import { checkMobile } from "../../utilities/check-mobile";
 import { testimonials } from "../../utilities/testimonials";
 
 const Testimonials = () => {
@@ -15,32 +14,31 @@ const Testimonials = () => {
         triggerOnce: true
     })
 
-    // Check Mobile, Calculate Window Width & Set Visible Slides for Carousel
-    const isMobile = checkMobile();
-    const windowWidth = useWindowWidth();
-    const setCarouselSliders = (windowWidth, isMobile) => {
-        if (isMobile) {
+    // Check Calculate Window Width & Set Visible Slides for Carousel
+    let windowWidth = useWindowWidth();
+    const setCarouselSliders = (windowWidth) => {
+        if (windowWidth < 1500) {
             return 1
         } 
-        else if (!isMobile && windowWidth.width > 1500 ) {
+        else if (windowWidth > 1500 ) {
             return 2
         } 
         else {
             return 1
         }
     }
+    let carouselSlides = setCarouselSliders(windowWidth)
     return (
         <section id="testimonials" ref={ref}>
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">Client Stories</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                {isMobile ? "mobile device detected" : "mobile device not detected"}
                 <CarouselProvider
                     isIntrinsicHeight={true}
                     totalSlides={clientTestimonials.length}
                     isPlaying={true}
                     infinite={true}
-                    visibleSlides={setCarouselSliders(windowWidth)}
+                    visibleSlides={carouselSlides}
                 >
                     <Slider>                            
                         {

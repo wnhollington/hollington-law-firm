@@ -3,7 +3,6 @@ import Desktop from "./menus/desktop"
 import Mobile from "./menus/mobile"
 import { useEffect, useState } from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 const Header = () => {
     // Set Scroll State
