@@ -8,7 +8,7 @@ module.exports = {
   },
   siteMetadata: {
     title: `Colorado Construction Attorney`,
-    tagline: `W. Neal Hollington`,
+    tagline: `Constructing great results; one construction dispute at a time`,
     siteUrl: `https://hollington.law`,
     description: ``,
     contact: {
