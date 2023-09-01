@@ -67,8 +67,8 @@ exports.createPages = async ({ graphql, actions }) => {
           path: `/${post.node.frontmatter.slug}`,
           component: `${postTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
           context: {
-              slug: post.node.frontmatter.slug,
               id: post.node.id,
+              slug: post.node.frontmatter.slug,
               previous,
               next,
           },
