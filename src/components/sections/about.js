@@ -9,8 +9,8 @@ const About = () => {
     return (
         <section id="about" ref={ref}>
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <div className="container">
-                    <h2 className="text-center text-3xl mb-2 font-medium">Construction Dispute?</h2>
+                <div className="">
+                    <h2 className="text-center text-3xl mb-2 font-medium">Construction Issue?</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                     <p className="text-xl text-gray-900 my-4 text-justify">
                         Are you a home owner facing construction defects from a builder or contractor? Are you a subcontractor not getting paid for your hard work on a construction project? Maybe you are a laborer that has been injured on a jobsite or are experiencing a wage dispute with your employer. If you fit into any of these categories of issues, you have probably come to this website frustrated and seeking answers.
@@ -19,7 +19,7 @@ const About = () => {
                         Unfortunately, navigating the legal process without representation is a huge challenge. Statutes, rules, and deadlines can make it seemingly impossible to handle your legal issues on your own. Worse, there is a lot of misinformation out there and it can be equally as difficult to find a qualified attorney to competently handle your construction dispute.
                     </p>
                 </div>
-                <div className="container mt-12">
+                <div className="mt-12">
                     <h2 className="text-center text-3xl  mb-2 font-medium">Help Starts Here</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                     <p className="text-xl text-gray-900 my-4 text-justify">

@@ -96,7 +96,12 @@
   "frontMatter.preview.host": "http://localhost:8000",
   "frontMatter.content.pageFolders": [
     {
-      "path": "[[workspace]]/src/content"
+      "title": "pages",
+      "path": "[[workspace]]/src/content/pages"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/src/content/posts"
     }
   ]
 }
