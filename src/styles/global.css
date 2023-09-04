@@ -42,7 +42,13 @@ article a:hover {
 ::selection {
     @apply text-white bg-primary
 }
-
+/* Lists */
+article ul {
+    @apply list-disc
+}
+article ol {
+    @apply list-decimal
+}
 /* FAQS */
 .accordion button h2 {
     @apply text-lg py-2
