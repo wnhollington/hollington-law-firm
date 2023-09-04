@@ -5,7 +5,7 @@ import { Dropdown } from "flowbite-react"
 const HeaderMenu = ({placement}) => {
     return (            
         <>
-            <Link to="/about" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
+            <Link to="/about-me" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
             <Dropdown
                 inline
                 label="Practice Areas"
