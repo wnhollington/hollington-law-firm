@@ -49,6 +49,13 @@ article ul {
 article ol {
     @apply list-decimal
 }
+article ul, ol {
+    @apply ml-6 text-xl
+}
+article li {
+    @apply py-2
+}
+
 /* FAQS */
 .accordion button h2 {
     @apply text-lg py-2

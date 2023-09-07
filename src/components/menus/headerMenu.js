@@ -11,6 +11,7 @@ const HeaderMenu = ({placement}) => {
                 label="Practice Areas"
                 placement={placement}
             >
+                <Dropdown.Item><Link to="/construction-defect-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Construction Defect</Link></Dropdown.Item>
             </Dropdown>
             {/* <Dropdown
                 inline

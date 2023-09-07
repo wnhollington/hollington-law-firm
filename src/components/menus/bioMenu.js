@@ -11,26 +11,26 @@ const BioMenu = () => {
                 active
                 title="Education"
                 >
-                    <ul>
-                        <li><span className="font-semibold">University of Colorado - Boulder</span>, Bachelor of Arts</li>
-                        <li><span className="font-semibold">University of Georgia School of Law</span>, Juris Doctorate</li>
+                    <ul className="text-lg mx-0">
+                        <li className="py-1"><span className="font-semibold">University of Colorado - Boulder</span>, Bachelor of Arts</li>
+                        <li className="py-1"><span className="font-semibold">University of Georgia School of Law</span>, Juris Doctorate</li>
                     </ul>
                 </Tabs.Item>
 
                 <Tabs.Item
                 title="Publications"
                 >
-                    <ul>
-                        <li>William Neal Hollington, <span className="italic">Legal and Policy Justifications for Refusing to Grant China Market Economy Status in 2016</span>, 46 GA. J. INT’L & COMP. L. 1 (2018).</li>
+                    <ul className="text-lg mx-0">
+                        <li className="py-1">William Neal Hollington, <span className="italic">Legal and Policy Justifications for Refusing to Grant China Market Economy Status in 2016</span>, 46 GA. J. INT’L & COMP. L. 1 (2018).</li>
                     </ul>
                 </Tabs.Item>
 
                 <Tabs.Item
                 title="Recognitions"
                 >
-                    <ul>
-                        <li><span className="font-semibold">Best Lawyers&#8482;:</span> Ones to Watch, Construction Law</li>
-                        <li><span className="font-semibold">Best Lawyers&#8482;:</span> Ones to Watch, Commercial Litigation</li>
+                    <ul className="text-lg mx-0">
+                        <li className="py-1"><span className="font-semibold">Best Lawyers&#8482;:</span> Ones to Watch, Construction Law</li>
+                        <li className="py-1"><span className="font-semibold">Best Lawyers&#8482;:</span> Ones to Watch, Commercial Litigation</li>
                     </ul>
                 </Tabs.Item>
 

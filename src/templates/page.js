@@ -10,7 +10,7 @@ function Page({ data, children }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <article className='max-w-3xl m-4 md:mx-auto'>
-        <h1 className={data.mdx.frontmatter.title === "About Me" ? "text-center" : null}>{data.mdx.frontmatter.title}</h1>
+        <h1 className="text-center">{data.mdx.frontmatter.title}</h1>
         {children}
       </article>
     </Layout>
