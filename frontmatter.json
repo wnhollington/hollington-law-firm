@@ -103,5 +103,6 @@
       "title": "posts",
       "path": "[[workspace]]/src/content/posts"
     }
-  ]
+  ],
+  "frontMatter.content.defaultFileType": "mdx"
 }

@@ -2,6 +2,7 @@
 - practice areas
     - Construction Defects
     - Nondisclosure & Fraud
+    - CCPA
     - Insurance Coverage (Bad Faith)
     - Property Contamination
     - Wage, Hour, & Classification
