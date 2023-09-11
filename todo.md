@@ -1,13 +1,10 @@
-- about
 - practice areas
-    - Construction Defects
-    - Nondisclosure & Fraud
     - CCPA
     - Insurance Coverage (Bad Faith)
     - Property Contamination
+    - Collections (Liens, Bonds, Trust Fund, etc.)
     - Wage, Hour, & Classification
     - Construction Accidents (Workers Comp. & PI)
-    - Collections (Liens, Bonds, Trust Fund, etc.)
     - Qui Tam/Whistleblower
 - Algolia (articles & videos)
 - Mailchimp signup
