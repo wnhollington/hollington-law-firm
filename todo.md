@@ -1,10 +1,9 @@
 - practice areas
+    - Construction Accidents (Workers Comp. & PI)
     - CCPA
     - Insurance Coverage (Bad Faith)
     - Property Contamination
-    - Collections (Liens, Bonds, Trust Fund, etc.)
     - Wage, Hour, & Classification
-    - Construction Accidents (Workers Comp. & PI)
     - Qui Tam/Whistleblower
 - Algolia (articles & videos)
 - Mailchimp signup
