@@ -1,49 +1,34 @@
 import * as React from "react"
 import { Link } from "gatsby"
-
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import { StaticImage } from "gatsby-plugin-image"
+// Components
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <div className="my-2 py-4 max-w-3xl mx-auto">
+        <h1 className="max-w-lg mb-4 text-3xl leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">404: Page Not Found</h1>
+        <div className="flex gap-6 my-12">
+          <StaticImage src="../images/astronaut.png" width={1250}/>
+          <div>
+            <p className="text-xl text-gray-900 my-4 text-justify">
+              Oop! It looks you are lost in space. I apologize, but it appears that the page you are looking for cannot be found. Please head back to the home page and try again.
+            </p>
+            <Link to="/" className="bg-primary p-3 rounded-lg text-md font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">Take Me Home</Link>
+          </div>
+
+        </div>
+      </div>
+    </Layout>
   )
 }
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => (
+  <Seo 
+    title="404: Page Not Found"
+  />
+)
