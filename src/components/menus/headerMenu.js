@@ -11,11 +11,11 @@ const HeaderMenu = ({placement}) => {
                 label="Practice Areas"
                 placement={placement}
             >
-                <Dropdown.Item><Link to="/construction-defect-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Construction Defect</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/construction-defect-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Defect</Link></Dropdown.Item>
 
-                <Dropdown.Item><Link to="/contractor-lien-colorado" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Construction Collections</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/contractor-lien-colorado" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Collections</Link></Dropdown.Item>
 
-                <Dropdown.Item><Link to="/real-estate-fraud-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Real Estate Fraud and Nondisclosure</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/real-estate-fraud-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Real Estate Fraud and Nondisclosure</Link></Dropdown.Item>
             </Dropdown>
             {/* <Dropdown
                 inline
@@ -31,8 +31,8 @@ const HeaderMenu = ({placement}) => {
                 label="Contact"
                 placement={placement}
             >
-                <Dropdown.Item><Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Contact</Link></Dropdown.Item>
-                <Dropdown.Item><Link to="/schedule-consultation" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Schedule Consultation</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Contact</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/schedule-consultation" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Schedule Consultation</Link></Dropdown.Item>
             </Dropdown>
         </>
 

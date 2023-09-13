@@ -124,3 +124,7 @@ article li {
 .header-logo {
     font-family: "Mr Dafoe";
 }
+
+.menu-item {
+    @apply mx-2
+}

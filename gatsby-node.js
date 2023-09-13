@@ -11,7 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      pages: allMdx(filter: {frontmatter: {type: {eq: "page"}}}) {
+      pages: allMdx(filter: {frontmatter: {draft: {ne: true}, type: {eq: "page"}}}) {
         edges {
           node {
             id
@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      posts: allMdx(filter: {frontmatter: {type: {eq: "post"}}}) {
+      posts: allMdx(filter: {frontmatter: {draft: {ne: true}, type: {eq: "post"}}}) {
         edges {
           node {
             id
