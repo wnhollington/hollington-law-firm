@@ -12,7 +12,7 @@ module.exports = {
     siteUrl: `https://hollington.law`,
     description: ``,
     contact: {
-      phone: "",
+      phone: "720-473-7644",
       email: ""
     },
     social: {

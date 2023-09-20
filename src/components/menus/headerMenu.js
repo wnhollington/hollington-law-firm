@@ -11,7 +11,9 @@ const HeaderMenu = ({placement}) => {
                 label="Practice Areas"
                 placement={placement}
             >
-                <Dropdown.Item><Link to="/construction-defect-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Defect</Link></Dropdown.Item>
+                <Dropdown.Item><Link to="/construction-contract-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Contracts</Link></Dropdown.Item>
+
+                <Dropdown.Item><Link to="/construction-defect-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Defects</Link></Dropdown.Item>
 
                 <Dropdown.Item><Link to="/contractor-lien-colorado" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Collections</Link></Dropdown.Item>
 

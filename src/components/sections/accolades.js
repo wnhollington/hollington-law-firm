@@ -23,7 +23,7 @@ const Accolades = () => {
                 {
                     data.allFile.edges.map((edge) => {
                         return(
-                            <div className="">
+                            <div className="my-4">
                                 <GatsbyImage 
                                     image={edge.node.childImageSharp.gatsbyImageData}
                                     imgClassName=""

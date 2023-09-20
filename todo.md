@@ -1,4 +1,5 @@
 - practice areas
+    - Construction contract lawyer
     - Construction Accidents (Workers Comp. & PI)
     - CCPA
     - Insurance Coverage (Bad Faith)
