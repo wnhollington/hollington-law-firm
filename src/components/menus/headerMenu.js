@@ -17,6 +17,8 @@ const HeaderMenu = ({placement}) => {
 
                 <Dropdown.Item><Link to="/contractor-lien-colorado" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Collections</Link></Dropdown.Item>
 
+                <Dropdown.Item><Link to="/construction-accident-attorney" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Accidents</Link></Dropdown.Item>
+
                 <Dropdown.Item><Link to="/real-estate-fraud-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Real Estate Fraud and Nondisclosure</Link></Dropdown.Item>
             </Dropdown>
             {/* <Dropdown
