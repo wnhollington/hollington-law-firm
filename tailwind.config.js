@@ -4,6 +4,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: [
     "./src/pages/**/*.{html,js,jsx,ts,tsx,mdx}",
+    "./src/templates/**/*.{html,js,jsx,ts,tsx,mdx}",
     "./src/components/**/*.{html,js,jsx,ts,tsx,mdx}",
     "./src/content/**/*.{html,js,jsx,ts,tsx,mdx}",
     "./node_modules/flowbite/**/*.js"
@@ -23,6 +24,11 @@ module.exports = {
         secondary: "#055b6e"
       },
     },
+    listStyleType: {
+      circle: 'circle',
+      disc: 'disc',
+      decimal: 'decimal'
+    }
   },
   plugins: [
     require('./node_modules/flowbite/plugin'),

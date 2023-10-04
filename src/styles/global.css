@@ -46,6 +46,9 @@ article a:hover {
 article ul {
     @apply list-disc
 }
+article ul ul {
+    @apply list-circle
+}
 article ol {
     @apply list-decimal
 }

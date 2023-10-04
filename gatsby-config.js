@@ -8,11 +8,11 @@ module.exports = {
   },
   siteMetadata: {
     title: `Colorado Construction Attorney`,
-    tagline: `Constructing great results; one dispute at a time`,
-    siteUrl: `https://hollington.law`,
-    description: ``,
+    tagline: `Constructing great results; one construction dispute at a time`,
+    siteUrl: `https://coloradoconstructioncounsel.com`,
+    description: '',
     contact: {
-      phone: "720-473-7644",
+      phone: "",
       email: ""
     },
     social: {

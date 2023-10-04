@@ -9,7 +9,7 @@ import Seo from '../components/seo.js'
 function Page({ data, children }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <article className='max-w-3xl m-4 md:mx-auto'>
+      <article className='max-w-5xl m-2 p-4 mx-auto'>
         <h1 className="text-center">{data.mdx.frontmatter.title}</h1>
         {children}
       </article>

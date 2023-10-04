@@ -39,7 +39,7 @@ const Mobile = () => {
                                 <div className="flex flex-row justify-center phone">
                                     <a href="tel:303.909.1227" className="flex gap-2 bg-primary p-3 rounded-lg phone text-md font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">
                                         <BsFillTelephoneFill size={"1.25em"} className="fill-gray-100"/>
-                                        <span>303-909-1127</span>
+                                        <span>Call Now</span>
                                     </a>
                                 </div>
                             </div>

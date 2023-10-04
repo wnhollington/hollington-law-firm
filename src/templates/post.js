@@ -14,17 +14,17 @@ function Post ({ data, children, pageContext }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
 
-      <article className='max-w-3xl m-4 md:mx-auto'>
-        <header className='text-center my-4'>
+      <article className='max-w-4xl m-2 p-4 md:mx-auto'>
+        <header className='text-center'>
           <h1>{data.mdx.frontmatter.title}</h1>
           <GatsbyImage image={data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData} />
-          <p>{data.mdx.frontmatter.description}</p>
+          <p className='italic'>{data.mdx.frontmatter.description}</p>
         </header>
         {children}
       </article>
 
       {/* Navigation */}
-      <nav className="max-w-3xl mx-auto my-4">
+      <nav className="max-w-4xl px-4 mx-auto">
         <ul className="flex flex-wrap justify-between mx-auto my-4">
           <li>
             {previous && (
