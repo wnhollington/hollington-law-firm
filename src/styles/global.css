@@ -131,3 +131,28 @@ article li {
 .menu-item {
     @apply mx-2
 }
+
+/* Carousel Sliders */
+.slick-list {
+    display: flex !important;
+    padding: 1rem 0 !important;
+}
+.slick-track {
+    display: flex !important;
+    flex-direction: row;
+    flex: 1;
+    align-items: stretch;
+    padding: 0 1rem !important;
+    gap: 1rem;
+}
+.slick-slide {
+    display: flex !important;
+    flex: 1;
+    align-items: stretch;
+}
+
+.slick-slide > div {
+    display: flex !important;
+    flex: 1;
+    align-items: stretch;
+}

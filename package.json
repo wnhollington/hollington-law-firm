@@ -34,12 +34,13 @@
     "gatsby-source-filesystem": "^5.11.0",
     "gatsby-source-google-reviews-en": "^2.0.0",
     "gatsby-transformer-sharp": "^5.11.0",
-    "pure-react-carousel": "^1.30.1",
     "react": "^18.2.0",
     "react-calendly": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-intersection-observer": "^9.5.2",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "style-to-object": "^0.4.2"
   },
   "devDependencies": {

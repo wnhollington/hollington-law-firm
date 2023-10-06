@@ -1,7 +1,6 @@
 - practice areas
-    - Construction contract lawyer
-    - Construction Accidents (Workers Comp. & PI)
     - CCPA
+    - HOA Claims
     - Insurance Coverage (Bad Faith)
     - Property Contamination
     - Wage, Hour, & Classification

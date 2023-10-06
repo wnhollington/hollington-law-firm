@@ -1,13 +1,14 @@
 import * as React from "react"
+import { useState } from "react"
 import { useInView } from "react-intersection-observer"
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import Priority from "../../images/svg/priority.svg"
 import Handle from "../../images/svg/handle.svg"
 import Results from "../../images/svg/results.svg"
 import Talk from "../../images/svg/talk.svg"
 import Wait from "../../images/svg/wait.svg"
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import { useWindowWidth } from "../../utilities/use-window-width"
+import Slider from "react-slick"
+import "../../../node_modules/slick-carousel/slick/slick.css"
+import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-icons/bs"
 
 const WhatSetsUsApart = () => {
@@ -38,56 +39,47 @@ const WhatSetsUsApart = () => {
                 break;
         }
     }
-    // Calculate Window Width & Set Visible Slides for Carousel
-    let windowWidth = useWindowWidth();
-    const setCarouselSlides = (windowWidth) => {
-
-        if (windowWidth < 1025) {
-            return 1
-        }
-        else if((windowWidth > 1025) && (windowWidth < 1550)) {
-            return 2
-        }
-        else if (windowWidth > 1550){
-            return 3
-        }
-        else return 2
+    // Configure Slick Carousel
+    const [sliderRef, setSliderRef] = useState(null)
+    const sliderSettings = {
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2
+            }
+            },
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1
+            }
+            }
+        ]
     }
-    let carouselSlides = setCarouselSlides(windowWidth)
 
     return (
         <section id="what-sets-us-apart" ref={ref}>
             <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">What Sets Me Apart</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                <CarouselProvider
-                    isIntrinsicHeight={true}
-                    totalSlides={process.length}
-                    isPlaying={false}
-                    infinite={false}
-                    visibleSlides={carouselSlides}
-                >
-                    <Slider>                            
-                        {
-                            process.map((step, index) => {
-                                return (
-                                    <Slide index={1}>
-                                        <div className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
-                                            <div className="svg-icons">{svgIcons(index)}</div>
-                                            <h3 class="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
-                                            <p class="mt-6 text-gray-900 text-xl text-justify">{step.caption}</p>
-                                        </div>
-                                    </Slide>
-                                )
-                            })
-                        }
-                    </Slider>
-                    <div className="flex gap-4 mx-6 justify-center">
-                        <ButtonBack> <BsFillArrowLeftCircleFill size={36} color="#6E0A05"/> </ButtonBack>
-                        <ButtonNext> <BsFillArrowRightCircleFill size={36} color="#6E0A05"/> </ButtonNext>
-                    </div>
-                </CarouselProvider>
-
+                <Slider ref={setSliderRef} {...sliderSettings}>     
+                    {process.map((step, index) => (
+                        <div index={1} className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
+                            <div className="svg-icons">{svgIcons(index)}</div>
+                            <h3 class="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
+                            <p class="mt-6 text-gray-900 text-xl text-justify">{step.caption}</p>
+                        </div>
+                    ))}                       
+                </Slider>
+                <div className="flex gap-4 mt-8 justify-center">
+                    <BsFillArrowLeftCircleFill size={36} color="#6E0A05" onClick={sliderRef?.slickPrev}/>
+                    <BsFillArrowRightCircleFill size={36} color="#6E0A05" onClick={sliderRef?.slickNext}/>
+                </div>
             </div>
         </section>
     )

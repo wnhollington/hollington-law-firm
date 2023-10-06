@@ -4,7 +4,7 @@ import BioMenu from "../components/menus/bioMenu"
 
 const Bio= () => {
   return (
-    <div className="flex flex-col md:flex-row my-2 p-2 gap-6 shadow-md rounded-md">
+    <div className="flex flex-col sm:flex-row my-2 p-2 gap-6 shadow-md rounded-md">
         <StaticImage src="../images/neal.png" alt="W. Neal Hollington"/>
         <BioMenu/>
     </div>
