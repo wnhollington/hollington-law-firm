@@ -10,11 +10,15 @@ import Schedule from "../components/sections/schedule"
 function Page({ data, children }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <article className='max-w-5xl m-2 p-4 mx-auto'>
+      <article className='max-w-5xl m-2 p-4 xl:p-0 mx-auto'>
         <h1 className="text-center">{data.mdx.frontmatter.title}</h1>
         {children}
       </article>
-      <Schedule/>
+
+      {/* Schedule */}
+      {
+        data.mdx.frontmatter.title !== "Disclaimer" & data.mdx.frontmatter.title !== "Privacy Policy" && <Schedule />
+      }
     </Layout>
   )
 }

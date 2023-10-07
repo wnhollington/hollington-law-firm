@@ -1,0 +1,56 @@
+/* Custom Tailwind Components */
+
+/* Menus */
+.header-navigation button {
+    @apply text-lg font-semibold leading-6 text-gray-900 hover:text-primary
+}
+
+.header-logo {
+    font-family: "Mr Dafoe";
+}
+
+.menu-item {
+    @apply mx-2
+}
+
+/* FAQS */
+.accordion button h2 {
+    @apply text-lg py-2
+}
+
+.accordion div {
+    @apply text-lg text-gray-500 py-4
+}
+
+/* Slick React Carousel Sliders */
+.slick-list {
+    display: flex !important;
+    padding: 1rem 0 !important;
+}
+
+.slick-track {
+    display: flex !important;
+    flex-direction: row;
+    flex: 1;
+    align-items: stretch;
+    padding: 1rem 0 !important;
+    gap: 1rem;
+}
+
+.slick-slide {
+    display: flex !important;
+    flex: 1;
+    align-items: stretch;
+    
+}
+
+.slick-slide > div {
+    display: flex !important;
+    flex: 1;
+    align-items: stretch;
+}
+
+/* SVG Icons */
+.svg-icons svg {
+    max-height: 100px;
+}

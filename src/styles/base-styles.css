@@ -1,0 +1,70 @@
+/* Base Styles */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Libre Baskerville";
+}
+
+p, span {
+    font-family: "Source Sans Pro";
+}
+
+::selection {
+    @apply text-white bg-primary
+}
+
+/* Articles */
+article {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-medium py-2
+    }
+
+    h1 {
+        @apply text-4xl
+    }
+
+    h2 {
+        @apply text-3xl
+    }
+
+    h3 {
+        @apply text-2xl
+    }
+
+    h4 {
+        @apply text-xl
+    }
+
+    p {
+        text-align: justify;
+        hyphens: auto;
+        @apply text-xl py-2
+    }
+
+    a {
+        @apply text-primary underline decoration-dotted;
+        &:hover {
+            @apply text-primary decoration-solid
+        }
+    }
+
+    /* Lists */
+    ul, ol {
+        @apply ml-6 text-xl
+    }
+
+    ul {
+        @apply list-disc;
+        
+        ul {
+            @apply list-circle
+        }
+    }
+
+    ol {
+        @apply list-decimal
+    }
+
+    li {
+        @apply py-2
+    }
+}
