@@ -20,10 +20,10 @@ const Testimonials = () => {
         dots: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
-            breakpoint: 1250,
+            breakpoint: 1275,
             settings: {
                 slidesToShow: 1
             }
@@ -32,7 +32,7 @@ const Testimonials = () => {
     }
     return (
         <section id="testimonials" ref={ref}>
-            <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
+            <div className={`container my-16 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">Client Stories</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
 

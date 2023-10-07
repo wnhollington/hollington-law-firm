@@ -48,13 +48,13 @@ const WhatSetsUsApart = () => {
         infinite: false,
         responsive: [
             {
-            breakpoint: 1024,
+            breakpoint: 1275,
             settings: {
                 slidesToShow: 2
             }
             },
             {
-            breakpoint: 600,
+            breakpoint: 800,
             settings: {
                 slidesToShow: 1
             }
@@ -64,7 +64,7 @@ const WhatSetsUsApart = () => {
 
     return (
         <section id="what-sets-us-apart" ref={ref}>
-            <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
+            <div className={`container my-16 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">What Sets Me Apart</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <Slider ref={setSliderRef} {...sliderSettings}>     
@@ -76,7 +76,7 @@ const WhatSetsUsApart = () => {
                         </div>
                     ))}                       
                 </Slider>
-                <div className="flex gap-4 mt-8 justify-center">
+                <div className="flex gap-4 justify-center">
                     <BsFillArrowLeftCircleFill size={36} color="#6E0A05" onClick={sliderRef?.slickPrev}/>
                     <BsFillArrowRightCircleFill size={36} color="#6E0A05" onClick={sliderRef?.slickNext}/>
                 </div>

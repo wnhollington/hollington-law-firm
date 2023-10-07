@@ -14,7 +14,7 @@ const NotFoundPage = () => {
           <StaticImage src="../images/astronaut.png" width={1250}/>
           <div>
             <p className="text-xl text-gray-900 my-4 text-justify">
-              Oop! It looks you are lost in space. I apologize, but it appears that the page you are looking for cannot be found. Please head back to the home page and try again.
+              Oops! I apologize, but it appears that the page you are looking for cannot be found. Please head back to the home page and try again.
             </p>
             <Link to="/" className="bg-primary p-3 rounded-lg text-md font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">Take Me Home</Link>
           </div>

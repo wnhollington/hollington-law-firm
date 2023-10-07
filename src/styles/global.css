@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 /* Base Styles */
+body * {
+    hyphens: auto;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: "Libre Baskerville";
 }
@@ -115,10 +119,6 @@ article li {
     max-height: 100px;
 }
 
-.slide___3-Nqo,.slideHorizontal___1NzNV,.carousel__slide,.carousel__slide--visible {
-    margin: 1rem .5rem !important;
-}
-
 /* Menus */
 .header-navigation button {
     @apply text-lg font-semibold leading-6 text-gray-900 hover:text-primary
@@ -132,7 +132,7 @@ article li {
     @apply mx-2
 }
 
-/* Carousel Sliders */
+/* Slick React Carousel Sliders */
 .slick-list {
     display: flex !important;
     padding: 1rem 0 !important;
@@ -142,13 +142,14 @@ article li {
     flex-direction: row;
     flex: 1;
     align-items: stretch;
-    padding: 0 1rem !important;
+    padding: 1rem 0 !important;
     gap: 1rem;
 }
 .slick-slide {
     display: flex !important;
     flex: 1;
     align-items: stretch;
+    
 }
 
 .slick-slide > div {

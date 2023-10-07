@@ -8,8 +8,8 @@ const About = () => {
     })
     return (
         <section id="about" ref={ref}>
-            <div className={`container my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <div className="">
+            <div className={`container my-12 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
+                <div>
                     <h2 className="text-center text-3xl mb-2 font-medium">Construction Issue?</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                     <p className="text-xl text-gray-900 my-4 text-justify">
