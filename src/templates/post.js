@@ -7,6 +7,7 @@ import { Link } from 'gatsby'
 // Components
 import Layout from '../components/layout.js'
 import Seo from '../components/seo.js'
+import Schedule from "../components/sections/schedule.js"
 
 // Render
 function Post ({ data, children, pageContext }) {
@@ -14,7 +15,7 @@ function Post ({ data, children, pageContext }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
 
-      <article className='max-w-4xl m-2 p-4 md:mx-auto'>
+      <article className='max-w-5xl m-2 p-4 md:mx-auto'>
         <header className='text-center'>
           <h1>{data.mdx.frontmatter.title}</h1>
           <GatsbyImage image={data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData} />
@@ -24,7 +25,7 @@ function Post ({ data, children, pageContext }) {
       </article>
 
       {/* Navigation */}
-      <nav className="max-w-4xl px-4 mx-auto">
+      <nav className="max-w-5xl px-4 mx-auto">
         <ul className="flex flex-wrap justify-between mx-auto my-4">
           <li>
             {previous && (
@@ -42,6 +43,9 @@ function Post ({ data, children, pageContext }) {
           </li>
         </ul>
       </nav>
+
+      {/* Consultation */}
+      <Schedule/>
     </Layout>
   )
 }

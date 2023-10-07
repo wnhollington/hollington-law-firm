@@ -1,4 +1,4 @@
 export const testimonials = [
     {id: 1, author: "Emilia Rodriguez", review: "I appreciate all the hard work that you have put into completing my case. I am very grateful to you. Before I contacted you, I was hopeless. I have no words to express my gratitude to you."},
-    {id: 2, author: "Peter Mink", review: "Neal is a very strong professional with great insight and fortitude. He blends a distinct style of finding solutions for short and long term problems that produce results. With an experienced and well-rounded background in legal studies and work positions, Neal is a great asset to any team. "}
+    {id: 2, author: "Peter Menk", review: "Neal is a very strong professional with great insight and fortitude. He blends a distinct style of finding solutions for short and long term problems that produce results. With an experienced and well-rounded background in legal studies and work positions, Neal is a great asset to any team. "}
 ]

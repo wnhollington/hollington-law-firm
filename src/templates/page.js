@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 // Components
 import Layout from '../components/layout.js'
 import Seo from '../components/seo.js'
+import Schedule from "../components/sections/schedule"
 
 // Render
 function Page({ data, children }) {
@@ -13,6 +14,7 @@ function Page({ data, children }) {
         <h1 className="text-center">{data.mdx.frontmatter.title}</h1>
         {children}
       </article>
+      <Schedule/>
     </Layout>
   )
 }
