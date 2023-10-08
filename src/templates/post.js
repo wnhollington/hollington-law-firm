@@ -15,7 +15,7 @@ function Post ({ data, children, pageContext }) {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
 
-      <article className='max-w-5xl m-2 p-4 md:mx-auto'>
+      <article className='max-w-5xl mt-8 p-4 md:mx-auto'>
         <header className='text-center'>
           <h1>{data.mdx.frontmatter.title}</h1>
           <GatsbyImage image={data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData} />

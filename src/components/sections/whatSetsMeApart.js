@@ -17,7 +17,7 @@ const WhatSetsUsApart = () => {
         {id: 2, heading: "2. I'll Explain the Process", caption: "A lot of attorneys like to overcomplicate things. Not me. I'll clearly and honestly explain the process, so you will be informed and comfortable every step of the way."},
         {id: 3, heading: "3. You Won't Wait on Me", caption: "In fact, I'll come to you - your home or virtually via Zoom, Facetime, or Video Chat. Whether it's returning a call, answering a question, or just checking in, I am always available."},
         {id: 4, heading: "4. I'll Handle Everything", caption: "It's easy to feel overwhelmed and I understand that. I'll take on your stress by collecting documents, negotiating with the other party, and fighting on your behalf."},
-        {id: 5, heading: "5. I'll Get You Great Results", caption: "My team has a track record of getting clients great outcomes. We will pursue full and complete justice on your behalf, regardless of any obstacles along the way."},
+        {id: 5, heading: "5. I'll Get You Great Results", caption: "Though I can't guarantee results, my team has a track record of getting clients great outcomes. We will pursue full and complete justice on your behalf, regardless of any obstacles along the way."},
     ]
     const { ref, inView } = useInView({
         threshold: .1,

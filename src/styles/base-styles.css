@@ -37,7 +37,7 @@ article {
     p {
         text-align: justify;
         hyphens: auto;
-        @apply text-xl py-2
+        @apply text-xl py-2 text-gray-900
     }
 
     a {
