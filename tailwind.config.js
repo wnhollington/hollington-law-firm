@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('../images/construction-bg-4.jpg')",
+        'hero': "url('../images/hero.jpg')",
         'profile': "url('../images/neal.png')"
       },
       colors: {

@@ -7,9 +7,9 @@ module.exports = {
     DEV_SSR: true
   },
   siteMetadata: {
-    title: `Colorado Construction Attorney`,
-    tagline: `Constructing great results; one construction dispute at a time`,
-    siteUrl: `https://coloradoconstructioncounsel.com`,
+    title: `Altitude Injury Law`,
+    tagline: `For the People of Colorado`,
+    siteUrl: `https://altitudeinjurylaw.com`,
     description: '',
     contact: {
       phone: "",

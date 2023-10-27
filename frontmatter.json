@@ -3,6 +3,7 @@
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "post",
+      "fileType": "mdx",
       "pageBundle": false,
       "previewPath": null,
       "fields": [
@@ -58,6 +59,7 @@
     },
     {
       "name": "page",
+      "fileType": "mdx",
       "pageBundle": false,
       "previewPath": null,
       "fields": [
@@ -103,6 +105,5 @@
       "title": "posts",
       "path": "[[workspace]]/src/content/posts"
     }
-  ],
-  "frontMatter.content.defaultFileType": "mdx"
+  ]
 }

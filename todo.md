@@ -1,10 +1,5 @@
+- additional index sections
 - practice areas
-    - CCPA
-    - HOA Claims
-    - Insurance Coverage (Bad Faith)
-    - Property Contamination
-    - Wage, Hour, & Classification
-    - Qui Tam/Whistleblower
 - Algolia (articles & videos)
 - Mailchimp signup
 - Rss Feed
