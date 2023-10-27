@@ -12,7 +12,7 @@ const Hero = () => {
     return (
         <section>
             <div className="relative isolate bg-hero bg-cover bg-no-repeat 2xl:h-screen">
-                <div className="h-full max-w-full flex flex-col-reverse sm:flex-row items-center md:justify-around p-2 md:gap-10 bg-gray-100/10">
+                <div className="h-full max-w-full flex flex-col-reverse sm:flex-row items-center md:justify-around p-2 md:gap-10 bg-red-100/60">
                     <div className="text-center my-4">
                         <h1 className="font-['Libre_Baskerville'] text-3xl md:text-4xl lg:text-5xl max-w-2xl">{siteMetaData.tagline}</h1>
                         <div className="flex flex-row my-2 md:my-6">
