@@ -6,6 +6,7 @@ import Seo from "../components/seo"
 import Hero from "../components/sections/hero"
 import About from "../components/sections/about"
 import Accolades from "../components/sections/accolades"
+import PracticeAreas from "../components/sections/practiceAreas"
 import WhatSetsMeApart from "../components/sections/whatSetsMeApart"
 import Testimonials from "../components/sections/testimonials"
 import Schedule from "../components/sections/schedule"
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <Hero />
       <Accolades />
       <About />
+      <PracticeAreas />
       <WhatSetsMeApart />
       <Testimonials />
       <Schedule />

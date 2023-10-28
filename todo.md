@@ -1,4 +1,7 @@
 - additional index sections
+-- verdicts
+-- faqs
+-- process
 - practice areas
 - Algolia (articles & videos)
 - Mailchimp signup

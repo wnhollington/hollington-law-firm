@@ -18,7 +18,7 @@ const Accolades = () => {
         }
     `)
     return (
-        <section className="container hidden lg:flex flex-row justify-around relative xl:-top-16 bg-white shadow-lg p-8">
+        <section className="container hidden lg:flex flex-row justify-around relative lg:-top-12 bg-white shadow-lg p-8">
             {data.allFile.edges.map((edge, index) => {
                 return (
                     <div key={index}>
