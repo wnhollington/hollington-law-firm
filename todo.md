@@ -1,8 +1,12 @@
 - additional index sections
 -- verdicts
 -- faqs
--- process
+
 - practice areas
+-- Premises Liability
+-- Uber/Ride Share Accidents
+-- Negligent Security
+
 - Algolia (articles & videos)
 - Mailchimp signup
 - Rss Feed

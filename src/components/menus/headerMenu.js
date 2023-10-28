@@ -1,8 +1,25 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { Dropdown } from "flowbite-react"
+import { useStaticQuery, graphql } from "gatsby"
 
 const HeaderMenu = ({placement}) => {
+    const data = useStaticQuery(graphql`
+        query MyQuery {
+            allMdx(filter: {frontmatter: {type: {eq: "page"}}}){
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        practiceArea
+                        slug
+                    }
+                }
+            }
+            }
+        }
+    `)
+    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy"]
     return (            
         <>
             <Link to="/about-me" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">About</Link>
@@ -11,15 +28,12 @@ const HeaderMenu = ({placement}) => {
                 label="Practice Areas"
                 placement={placement}
             >
-                <Dropdown.Item><Link to="/construction-contract-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Contracts</Link></Dropdown.Item>
+                {data.allMdx.edges.map((edge) => {
+                    return (
+                        pageFilter.includes(edge.node.frontmatter.title) ? null : <Dropdown.Item><Link to={`/${edge.node.frontmatter.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.frontmatter.practiceArea}</Link></Dropdown.Item>
+                    )
+                })}
 
-                <Dropdown.Item><Link to="/construction-defect-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Defects</Link></Dropdown.Item>
-
-                <Dropdown.Item><Link to="/contractor-lien-colorado" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Collections</Link></Dropdown.Item>
-
-                <Dropdown.Item><Link to="/construction-accident-attorney" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Construction Accidents</Link></Dropdown.Item>
-
-                <Dropdown.Item><Link to="/real-estate-fraud-lawyer" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Real Estate Fraud and Nondisclosure</Link></Dropdown.Item>
             </Dropdown>
             {/* <Dropdown
                 inline
