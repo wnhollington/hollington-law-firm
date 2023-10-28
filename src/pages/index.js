@@ -7,7 +7,8 @@ import Hero from "../components/sections/hero"
 import About from "../components/sections/about"
 import Accolades from "../components/sections/accolades"
 import PracticeAreas from "../components/sections/practiceAreas"
-import WhatSetsMeApart from "../components/sections/whatSetsMeApart"
+import WhatSetsUsApart from "../components/sections/whatSetsUsApart"
+import Process from "../components/sections/process"
 import Testimonials from "../components/sections/testimonials"
 import Schedule from "../components/sections/schedule"
 
@@ -18,7 +19,8 @@ const IndexPage = () => {
       <Accolades />
       <About />
       <PracticeAreas />
-      <WhatSetsMeApart />
+      <Process />
+      <WhatSetsUsApart />
       <Testimonials />
       <Schedule />
     </Layout>

@@ -15,6 +15,7 @@ const PracticeAreas = () => {
                 node {
                     frontmatter {
                         title
+                        practiceArea
                         slug
                     }
                 }
@@ -34,7 +35,7 @@ const PracticeAreas = () => {
                             pageFilter.includes(edge.node.frontmatter.title) ? null :                             <Link 
                             to={`/${edge.node.frontmatter.slug}`}
                             className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg"
-                            >{edge.node.frontmatter.title}</Link>                          
+                            >{edge.node.frontmatter.practiceArea}</Link>                          
                         )
                     })}
                 </div>

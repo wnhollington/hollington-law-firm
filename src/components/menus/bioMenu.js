@@ -33,6 +33,14 @@ const BioMenu = () => {
                         <li className="py-1"><span className="font-semibold">Best Lawyers&#8482;:</span> Ones to Watch, Commercial Litigation</li>
                     </ul>
                 </Tabs.Item>
+                <Tabs.Item
+                title="Bar Admissions"
+                >
+                    <ul className="text-lg mx-0">
+                        <li className="py-1">Colorado State District Courts</li>
+                        <li className="py-1">United States District Court, District of Colorado</li>
+                    </ul>
+                </Tabs.Item>
 
             </Tabs.Group>
         </div>

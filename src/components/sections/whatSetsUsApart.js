@@ -13,11 +13,11 @@ import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from "react-ico
 
 const WhatSetsUsApart = () => {
     const process = [
-        {id: 1, heading: "1. You are the Priority", caption: "When you work with me, you are the priority. I will walk you through every step of the process with compassion, individual attention, and dedication to your legal matter."},
-        {id: 2, heading: "2. I'll Explain the Process", caption: "A lot of attorneys like to overcomplicate things. Not me. I'll clearly and honestly explain the process, so you will be informed and comfortable every step of the way."},
-        {id: 3, heading: "3. You Won't Wait on Me", caption: "In fact, I'll come to you - your home or virtually via Zoom, Facetime, or Video Chat. Whether it's returning a call, answering a question, or just checking in, I am always available."},
-        {id: 4, heading: "4. I'll Handle Everything", caption: "It's easy to feel overwhelmed and I understand that. I'll take on your stress by collecting documents, negotiating with the other party, and fighting on your behalf."},
-        {id: 5, heading: "5. I'll Get You Great Results", caption: "Though I can't guarantee results, my team has a track record of getting clients great outcomes. We will pursue full and complete justice on your behalf, regardless of any obstacles along the way."},
+        {id: 1, heading: "1. You are the Priority", caption: "When you work with us, you are the priority. We will walk you through every step of the process with compassion, individual attention, and dedication to your legal matter."},
+        {id: 2, heading: "2. We'll Explain the Process", caption: "A lot of attorneys like to overcomplicate things. Not us. We'll clearly and honestly explain the process, so you will be informed and comfortable every step of the way."},
+        {id: 3, heading: "3. You Won't Wait on Us", caption: "In fact, we'll come to you - your home or virtually via Zoom, Facetime, or Video Chat. Whether it's returning a call, answering a question, or just checking in, we are always available."},
+        {id: 4, heading: "4. We'll Handle Everything", caption: "It's easy to feel overwhelmed and we understand that. We'll take on your stress by collecting documents, negotiating with the other party, and fighting on your behalf."},
+        {id: 5, heading: "5. We'll Get You Great Results", caption: "Though we can't guarantee results, our team has a track record of getting clients great outcomes. We will pursue full and complete justice on your behalf, regardless of any obstacles along the way."},
     ]
     const { ref, inView } = useInView({
         threshold: .1,
@@ -65,7 +65,7 @@ const WhatSetsUsApart = () => {
     return (
         <section id="what-sets-us-apart" ref={ref}>
             <div className={`container my-16 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <h2 className="text-center text-3xl mb-2 font-medium">What Sets Me Apart</h2>
+                <h2 className="text-center text-3xl mb-2 font-medium">What Sets Us Apart</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <Slider ref={setSliderRef} {...sliderSettings}>     
                     {process.map((step, index) => (
