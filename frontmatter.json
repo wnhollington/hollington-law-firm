@@ -89,6 +89,21 @@
           "title": "Is in draft",
           "name": "draft",
           "type": "draft"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "title": "practiceArea",
+          "name": "practiceArea",
+          "type": "string"
         }
       ]
     }

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import BioMenu from "../components/menus/bioMenu"
+import BioMenu from "../components/menus/bio-menu"
 
 const Bio= () => {
   return (

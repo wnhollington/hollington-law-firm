@@ -6,16 +6,16 @@ import { useStaticQuery, graphql } from "gatsby"
 const HeaderMenu = ({placement}) => {
     const data = useStaticQuery(graphql`
         query MyQuery {
-            allMdx(filter: {frontmatter: {type: {eq: "page"}}}){
-            edges {
-                node {
-                    frontmatter {
-                        title
-                        practiceArea
-                        slug
+            allMdx(filter: {frontmatter: {type: {eq: "page"}}}, sort: {frontmatter: {title: ASC}}){
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                            practiceArea
+                            slug
+                        }
                     }
                 }
-            }
             }
         }
     `)
@@ -33,6 +33,7 @@ const HeaderMenu = ({placement}) => {
                         pageFilter.includes(edge.node.frontmatter.title) ? null : <Dropdown.Item><Link to={`/${edge.node.frontmatter.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.frontmatter.practiceArea}</Link></Dropdown.Item>
                     )
                 })}
+                <Dropdown.Item><Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">View All Practice Areas</Link></Dropdown.Item>
 
             </Dropdown>
             {/* <Dropdown

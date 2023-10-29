@@ -1,6 +1,6 @@
 import * as React from "react"
 import { BsFillTelephoneFill} from "react-icons/bs"
-import HeaderMenu from "./headerMenu"
+import HeaderMenu from "./header-menu"
 
 const Mobile = () => {
     const [isOpen, setIsOpen] = React.useState(false)

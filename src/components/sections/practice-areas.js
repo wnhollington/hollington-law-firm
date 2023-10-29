@@ -9,8 +9,8 @@ const PracticeAreas = () => {
         triggerOnce: true
     })
     const data = useStaticQuery(graphql`
-        query MyQuery {
-            allMdx(filter: {frontmatter: {type: {eq: "page"}}}){
+        query PracticeAreas {
+            allMdx(filter: {frontmatter: {type: {eq: "page"}}}, limit: 4){
             edges {
                 node {
                     frontmatter {
@@ -38,6 +38,9 @@ const PracticeAreas = () => {
                             >{edge.node.frontmatter.practiceArea}</Link>                          
                         )
                     })}
+                </div>
+                <div className="my-12">
+                    <Link to={`/practice-areas`} className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg">View All</Link>       
                 </div>
             </div>
         </section>
