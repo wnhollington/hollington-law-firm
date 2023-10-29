@@ -4,6 +4,7 @@ import Mobile from "./menus/mobile"
 import { useEffect, useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import Logo from "../images/svg/logo.svg"
 
 const Header = () => {
     // Set Scroll State
@@ -31,8 +32,8 @@ const Header = () => {
     return (
         <header>
             <div className={`inset-x-0 top-0 z-50 bg-white shadow-lg transition-all ease-in-out delay-150 ${scrolled === false ? "relative" : "fixed"}`}>
-                <div className="flex justify-between items-center py-6 px-2">
-                    <Link to="/"><StaticImage src="../images/logo.png" width={250}/></Link>
+                <div className="flex justify-between items-center py-2 px-2">
+                    <Link to="/"><Logo width={175}/></Link>
                     <Desktop/>
                     <Mobile/>
                 </div>
