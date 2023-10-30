@@ -16,9 +16,10 @@ module.exports = {
       email: ""
     },
     social: {
-      facebook: ``,
-      youtube: ``,
-      instagram: ``,
+      facebook: ` `,
+      youtube: ` `,
+      instagram: ` `,
+      twitter: ` `,
     }
   },
   plugins: 

@@ -10,7 +10,7 @@ const PracticeAreas = () => {
     })
     const data = useStaticQuery(graphql`
         query PracticeAreas {
-            allMdx(filter: {frontmatter: {type: {eq: "page"}}}, limit: 4){
+            allMdx(filter: {frontmatter: {categories: {eq: "Auto Accidents"}, type: {eq: "page"}}}, limit: 3){
             edges {
                 node {
                     frontmatter {
@@ -23,7 +23,6 @@ const PracticeAreas = () => {
             }
         }
     `)
-    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy"]
     return (
         <section id="practice-ares" ref={ref}>
             <div className={`container my-16 text-center animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
@@ -32,7 +31,7 @@ const PracticeAreas = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {data.allMdx.edges.map((edge) => {
                         return (
-                            pageFilter.includes(edge.node.frontmatter.title) ? null :                             <Link 
+                            <Link 
                             to={`/${edge.node.frontmatter.slug}`}
                             className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg"
                             >{edge.node.frontmatter.practiceArea}</Link>                          

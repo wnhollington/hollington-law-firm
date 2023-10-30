@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-// import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs"
+import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs"
+import {FaXTwitter} from "react-icons/fa6"
 
 const Footer = () => {
 
@@ -9,12 +10,12 @@ const Footer = () => {
             
             <div class="flex flex-col items-center justify-center">
                 
-                {/* <ul className="flex gap-6">
-                    <li><a href={siteMetaData.social.facebook} aria-label="facebook" target="__blank"><BsFacebook size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
-                    <li><a href={siteMetaData.social.instagram} aria-label="instagram" target="__blank"><BsInstagram size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
-                    <li><a href={siteMetaData.social.youtube} aria-label="youtube" target="__blank"><BsYoutube size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
-
-                </ul> */}
+                <ul className="flex gap-6">
+                    <li><a href="www.facebook.com" aria-label="facebook" target="__blank"><BsFacebook size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="www.instagram.com" aria-label="instagram" target="__blank"><BsInstagram size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="www.youtube.com" aria-label="youtube" target="__blank"><BsYoutube size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="www.youtube.com" aria-label="youtube" target="__blank"><FaXTwitter size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
+                </ul>
 
                 <ul className="flex my-4">
                     <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/privacy-policy">Privacy Policy</Link></li>
