@@ -3,7 +3,7 @@ import { Tabs } from 'flowbite-react';
 
 const BioMenu = () => {
     return (
-        <div className="mx-4 mb-4 w-full h-48 md:h-full md:w-2/3">
+        <div className="mx-4 mb-4 w-full m-h-48 md:h-full md:w-2/3">
             <Tabs.Group
                 aria-label="Default tabs"
             >

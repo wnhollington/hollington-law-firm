@@ -22,7 +22,7 @@ const PracticeAreas = () => {
             }
         }
     `)
-    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy"]
+    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy", "About the Firm", "W. Neal Hollington, Esq."]
     return (
         <Layout>
             <div className="my-2 py-4">
