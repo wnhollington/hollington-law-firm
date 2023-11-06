@@ -12,6 +12,7 @@ import Process from "../components/sections/process"
 import Victories from "../components/sections/victories"
 import Testimonials from "../components/sections/testimonials"
 import Schedule from "../components/sections/schedule"
+import Faqs from "../components/sections/faqs"
 
 const IndexPage = () => {
   return (
@@ -21,6 +22,7 @@ const IndexPage = () => {
       <About />
       <PracticeAreas />
       <Process />
+      <Faqs/>
       <WhatSetsUsApart />
       <Victories />
       <Testimonials />
