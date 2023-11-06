@@ -19,7 +19,7 @@ const HeaderMenu = ({placement}) => {
             }
         }
     `)
-    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy", "About the Firm", "W. Neal Hollington, Esq."]
+    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy", "About the Firm", "W. Neal Hollington, Esq.", "Micah 6:8 Initiative"]
     return (            
         <>
             <Dropdown
@@ -29,6 +29,7 @@ const HeaderMenu = ({placement}) => {
             >
                 <Dropdown.Item><Link to={`/about-the-firm`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">About the Firm</Link></Dropdown.Item>
                 <Dropdown.Item><Link to={`/w-neal-hollington`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">W. Neal Hollington</Link></Dropdown.Item>
+                <Dropdown.Item><Link to={`/micah-6:8-initiative`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Micah 6:8 Initiative</Link></Dropdown.Item>
 
             </Dropdown>
 
