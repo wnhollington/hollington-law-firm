@@ -19,16 +19,16 @@ const Faqs = () => {
     ]
 
     return (
-        <section id="process" ref={ref}>
+        <section id="faqs" ref={ref}>
             <div className={`container my-16 text-center animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl font-medium mb-2">Personal Injury Faqs</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <div className="">
                     <Accordion collapseAll>
 
-                            {faqs.map((faq) => {
+                            {faqs.map((faq, index) => {
                                 return (
-                                    <Accordion.Panel>
+                                    <Accordion.Panel key={index}>
                                         <Accordion.Title className="text-sm sm:text-lg font-bold px-2 py-4 text-gray-900">{faq.point}</Accordion.Title>
                                         <Accordion.Content>
                                             <p className="text-gray-900 text-md sm:text-xl text-justify mx-auto py-4">{faq.description}</p>

@@ -69,10 +69,10 @@ const WhatSetsUsApart = () => {
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <Slider ref={setSliderRef} {...sliderSettings}>     
                     {process.map((step, index) => (
-                        <div index={1} className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
+                        <div index={1} key={index} className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
                             <div className="svg-icons">{svgIcons(index)}</div>
-                            <h3 class="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
-                            <p class="mt-6 text-gray-900 text-xl text-justify">{step.caption}</p>
+                            <h3 className="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
+                            <p className="mt-6 text-gray-900 text-xl text-justify">{step.caption}</p>
                         </div>
                     ))}                       
                 </Slider>

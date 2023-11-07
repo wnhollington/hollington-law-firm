@@ -33,6 +33,7 @@ const PracticeAreas = () => {
                         return (
                             <Link 
                             to={`/${edge.node.frontmatter.slug}`}
+                            key={edge.node.frontmatter.practiceArea}
                             className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg"
                             >{edge.node.frontmatter.practiceArea}</Link>                          
                         )

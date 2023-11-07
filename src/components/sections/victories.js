@@ -36,10 +36,11 @@ const Victories = () => {
                 <div className="bg-herringbone shadow-lg rounded-lg">
                     <Slider {...sliderSettings}>                            
                         {
-                            victories.map((victory) => {
+                            victories.map((victory, index) => {
                                 return (
                                     <div 
                                         index={1}
+                                        key={index}
                                         className="items-center justify-center p-4 rounded-lg bg-white text-center"
                                     >
                                         <p className=" text-gray-900 font-bold text-2xl">{victory.result}</p>

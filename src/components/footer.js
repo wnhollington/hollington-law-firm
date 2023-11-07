@@ -6,9 +6,9 @@ import {FaXTwitter} from "react-icons/fa6"
 const Footer = () => {
 
     return (
-        <footer class="w-full bg-primary py-8">
+        <footer className="w-full bg-primary py-8">
             
-            <div class="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
                 
                 <ul className="flex gap-6">
                     <li><a href="https://www.facebook.com" aria-label="facebook" target="__blank"><BsFacebook size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
@@ -22,7 +22,7 @@ const Footer = () => {
                     <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/disclaimer">Disclaimer</Link></li>
                     <li className="text-md md:text-lg text-white font-semibold mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/contact">Contact</Link></li>
                 </ul>
-                <p class="text-sm text-white">© Copyright 2023. All Rights Reserved.</p>
+                <p className="text-sm text-white">© Copyright 2023. All Rights Reserved.</p>
             </div>
         </footer>
     )

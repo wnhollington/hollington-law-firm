@@ -24,6 +24,7 @@ const Hero = () => {
                         <StaticImage 
                             src="../../images/neal.png"
                             className="relative"
+                            alt="Altitude Injury Law"
                         />
                     </div>
                 </div>

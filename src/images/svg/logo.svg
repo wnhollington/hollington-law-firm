@@ -3,7 +3,7 @@
   <defs>
     <style>
       .cls-1 {
-        letter-spacing: .04em;
+        letterSpacing: .04em;
       }
 
       .cls-2 {
@@ -11,31 +11,31 @@
       }
 
       .cls-2, .cls-3 {
-        stroke-width: 0px;
+        strokeWidth: 0px;
       }
 
       .cls-4 {
-        letter-spacing: -.03em;
+        letterSpacing: -.03em;
       }
 
       .cls-5 {
-        letter-spacing: 0em;
+        letterSpacing: 0em;
       }
 
       .cls-6 {
-        letter-spacing: 0em;
+        letterSpacing: 0em;
       }
 
       .cls-7 {
-        letter-spacing: 0em;
+        letterSpacing: 0em;
       }
 
       .cls-8 {
-        letter-spacing: 0em;
+        letterSpacing: 0em;
       }
 
       .cls-9 {
-        letter-spacing: -.01em;
+        letterSpacing: -.01em;
       }
 
       .cls-3, .cls-10 {
@@ -50,23 +50,23 @@
       }
 
       .cls-11 {
-        letter-spacing: -.03em;
+        letterSpacing: -.03em;
       }
 
       .cls-12 {
-        letter-spacing: .01em;
+        letterSpacing: .01em;
       }
 
       .cls-13 {
-        letter-spacing: 0em;
+        letterSpacing: 0em;
       }
 
       .cls-14 {
-        letter-spacing: 0em;
+        letterSpacing: 0em;
       }
 
       .cls-15 {
-        letter-spacing: .05em;
+        letterSpacing: .05em;
       }
     </style>
   </defs>

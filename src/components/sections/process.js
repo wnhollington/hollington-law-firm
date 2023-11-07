@@ -29,7 +29,7 @@ const Process = () => {
                     <ul className="flex flex-col text-left md:w-2/4 xl:w-1/4 max-h-48 overflow-y-auto md:max-h-full md:pr-4 md:border-r-2 border-gray-100">
                         {timeline.map((event) => {
                             return (
-                                <li className={activeTab === event.id ? "bg-primary  text-white text-sm sm:text-lg font-bold p-4 my-1 rounded-lg" : "hover:shadow-lg hover:bg-primary hover:text-white hover:rounded-lg text-sm sm:text-lg font-bold p-4 my-1"} onClick={() => setActiveTab(event.id)}>{`${event.id + 1}. ${event.point}`}</li>                    
+                                <li className={activeTab === event.id ? "bg-primary  text-white text-sm sm:text-lg font-bold p-4 my-1 rounded-lg" : "hover:shadow-lg hover:bg-primary hover:text-white hover:rounded-lg text-sm sm:text-lg font-bold p-4 my-1"} key={event.id} onClick={() => setActiveTab(event.id)}>{`${event.id + 1}. ${event.point}`}</li>                    
                             )
                         })}
                     </ul>

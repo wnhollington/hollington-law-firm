@@ -38,14 +38,15 @@ const Testimonials = () => {
 
                 <Slider {...sliderSettings}>                            
                     {
-                        clientTestimonials.map((testimonial) => {
+                        clientTestimonials.map((testimonial, index) => {
                             return (
                                 <div 
                                     index={1}
+                                    key={index}
                                     className="items-center justify-center rounded-lg shadow-lg p-4"
                                 >
-                                    <p class="mt-6 text-gray-900 text-xl text-justify"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.review}</p>
-                                    <h3 class="mt-6 text-lg text-center font-medium text-primary">{testimonial.author}</h3>
+                                    <p className="mt-6 text-gray-900 text-xl text-justify"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.review}</p>
+                                    <h3 className="mt-6 text-lg text-center font-medium text-primary">{testimonial.author}</h3>
                                 </div>
                             )
                         })
