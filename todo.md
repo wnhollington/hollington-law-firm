@@ -1,6 +1,3 @@
-- additional index sections
--- faqs
-
 - practice areas
 -- Premises Liability
 -- Uber/Ride Share Accidents

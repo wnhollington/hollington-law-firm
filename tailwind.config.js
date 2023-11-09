@@ -13,8 +13,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('../images/hero-bg.jpg')",
-        'herringbone': "url('../images/herringbone-bg.png')"
+        'hero': "url('../images/hero-bg.webp')",
+        'herringbone': "url('../images/herringbone-bg.webp')"
       },
       colors: {
         primary: "#6E0A05",

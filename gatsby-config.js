@@ -88,7 +88,7 @@ module.exports = {
           cookie_expires: 0,
         },
         pluginConfig: {
-          head: true,
+          head: false,
           respectDNT: true,
         },
       },
