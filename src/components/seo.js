@@ -15,15 +15,15 @@ const Seo = ({ description, title, children }) => {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const defaultDescription = site.siteMetadata?.description
   const defaultTitle = site.siteMetadata?.title
 
   return (
     <>
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
+      <meta property="og:title" content={defaultTitle ? `${title} | ${defaultTitle}` : title} />
+      <meta name="description" content={description ? description : defaultDescription} />
+      <meta property="og:description" content={description ? description : defaultDescription} />
       <meta property="og:type" content="website" />
       {children}
     </>

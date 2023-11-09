@@ -15,8 +15,7 @@ const Desktop = () => {
 
             <div className="hidden lg:flex">
                 <a href="tel:303.909.1227" className="flex items-center gap-2 bg-primary p-3 rounded-lg phone text-lg font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">
-                    <BsFillTelephoneFill size={"1em"} className="fill-gray-100"/>
-                    <span>Call Now</span>
+                    Call Now
                 </a>
             </div>
         </>

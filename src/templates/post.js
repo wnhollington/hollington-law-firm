@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import { Link } from 'gatsby'
 
 // Components
@@ -30,14 +29,14 @@ function Post ({ data, children, pageContext }) {
           <li>
             {previous && (
               <Link to={`/${previous.frontmatter.slug}`} rel="prev" aria-label={previous.frontmatter.title} title={previous.frontmatter.title} className="inline-flex items-center p-2 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
-                <h3 className="flex items-center gap-4"><FaArrowLeft/>Previous Post</h3>
+                <h3 className="flex items-center gap-4">&larr; Previous Post</h3>
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={`/${next.frontmatter.slug}`} rel="next" aria-label={next.frontmatter.title} title={next.frontmatter.title} className="inline-flex items-center p-2 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
-                <h3 className="flex items-center justify-right gap-4">Next Post<FaArrowRight/></h3>
+                <h3 className="flex items-center justify-right gap-4">Next Post &rarr;</h3>
               </Link>
             )}
           </li>

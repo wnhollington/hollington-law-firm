@@ -8,9 +8,9 @@ module.exports = {
   },
   siteMetadata: {
     title: `Altitude Injury Law`,
+    description: 'Colorado Personal Injury Law Firm',
     tagline: `For the People of Colorado`,
     siteUrl: `https://altitudeinjurylaw.com`,
-    description: '',
     contact: {
       phone: "",
       email: ""
@@ -91,6 +91,12 @@ module.exports = {
           head: false,
           respectDNT: true,
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
       },
     },
   ]
