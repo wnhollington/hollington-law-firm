@@ -33,7 +33,7 @@ const Victories = () => {
             <div className={`container my-16 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">Recent Results</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                <div className="bg-herringbone shadow-lg rounded-lg">
+                <div className="bg-zinc-300 shadow-lg rounded-lg">
                     <Slider {...sliderSettings}>                            
                         {
                             victories.map((victory, index) => {
