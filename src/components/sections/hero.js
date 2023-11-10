@@ -22,7 +22,7 @@ const Hero = () => {
                     </div>
                     <div className="flex flex-col justify-center">
                         <StaticImage 
-                            src="../../images/neal.webp"
+                            src="https://res.cloudinary.com/wnhollington/image/upload/v1699606613/e1eqadzarq4bjsapvwgy.webp"
                             className="relative"
                             alt="Altitude Injury Law"
                         />

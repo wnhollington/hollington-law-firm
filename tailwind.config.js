@@ -13,8 +13,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('../images/hero-bg.webp')",
-        'herringbone': "url('../images/herringbone-bg.webp')"
+        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/v1699606613/fwc3pmbkdm0xdmvpzmkc.webp')",
+        'herringbone': "url('https://res.cloudinary.com/wnhollington/image/upload/v1699606613/pijwvmzqmulmxpocc3iq.webp')"
       },
       colors: {
         primary: "#6E0A05",

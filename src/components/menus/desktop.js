@@ -1,5 +1,4 @@
 import * as React from "react"
-import { BsFillTelephoneFill } from "react-icons/bs"
 import HeaderMenu from "./header-menu"
 
 const Desktop = () => {
