@@ -22,6 +22,7 @@ module.exports = {
       twitter: ` `,
     }
   },
+  partytownProxiedURLs: [`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`],
   plugins: 
   [
       "gatsby-plugin-image", 
@@ -69,6 +70,20 @@ module.exports = {
       __key: "posts"
     },
     {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        token: process.env.SANITY_TOKEN,
+
+        // If the Sanity GraphQL API was deployed using `--tag <name>`,
+        // use `graphqlTag` to specify the tag name. Defaults to `default`.
+        graphqlTag: 'default',
+      },
+    },    
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
@@ -84,5 +99,5 @@ module.exports = {
       },
     },
   ],
-  partytownProxiedURLs: [`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`]
+
 };

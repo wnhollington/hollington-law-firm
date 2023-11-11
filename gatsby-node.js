@@ -7,34 +7,40 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Templates
   const pageTemplate = path.resolve(`./src/templates/page.js`)
+  const practiceAreaTemplate = path.resolve(`./src/templates/practice-area.js`)
   const postTemplate = path.resolve(`./src/templates/post.js`)
 
   const result = await graphql(`
     {
-      pages: allMdx(filter: {frontmatter: {draft: {ne: true}, type: {eq: "page"}}}) {
+      pages: allSanityPage {
         edges {
           node {
-            id
-            frontmatter {
-              title
-              slug
-            }
-            internal {
-              contentFilePath
+            _id
+            title
+            slug {
+              current
             }
           }
         }
       }
-      posts: allMdx(filter: {frontmatter: {draft: {ne: true}, type: {eq: "post"}}}) {
+      practiceAreas: allSanityPracticeArea {
         edges {
           node {
-            id
-            frontmatter {
-              title
-              slug
+            _id
+            title
+            slug {
+              current
             }
-            internal {
-              contentFilePath
+          }
+        }
+      }
+      posts: allSanityPost {
+        edges {
+          node {
+            _id
+            title
+            slug {
+              current
             }
           }
         }
@@ -46,12 +52,26 @@ exports.createPages = async ({ graphql, actions }) => {
   const pages = result.data.pages.edges
   pages.forEach(page => {
     createPage({
-      path: `${page.node.frontmatter.slug}`,
-      component: `${pageTemplate}?__contentFilePath=${page.node.internal.contentFilePath}`,
+      path: `${page.node.slug.current}`,
+      component: require.resolve(pageTemplate),
       context: {
-        title: page.node.frontmatter.title,
-        id: page.node.id,
-        slug: page.node.frontmatter.id
+        title: page.node.title,
+        id: page.node._id,
+        slug: page.node.slug.current
+      },
+    })
+  })
+
+  // Create Practice Area Pages
+  const practiceAreas = result.data.practiceAreas.edges
+  practiceAreas.forEach(practiceArea => {
+    createPage({
+      path: `${practiceArea.node.slug.current}`,
+      component: require.resolve(practiceAreaTemplate),
+      context: {
+        title: practiceArea.node.title,
+        id: practiceArea.node._id,
+        slug: practiceArea.node.slug.current
       },
     })
   })
@@ -64,14 +84,15 @@ exports.createPages = async ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node
       // Previous and next are object props sent as pageContext object to articleTemplate
       createPage({
-          path: `/${post.node.frontmatter.slug}`,
-          component: `${postTemplate}?__contentFilePath=${post.node.internal.contentFilePath}`,
+          path: `${post.node.slug.current}`,
+          component: require.resolve(postTemplate),
           context: {
-              id: post.node.id,
-              slug: post.node.frontmatter.slug,
+              id: post.node._id,
+              slug: post.node.slug.current,
               previous,
               next,
           },
       })
   })
+
 }

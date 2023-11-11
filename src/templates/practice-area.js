@@ -5,15 +5,17 @@ import BlockContent from '@sanity/block-content-to-react'
 // Components
 import Layout from '../components/layout.js'
 import Seo from '../components/seo.js'
+import Schedule from "../components/sections/schedule.js"
 
 // Render
 function Page({ data }) {
   return (
-    <Layout pageTitle={data.sanityPage.title}>
+    <Layout pageTitle={data.sanityPracticeArea.title}>
       <article className='max-w-5xl my-8 p-4 xl:p-0 mx-auto'>
-        <h1 className="text-center">{data.sanityPage.title}</h1>
-        <BlockContent blocks={data.sanityPage._rawContent} />
+        <h1 className="text-center">{data.sanityPracticeArea.title}</h1>
+        <BlockContent blocks={data.sanityPracticeArea._rawContent} />
       </article>
+      <Schedule/>
     </Layout>
   )
 }
@@ -21,7 +23,7 @@ function Page({ data }) {
 // Graphql call
 export const query = graphql`
   query ($id: String!) {
-    sanityPage(_id: {eq: $id}) {
+    sanityPracticeArea(_id: {eq: $id}) {
       title
       slug {
         current
@@ -34,6 +36,6 @@ export default Page
 
 export const Head = ({data}) => (
   <Seo 
-    title={data.sanityPage.title}
+    title={data.sanityPracticeArea.title}
   />
 )

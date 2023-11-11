@@ -1,12 +1,22 @@
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby";
 import { useInView } from "react-intersection-observer"
-import { victories } from "../../utilities/victories";
 import Slider from "react-slick"
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 
 const Victories = () => {
-
+    const data = useStaticQuery(graphql`
+        query {
+            allSanityResult {
+                edges {
+                  node {
+                    result
+                  }
+                }
+            }
+        }
+    `)
     const { ref, inView } = useInView({
         threshold: .1,
         triggerOnce: true
@@ -36,14 +46,14 @@ const Victories = () => {
                 <div className="bg-zinc-300 shadow-lg rounded-lg">
                     <Slider {...sliderSettings}>                            
                         {
-                            victories.map((victory, index) => {
+                            data.allSanityResult.edges.map((result, index) => {
                                 return (
                                     <div 
                                         index={1}
                                         key={index}
                                         className="items-center justify-center p-4 rounded-lg bg-white text-center"
                                     >
-                                        <p className=" text-gray-900 font-bold text-2xl">{victory.result}</p>
+                                        <p className=" text-gray-900 font-bold text-2xl">${result.node.result}</p>
                                     </div>
                                 )
                             })
