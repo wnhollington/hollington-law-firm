@@ -77,22 +77,7 @@ module.exports = {
       }
     },
     'gatsby-plugin-sitemap',
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          process.env.GA_TRACKING_ID
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-        },
-      },
-    },
     "gatsby-plugin-webpack-bundle-analyser-v2"
-  ]
+  ],
+  partytownProxiedURLs: [`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`]
 };
