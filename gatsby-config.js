@@ -77,7 +77,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-sitemap',
-    "gatsby-plugin-webpack-bundle-analyser-v2"
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+      },
+    },
   ],
   partytownProxiedURLs: [`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`]
 };

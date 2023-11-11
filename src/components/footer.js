@@ -11,10 +11,10 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center">
                 
                 <ul className="flex gap-6">
-                    <li><a href="https://www.facebook.com" aria-label="facebook" target="__blank"><BsFacebook size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
-                    <li><a href="https://www.instagram.com" aria-label="instagram" target="__blank"><BsInstagram size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
-                    <li><a href="https://www.youtube.com" aria-label="youtube" target="__blank"><BsYoutube size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
-                    <li><a href="https://www.twitter.com" aria-label="twitter" target="__blank"><FaXTwitter size={"1.75em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="https://www.facebook.com" aria-label="facebook" target="__blank"><BsFacebook size={"2em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="https://www.instagram.com" aria-label="instagram" target="__blank"><BsInstagram size={"2em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="https://www.youtube.com" aria-label="youtube" target="__blank"><BsYoutube size={"2em"} className="fill-white hover:fill-gray-200"/></a></li>
+                    <li><a href="https://www.twitter.com" aria-label="twitter" target="__blank"><FaXTwitter size={"2em"} className="fill-white hover:fill-gray-200"/></a></li>
                 </ul>
 
                 <ul className="flex my-4">
