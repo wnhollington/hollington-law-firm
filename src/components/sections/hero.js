@@ -11,8 +11,8 @@ const Hero = () => {
     const [toggler, setToggler] = useState(false)
     return (
         <section>
-            <div className="relative isolate bg-hero bg-cover bg-no-repeat h-96 md:h-auto xl:h-screen">
-                <div className="h-full max-w-full flex flex-col-reverse sm:flex-row items-center justify-center md:justify-around p-2 md:gap-10 bg-red-100/60">
+            <div className="relative isolate bg-hero bg-cover bg-no-repeat xl:h-screen">
+                <div className="h-full max-w-full flex flex-col-reverse sm:flex-row items-center justify-around p-2 md:gap-10 bg-red-100/60">
                     <div className="xl:text-center my-4">
                         <h1 className="font-['Libre_Baskerville'] text-3xl md:text-4xl lg:text-5xl max-w-2xl">{siteMetaData.tagline}</h1>
                         <div className="flex flex-row my-2 mx-auto md:my-6">
@@ -20,12 +20,10 @@ const Hero = () => {
                             <BsPlayCircle size={64} className="text-primary animate-pulse hover:cursor-pointer mx-auto" onClick={() => setToggler(!toggler)}/>
                         </div>
                     </div>
-                    <div className="hidden md:block">
-                        <StaticImage 
-                            src="https://res.cloudinary.com/wnhollington/image/upload/e_improve:outdoor:100/q_60/e1eqadzarq4bjsapvwgy.jpg"
-                            alt="Altitude Injury Law"
-                        />
-                    </div>
+                    <StaticImage 
+                        src="https://res.cloudinary.com/wnhollington/image/upload/e_improve:outdoor:100/q_60/e1eqadzarq4bjsapvwgy.jpg"
+                        alt="Altitude Injury Law"
+                    />
                 </div>
             </div>
             <FsLightbox 
