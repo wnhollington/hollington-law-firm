@@ -22,7 +22,10 @@ module.exports = {
       twitter: ` `,
     }
   },
-  partytownProxiedURLs: [`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`],
+  partytownProxiedURLs: [
+    `https://www.googletagmanager.com/gtm.js?id=${process.env.GA_TRACKING_ID}`,
+    `https://www.google-analytics.com/analytics.js`,
+  ],
   plugins: 
   [
       "gatsby-plugin-image", 
@@ -36,7 +39,6 @@ module.exports = {
     "gatsby-plugin-sharp", 
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
-    "gatsby-plugin-mdx", 
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -52,22 +54,6 @@ module.exports = {
         "path": "./src/pages/"
       },
       __key: "pages"
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "mdx-pages",
-        "path": "./src/content/pages"
-      },
-      __key: "mdx-pages"
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "posts",
-        "path": "./src/content/posts"
-      },
-      __key: "posts"
     },
     {
       resolve: `gatsby-source-sanity`,

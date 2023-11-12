@@ -9,20 +9,18 @@ import Seo from "../components/seo"
 const PracticeAreas = () => {
     const data = useStaticQuery(graphql`
         query MyQuery {
-            allMdx(filter: {frontmatter: {type: {eq: "page"}}}, sort: {frontmatter: {title: ASC}}){
+            allSanityPracticeArea{
                 edges {
                     node {
-                        frontmatter {
-                            title
-                            practiceArea
-                            slug
+                        title
+                        slug {
+                            current
                         }
                     }
                 }
             }
         }
     `)
-    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy", "About the Firm", "W. Neal Hollington, Esq.", "Micah 6:8 Initiative"]
     return (
         <Layout>
             <div className="my-2 py-4">
@@ -31,9 +29,9 @@ const PracticeAreas = () => {
                 <p>Welcome to our practice areas page. We regularly represent clients in the matters outlined below. Having said that, if you don't see your specific legal concern listed here, we still encourage you to reach out to us. If we cannot handle the matter ourselves, we are more than happy to refer you to another attorney in our network that can. Our dedicated team is well-connected within the legal community and can refer you to a qualified attorney who can address your specific needs. Your well-being and legal representation are our top priority and utmost concern.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-8 lg:mx-auto text-center my-8">
-                {data.allMdx.edges.map((edge) => {
+                {data.allSanityPracticeArea.edges.map((edge) => {
                     return (
-                        pageFilter.includes(edge.node.frontmatter.title) ? null : <Link to={`/${edge.node.frontmatter.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-white hover:bg-primary py-8 bg-white shadow-lg border-1 border-gray-900">{edge.node.frontmatter.practiceArea}</Link>
+                        <Link to={`/${edge.node.slug.current}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-white hover:bg-primary py-8 bg-white shadow-lg border-1 border-gray-900">{edge.node.title}</Link>
                     )
                 })}
             </div>

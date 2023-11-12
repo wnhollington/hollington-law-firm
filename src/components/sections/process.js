@@ -40,9 +40,10 @@ const Process = () => {
                         alt=""
                         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
                         src={
-                        "../../images/herringbone-bg.webp"
+                        "https://res.cloudinary.com/wnhollington/image/upload/v1699606613/pijwvmzqmulmxpocc3iq.webp"
                         }
                         formats={["auto", "webp", "avif"]}
+                        className="rounded-lg"
                     />
                     <div
                         style={{
@@ -55,7 +56,7 @@ const Process = () => {
                         }}
                     >
                         {/* Any content here will be centered in the component */}
-                        <div className="flex flex-col md:flex-row gap-8 shadow-lg p-8 rounded-lg">
+                        <div className="flex flex-col md:flex-row gap-8 shadow-lg p-8 rounded-lg h-full">
                             {/* Tabs */}
                             <ul className="flex flex-col text-left md:w-2/4 xl:w-1/4 max-h-48 overflow-y-auto md:max-h-full md:pr-4 md:border-r-2 border-gray-100">
                                 {timeline.map((event) => {

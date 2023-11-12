@@ -6,20 +6,18 @@ import { useStaticQuery, graphql } from "gatsby"
 const HeaderMenu = ({placement}) => {
     const data = useStaticQuery(graphql`
         query MyQuery {
-            allMdx(filter: {frontmatter: {type: {eq: "page"}}}, sort: {frontmatter: {title: ASC}}){
+            allSanityPracticeArea{
                 edges {
                     node {
-                        frontmatter {
-                            title
-                            practiceArea
-                            slug
+                        title
+                        slug {
+                            current
                         }
                     }
                 }
             }
         }
     `)
-    const pageFilter = ["About Me", "Disclaimer", "Privacy Policy", "About the Firm", "W. Neal Hollington, Esq.", "Micah 6:8 Initiative"]
     return (            
         <>
             <Dropdown
@@ -38,9 +36,9 @@ const HeaderMenu = ({placement}) => {
                 label="Practice Areas"
                 placement={placement}
             >
-                {data.allMdx.edges.map((edge) => {
+                {data.allSanityPracticeArea.edges.map((edge) => {
                     return (
-                        pageFilter.includes(edge.node.frontmatter.title) ? null : <Dropdown.Item key={edge.node.frontmatter.title}><Link to={`/${edge.node.frontmatter.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.frontmatter.practiceArea}</Link></Dropdown.Item>
+                        <Dropdown.Item key={edge.title}><Link to={`/${edge.node.slug.current}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
                     )
                 })}
                 <Dropdown.Item key="All Practice Areas"><Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">View All Practice Areas</Link></Dropdown.Item>

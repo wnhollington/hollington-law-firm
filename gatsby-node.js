@@ -9,6 +9,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const pageTemplate = path.resolve(`./src/templates/page.js`)
   const practiceAreaTemplate = path.resolve(`./src/templates/practice-area.js`)
   const postTemplate = path.resolve(`./src/templates/post.js`)
+  const attorneyBioTemplate = path.resolve(`./src/templates/attorney-bio.js`)
 
   const result = await graphql(`
     {
@@ -39,6 +40,16 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             _id
             title
+            slug {
+              current
+            }
+          }
+        }
+      }
+      attorneys: allSanityAttorney {
+        edges {
+          node {
+            _id
             slug {
               current
             }
@@ -93,6 +104,18 @@ exports.createPages = async ({ graphql, actions }) => {
               next,
           },
       })
+  })
+
+  // Create Attorney Bios
+  const attorneys = result.data.attorneys.edges
+  attorneys.forEach(attorney => {
+    createPage({
+      path: `${attorney.node.slug.current}`,
+      component: require.resolve(attorneyBioTemplate),
+      context: {
+        id: attorney.node._id,
+      },
+    })
   })
 
 }

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
+import BlockContent from "@sanity/block-content-to-react"
 
 // Components
 import Layout from '../components/layout.js'
@@ -17,10 +18,10 @@ function Post ({ data, pageContext }) {
       <article className='max-w-5xl mt-8 p-4 md:mx-auto'>
         <header className='text-center'>
           <h1>{data.sanityPost.title}</h1>
-          <GatsbyImage image={data.sanityPost.featured_image.asset.gatsbyImageData} />
+          <GatsbyImage image={data.sanityPost.featured_image.asset.gatsbyImageData} alt={data.sanityPost.title}/>
           <p className='italic'>{data.sanityPost.description}</p>
         </header>
-        <BlockContent block={data.SanityPost._rawContent} />
+        <BlockContent blocks={data.sanityPost._rawContent} />
       </article>
 
       {/* Navigation */}
