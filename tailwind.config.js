@@ -28,7 +28,7 @@ module.exports = {
     }
   },
   plugins: [
-    require('./node_modules/flowbite/plugin'),
+    require('flowbite/plugin'),
     'gatsby-plugin-postcss',
   ],
 }

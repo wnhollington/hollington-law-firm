@@ -2,6 +2,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 require('dotenv').config();
+
 module.exports = {
   flags: {
     DEV_SSR: true
@@ -60,13 +61,10 @@ module.exports = {
       options: {
         projectId: process.env.SANITY_PROJECT_ID,
         dataset: `production`,
-        // a token with read permissions is required
-        // if you have a private dataset
         token: process.env.SANITY_TOKEN,
-
-        // If the Sanity GraphQL API was deployed using `--tag <name>`,
-        // use `graphqlTag` to specify the tag name. Defaults to `default`.
         graphqlTag: 'default',
+        watchMode: true,
+        overlayDrafts: true,
       },
     },    
     {
@@ -81,7 +79,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {
-        devMode: true,
+        devMode: false,
       },
     },
   ],

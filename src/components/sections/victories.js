@@ -53,7 +53,7 @@ const Victories = () => {
                                         key={index}
                                         className="items-center justify-center p-4 rounded-lg bg-white text-center"
                                     >
-                                        <p className=" text-gray-900 font-bold text-2xl">${result.node.result}</p>
+                                        <p className=" text-gray-900 font-bold text-2xl"><span className="mr-0.5">$</span>{result.node.result.toLocaleString("en-US")}</p>
                                     </div>
                                 )
                             })
