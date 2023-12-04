@@ -6,13 +6,11 @@ import { useStaticQuery, graphql } from "gatsby"
 const HeaderMenu = ({placement}) => {
     const data = useStaticQuery(graphql`
         query MyQuery {
-            allSanityPracticeArea{
+            allContentfulPracticeAreas{
                 edges {
                     node {
                         title
-                        slug {
-                            current
-                        }
+                        slug
                     }
                 }
             }
@@ -35,9 +33,9 @@ const HeaderMenu = ({placement}) => {
                 label="Practice Areas"
                 placement={placement}
             >
-                {data.allSanityPracticeArea.edges.map((edge) => {
+                {data.allContentfulPracticeAreas.edges.map((edge) => {
                     return (
-                        <Dropdown.Item key={edge.title}><Link to={`/${edge.node.slug.current}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
+                        <Dropdown.Item key={edge.title}><Link to={`/${edge.node.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
                     )
                 })}
                 <Dropdown.Item key="All Practice Areas"><Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">View All Practice Areas</Link></Dropdown.Item>

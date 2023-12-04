@@ -57,17 +57,6 @@ module.exports = {
       __key: "pages"
     },
     {
-      resolve: `gatsby-source-sanity`,
-      options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: `production`,
-        token: process.env.SANITY_TOKEN,
-        graphqlTag: 'default',
-        watchMode: true,
-        overlayDrafts: true,
-      },
-    },
-    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
