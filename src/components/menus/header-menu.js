@@ -26,8 +26,7 @@ const HeaderMenu = ({placement}) => {
                 placement={placement}
             >
                 <Dropdown.Item key="about the firm"><Link to={`/about-the-firm`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">About the Firm</Link></Dropdown.Item>
-                <Dropdown.Item key="W. Neal Hollington"><Link to={`/w-neal-hollington`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">W. Neal Hollington</Link></Dropdown.Item>
-                <Dropdown.Item key="Micah 6:8 Initiative"><Link to={`/micah-6:8-initiative`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Micah 6:8 Initiative</Link></Dropdown.Item>
+                <Dropdown.Item key="W. Neal Hollington"><Link to={`/w-neal-hollington`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">W. Neal Hollington, Esq.</Link></Dropdown.Item>
 
             </Dropdown>
 

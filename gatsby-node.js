@@ -8,51 +8,43 @@ exports.createPages = async ({ graphql, actions }) => {
   // Templates
   const pageTemplate = path.resolve(`./src/templates/page.js`)
   const practiceAreaTemplate = path.resolve(`./src/templates/practice-area.js`)
-  const postTemplate = path.resolve(`./src/templates/post.js`)
+  const articleTemplate = path.resolve(`./src/templates/article.js`)
   const attorneyBioTemplate = path.resolve(`./src/templates/attorney-bio.js`)
 
   const result = await graphql(`
     {
-      pages: allSanityPage {
+      pages: allContentfulPages {
         edges {
           node {
-            _id
+            id
             title
-            slug {
-              current
-            }
+            slug
           }
         }
       }
-      practiceAreas: allSanityPracticeArea {
+      practiceAreas: allContentfulPracticeAreas {
         edges {
           node {
-            _id
+            id
             title
-            slug {
-              current
-            }
+            slug
           }
         }
       }
-      posts: allSanityPost {
+      articles: allContentfulArticles {
         edges {
           node {
-            _id
+            id
             title
-            slug {
-              current
-            }
+            slug
           }
         }
       }
-      attorneys: allSanityAttorney {
+      attorneys: allContentfulAttorneys{
         edges {
           node {
-            _id
-            slug {
-              current
-            }
+            id
+            slug
           }
         }
       }
@@ -63,12 +55,12 @@ exports.createPages = async ({ graphql, actions }) => {
   const pages = result.data.pages.edges
   pages.forEach(page => {
     createPage({
-      path: `${page.node.slug.current}`,
+      path: `${page.node.slug}`,
       component: require.resolve(pageTemplate),
       context: {
         title: page.node.title,
-        id: page.node._id,
-        slug: page.node.slug.current
+        id: page.node.id,
+        slug: page.node.slug
       },
     })
   })
@@ -77,29 +69,29 @@ exports.createPages = async ({ graphql, actions }) => {
   const practiceAreas = result.data.practiceAreas.edges
   practiceAreas.forEach(practiceArea => {
     createPage({
-      path: `${practiceArea.node.slug.current}`,
+      path: `${practiceArea.node.slug}`,
       component: require.resolve(practiceAreaTemplate),
       context: {
         title: practiceArea.node.title,
-        id: practiceArea.node._id,
-        slug: practiceArea.node.slug.current
+        id: practiceArea.node.id,
+        slug: practiceArea.node.slug
       },
     })
   })
 
   // Create Posts and Pagination
-  const posts = result.data.posts.edges
-  posts.forEach((post, index) => {
+  const articles = result.data.articles.edges
+  articles.forEach((article, index) => {
       // Create prev and next pages
-      const previous = index === posts.length - 1 ? null: posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+      const previous = index === articles.length - 1 ? null: articles[index + 1].node
+      const next = index === 0 ? null : articles[index - 1].node
       // Previous and next are object props sent as pageContext object to articleTemplate
       createPage({
-          path: `${post.node.slug.current}`,
-          component: require.resolve(postTemplate),
+          path: `${article.node.slug}`,
+          component: require.resolve(articleTemplate),
           context: {
-              id: post.node._id,
-              slug: post.node.slug.current,
+              id: article.node.id,
+              slug: article.node.slug,
               previous,
               next,
           },
@@ -110,10 +102,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const attorneys = result.data.attorneys.edges
   attorneys.forEach(attorney => {
     createPage({
-      path: `${attorney.node.slug.current}`,
+      path: `${attorney.node.slug}`,
       component: require.resolve(attorneyBioTemplate),
       context: {
-        id: attorney.node._id,
+        id: attorney.node.id,
+        slug: attorney.node.slug
       },
     })
   })

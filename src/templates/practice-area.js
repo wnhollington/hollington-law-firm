@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import BlockContent from '@sanity/block-content-to-react'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 // Components
 import Layout from '../components/layout.js'
@@ -10,10 +10,10 @@ import Schedule from "../components/sections/schedule.js"
 // Render
 function Page({ data }) {
   return (
-    <Layout pageTitle={data.sanityPracticeArea.title}>
+    <Layout>
       <article className='max-w-5xl my-8 p-4 xl:p-0 mx-auto'>
-        <h1 className="text-center">{data.sanityPracticeArea.title}</h1>
-        <BlockContent blocks={data.sanityPracticeArea._rawContent} />
+        <h1 className="text-center">{data.contentfulPracticeAreas.title}</h1>
+        <div>{renderRichText(data.contentfulPracticeAreas.body)}</div>
       </article>
       <Schedule/>
     </Layout>
@@ -23,12 +23,14 @@ function Page({ data }) {
 // Graphql call
 export const query = graphql`
   query ($id: String!) {
-    sanityPracticeArea(_id: {eq: $id}) {
+    contentfulPracticeAreas(id: {eq: $id}) {
       title
-      slug {
-        current
+      seoTitle
+      seoDescription
+      slug
+      body {
+        raw
       }
-      _rawContent
     }
   }
 `
@@ -36,6 +38,7 @@ export default Page
 
 export const Head = ({data}) => (
   <Seo 
-    title={data.sanityPracticeArea.title}
+    title={data.contentfulPracticeAreas.seoTitle}
+    description={data.contentfulPracticeAreas.seoDescription}
   />
 )

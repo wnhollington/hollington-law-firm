@@ -10,15 +10,13 @@ const PracticeAreas = () => {
     })
     const data = useStaticQuery(graphql`
         query PracticeAreas {
-            allSanityPracticeArea(limit: 4){
-            edges {
-                node {
-                    title
-                    slug {
-                        current
+            allContentfulPracticeAreas(limit: 4){
+                edges {
+                    node {
+                        title
+                        slug
                     }
                 }
-            }
             }
         }
     `)
@@ -28,10 +26,10 @@ const PracticeAreas = () => {
                 <h2 className="text-center text-3xl font-medium mb-2">Cases We Handle</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {data.allSanityPracticeArea.edges.map((edge) => {
+                    {data.allContentfulPracticeAreas.edges.map((edge) => {
                         return (
                             <Link 
-                            to={`/${edge.node.slug.current}`}
+                            to={`/${edge.node.slug}`}
                             key={edge.node.title}
                             className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg"
                             >{edge.node.title}</Link>                          

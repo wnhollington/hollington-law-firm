@@ -5,13 +5,13 @@ import Slider from "react-slick"
 import "../../../node_modules/slick-carousel/slick/slick.css"
 import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 
-const Victories = () => {
+const Results = () => {
     const data = useStaticQuery(graphql`
         query {
-            allSanityResult {
+            allContentfulResults {
                 edges {
                   node {
-                    result
+                    caseResult
                   }
                 }
             }
@@ -46,14 +46,14 @@ const Victories = () => {
                 <div className="bg-zinc-300 shadow-lg rounded-lg">
                     <Slider {...sliderSettings}>                            
                         {
-                            data.allSanityResult.edges.map((result, index) => {
+                            data.allContentfulResults.edges.map((result, index) => {
                                 return (
                                     <div 
                                         index={1}
                                         key={index}
                                         className="items-center justify-center p-4 rounded-lg bg-white text-center"
                                     >
-                                        <p className=" text-gray-900 font-bold text-2xl"><span className="mr-0.5">$</span>{result.node.result.toLocaleString("en-US")}</p>
+                                        <p className=" text-gray-900 font-bold text-2xl"><span className="mr-0.5">$</span>{result.node.caseResult.toLocaleString("en-US")}</p>
                                     </div>
                                 )
                             })
@@ -65,4 +65,4 @@ const Victories = () => {
     )
 }
 
-export default Victories
+export default Results

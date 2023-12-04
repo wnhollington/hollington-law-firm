@@ -9,11 +9,13 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css"
 const Testimonials = () => {
     const data = useStaticQuery(graphql`
         query {
-            allSanityTestimonial {
+            allContentfulTestimonials {
                 edges {
                   node {
-                    testimonial
                     name
+                    testimonial {
+                        testimonial
+                    }
                   }
                 }
             }
@@ -48,14 +50,14 @@ const Testimonials = () => {
 
                 <Slider {...sliderSettings}>                            
                     {
-                        data.allSanityTestimonial.edges.map((testimonial, index) => {
+                        data.allContentfulTestimonials.edges.map((testimonial, index) => {
                             return (
                                 <div 
                                     index={1}
                                     key={index}
                                     className="items-center justify-center rounded-lg shadow-lg p-4"
                                 >
-                                    <p className="mt-6 text-gray-900 text-xl text-justify"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.node.testimonial}</p>
+                                    <p className="mt-6 text-gray-900 text-xl text-justify"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.node.testimonial.testimonial}</p>
                                     <h3 className="mt-6 text-lg text-center font-medium text-primary">{testimonial.node.name}</h3>
                                 </div>
                             )
