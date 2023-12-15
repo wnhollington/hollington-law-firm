@@ -5,8 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const HeaderMenu = ({placement}) => {
     const data = useStaticQuery(graphql`
-        query MyQuery {
-            allContentfulPracticeAreas{
+        query QueryPracticeAreasForHeaderMenu {
+            allContentfulPracticeAreas(sort: {title: ASC}){
                 edges {
                     node {
                         title

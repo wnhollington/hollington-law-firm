@@ -64,7 +64,7 @@ const WhatSetsUsApart = () => {
 
     return (
         <section id="what-sets-us-apart" ref={ref}>
-            <div className={`container my-16 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
+            <div className={`container my-16 lg:my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">What Sets Us Apart</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <Slider ref={setSliderRef} {...sliderSettings}>     
@@ -72,7 +72,7 @@ const WhatSetsUsApart = () => {
                         <div index={1} key={index} className="items-center justify-center rounded-lg block m-4 p-6 shadow-lg">
                             <div className="svg-icons">{svgIcons(index)}</div>
                             <h3 className="mt-12 text-2xl font-medium text-gray-900">{step.heading}</h3>
-                            <p className="mt-6 text-gray-900 text-xl text-justify">{step.caption}</p>
+                            <p className="mt-6 text-gray-900 text-xl text-justify hyphens-auto">{step.caption}</p>
                         </div>
                     ))}                       
                 </Slider>

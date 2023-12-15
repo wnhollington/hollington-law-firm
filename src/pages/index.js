@@ -21,9 +21,9 @@ const IndexPage = () => {
       <Accolades />
       <About />
       <PracticeAreas />
+      <WhatSetsUsApart />
       <Process />
       <Faqs/>
-      <WhatSetsUsApart />
       <Results />
       <Testimonials />
       <Schedule />
@@ -33,4 +33,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Denver Personal Injury Attorney" />

@@ -9,7 +9,7 @@ const Schedule = () => {
     })
     return (
         <section id="schedule" ref={ref}>
-            <div className={`container my-16 text-center animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
+            <div className={`container my-16 lg:my-24 text-center animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl font-medium mb-2">Contact Us Today</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <p className="text-xl text-justify text-gray-900 max-w-5xl mx-auto mb-12">
