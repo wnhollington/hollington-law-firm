@@ -29,9 +29,9 @@ const Faqs = () => {
                             {faqs.map((faq, index) => {
                                 return (
                                     <Accordion.Panel key={index}>
-                                        <Accordion.Title className="text-sm sm:text-lg font-bold px-2 py-4 text-gray-900">{faq.point}</Accordion.Title>
+                                        <Accordion.Title className="text-lg sm:text-xl font-semibold px-2 py-4 text-gray-900">{faq.point}</Accordion.Title>
                                         <Accordion.Content>
-                                            <p className="text-gray-900 text-md sm:text-xl text-justify mx-auto py-4">{faq.description}</p>
+                                            <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4">{faq.description}</p>
                                         </Accordion.Content>
                                     </Accordion.Panel>
                                 )

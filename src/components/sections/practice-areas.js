@@ -10,7 +10,7 @@ const PracticeAreas = () => {
     })
     const data = useStaticQuery(graphql`
         query PracticeAreas {
-            allContentfulPracticeAreas(limit: 4){
+            allContentfulPracticeAreas(limit: 4, sort: {title: ASC}){
                 edges {
                     node {
                         title
@@ -31,13 +31,13 @@ const PracticeAreas = () => {
                             <Link 
                             to={`/${edge.node.slug}`}
                             key={edge.node.title}
-                            className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg"
+                            className="bg-primary hover:shadow-lg text-white text-lg font-semibold p-4 rounded-lg"
                             >{edge.node.title}</Link>                          
                         )
                     })}
                 </div>
                 <div className="my-12">
-                    <Link to={`/practice-areas`} className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg">View All</Link>       
+                    <Link to={`/practice-areas`} className="bg-primary hover:shadow-lg text-white text-lg font-bold p-4 rounded-lg">View All</Link>       
                 </div>
             </div>
         </section>

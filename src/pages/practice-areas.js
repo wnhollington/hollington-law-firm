@@ -8,8 +8,8 @@ import Seo from "../components/seo"
 
 const PracticeAreas = () => {
     const data = useStaticQuery(graphql`
-        query MyQuery {
-            allContentfulPracticeAreas{
+        query queryPracticeAreas {
+            allContentfulPracticeAreas(sort: {title: ASC}){
                 edges {
                     node {
                         title

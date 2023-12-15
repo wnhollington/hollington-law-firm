@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useInView } from "react-intersection-observer"
+import {StaticImage} from "gatsby-plugin-image"
 
 const About = () => {
     const { ref, inView } = useInView({
@@ -12,43 +13,27 @@ const About = () => {
                 <div>
                     <h2 className="text-center text-3xl mb-2 font-medium">Denver Personal Injury Lawyer</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <p className="text-xl text-gray-900 text-justify">
-                        Life can change dramatically in the blink of an eye. Accidents, whether on the bustling streets of Denver or in the serene landscapes of Colorado's countryside, bring with them a tidal wave of pain and confusion. The physical injuries, the emotional toll, and the mounting medical bills can feel like an insurmountable mountain to climb. It's in these moments of vulnerability that you need a trusted ally, someone who understands the intricacies of personal injury law right here in Colorado.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        Colorado's personal injury cases are a complex tapestry of laws and regulations. Navigating this legal maze alone can be a nightmare, leaving you at a significant disadvantage. Insurance companies, with their armies of adjusters and legal teams, are skilled at minimizing claims. They operate with their own interests at heart, making it imperative to have a seasoned advocate by your side, someone who knows how to stand up to these giants.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        The emotional aftermath of an accident can be just as profound as the physical injuries. Anxiety, depression, and the strain on relationships often follow. The simplest tasks become monumental challenges, and the road to recovery seems endless. It's a dark tunnel, and finding the light can feel like an impossible task without the right support.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        In the heart of Colorado, our communities are built on a foundation of resilience and unity. However, when it comes to personal injury cases, finding the right path forward can be a daunting task. Without a seasoned advocate, your voice may get lost in the complexities of the legal system. You deserve someone who understands the unique challenges you're facing right here in our great state.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        Medical bills, rehabilitation costs, and lost wages can quickly spiral out of control. The financial burden of an accident can feel like a never-ending nightmare. It's a cruel irony that when you should be focusing on healing, you're left grappling with the financial fallout. The weight of it all can be overwhelming.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        The clock is ticking. Time is of the essence in personal injury cases. Evidence can disappear, memories can fade, and deadlines can pass. Without swift and strategic action, your chances of securing the compensation you deserve diminish. You need an advocate who can move quickly and effectively, ensuring no opportunity for justice is lost.
-                        </p>
-                    </div>
-                </div>
-                <div className="my-12">
-                    <h2 className="text-center text-3xl mb-2 font-medium">Help Starts Here</h2>
-                    <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <p className="text-xl text-gray-900 text-justify">
-                        In the heart of Colorado, we stand as more than just legal advocates; we are staunch defenders of your rights. Our team's extensive experience in Colorado's personal injury laws equips us with a profound understanding of the intricacies that govern cases like yours. We've successfully navigated the diverse terrain of personal injury law in this state for years, gaining insight into the tactics often employed by insurance companies. This knowledge empowers us to craft strategies that are tailored to your unique situation, maximizing your chances of a favorable outcome.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        At our firm, we know that each case carries its own weight and importance. We pride ourselves on providing personalized attention to every client, ensuring that no detail is overlooked. When you choose us, you're not merely a case number; you're a valued individual with a story that deserves to be heard. We approach each case with unwavering dedication, working tirelessly to build a solid foundation for your claim. From gathering evidence to crafting compelling arguments, we leave no stone unturned in our pursuit of justice on your behalf.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        Success isn't just a goal; it's a standard we've consistently met. We've secured substantial compensation for countless clients who have faced situations similar to yours. Our track record speaks volumes about our ability to deliver results. These successes are not just numbers; they represent lives that we've helped rebuild. It's a testament to our commitment to securing the best possible outcome for each and every client.
-                        </p>
-                        <p className="text-xl text-gray-900 text-justify">
-                        In these challenging times, you need a legal partner you can trust implicitly. Our passion for justice, coupled with our deep roots in Colorado, positions us as the perfect fit for your case. We understand the impact a personal injury can have on your life, and we're here to be the beacon of support and guidance you need. Together, we'll navigate the complexities of your case, ensuring your voice is heard and your rights are fiercely defended. Reach out to us today, and let's embark on this journey to justice together. Your peace of mind is our priority, and your success is our mission.
-                        </p>
+                    <div className="lg:flex lg:flex-row lg:max-h-[500px] text-center">
+                        <div className="lg:w-1/3">
+                            <StaticImage src="https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/f_auto/q_auto/v1699606613/e1eqadzarq4bjsapvwgy.webp" alt="W. Neal Hollington, Esq."/>
+                        </div>
+                        <div className="lg:w-2/3 lg:max-h-full overflow-y-scroll">
+                            <p className="text-xl text-gray-900 text-justify hyphens-auto m-4">
+                            Life can change dramatically in the blink of an eye. Accidents, whether on the bustling streets of Denver or in the serene landscapes of Colorado's countryside, bring with them a tidal wave of pain and confusion. The physical injuries, the emotional toll, and the mounting medical bills can feel like an insurmountable mountain to climb. It's in these moments of vulnerability that you need a trusted ally, someone who understands the intricacies of personal injury law right here in Colorado.
+                            </p>
+                            <p className="text-xl text-gray-900 text-justify m-4 hyphens-auto">
+                            The emotional aftermath of an accident can be just as profound as the physical injuries. Anxiety, depression, and the strain on relationships often follow. The simplest tasks become monumental challenges, and the road to recovery seems endless. It's a dark tunnel, and finding the light can feel like an impossible task without the right support.
+                            </p>
+                            <p className="text-xl text-gray-900 text-justify m-4 hyphens-auto">
+                            I'm sure you’ve seen a lot of personal injury law firms advertising on TV or plastered across billboards.  Most of those firms accept every case they can find and then settle them cheaply and fast, one after another.  Every client is just a number to be worked through the system as fast as possible, with minimal involvement from anyone who actually has a law degree.  Those firms are called “mills” because they grind out case after case.
+                            </p>
+                            <p className="text-xl text-gray-900 text-justify m-4 hyphens-auto">
+                            We’re different.  We take fewer cases.  We focus on winning the maximum amount for the individual clients we serve.  When you call our office, you can speak with the actual personal injury attorney working on your case.  We care about our clients.  We get to know them.  We know that what we do can make a big difference in our client’s lives and the lives of their family members. We put maximum effort into being the best personal injury lawyers in Denver.
+                            </p>
+                            <p className="text-xl text-gray-900 text-justify m-4 hyphens-auto">
+                            If you want a law firm to take your personal injury case, assign it a number, then settle it cheaply and fast with minimal effort by any actual personal injury lawyer, then you have dozens of law firms to choose from.  If you want individual attention and hard work to maximize the value of your case, let’s talk.  We believe in doing real work on real personal injury cases.  Our firm takes a relatively small number of cases so that we can fight hard for the clients we represent.  If we’re unable to take your case, we can almost always suggest another personal injury law firm that can. You only get one chance at this. Let's make it count.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 

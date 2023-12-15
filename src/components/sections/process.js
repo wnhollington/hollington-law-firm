@@ -58,15 +58,15 @@ const Process = () => {
                         {/* Any content here will be centered in the component */}
                         <div className="flex flex-col md:flex-row gap-8 shadow-lg p-8 rounded-lg h-full">
                             {/* Tabs */}
-                            <ul className="flex flex-col text-left md:w-2/4 xl:w-1/4 max-h-48 overflow-y-auto md:max-h-full md:pr-4 md:border-r-2 border-gray-100">
+                            <ul className="flex flex-col text-left md:w-2/4 xl:w-1/4 max-h-48 overflow-y-auto md:max-h-full md:pr-4 md:border-r-2 border-gray-100 min-h-[275px]">
                                 {timeline.map((event) => {
                                     return (
-                                        <li className={activeTab === event.id ? "bg-primary  text-white text-sm sm:text-lg font-bold p-4 my-1 rounded-lg" : "hover:shadow-lg hover:bg-primary hover:text-white hover:rounded-lg text-sm sm:text-lg font-bold p-4 my-1"} key={event.id} onClick={() => setActiveTab(event.id)}>{`${event.id + 1}. ${event.point}`}</li>                    
+                                        <li className={activeTab === event.id ? "bg-primary  text-white text-lg font-semibold p-4 my-1 rounded-lg" : "hover:shadow-lg hover:bg-primary hover:text-white hover:rounded-lg text-lg font-semibold p-4 my-1"} key={event.id} onClick={() => setActiveTab(event.id)}>{`${event.id + 1}. ${event.point}`}</li>                    
                                     )
                                 })}
                             </ul>
                             {/* Content */}
-                            <div className="md:w-2/4 xl:w-3/4 text-gray-900 text-md sm:text-xl text-justify">
+                            <div className="md:w-2/4 xl:w-3/4 text-gray-900 text-xl text-justify hyphens-auto">
                                 {timeline[activeTab].description}
                             </div>
                         </div>

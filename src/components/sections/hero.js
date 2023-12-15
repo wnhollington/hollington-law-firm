@@ -3,7 +3,6 @@ import { useSiteMetadata } from "../../utilities/use-site-metadata"
 import { BsPlayCircle } from "react-icons/bs"
 import { useState } from "react"
 import FsLightbox from "fslightbox-react"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 const Hero = () => {
@@ -11,19 +10,25 @@ const Hero = () => {
     const [toggler, setToggler] = useState(false)
     return (
         <section>
-            <div className="relative isolate bg-hero bg-cover bg-no-repeat xl:h-screen">
-                <div className="h-full max-w-full flex flex-col-reverse sm:flex-row items-center justify-around p-2 md:gap-10 bg-red-100/60">
-                    <div className="xl:text-center my-4">
-                        <h1 className="font-['Libre_Baskerville'] text-3xl md:text-4xl lg:text-5xl max-w-2xl">{siteMetaData.tagline}</h1>
-                        <div className="flex flex-row my-2 mx-auto md:my-6">
-                            <Link to="/schedule-consultation" className="bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg">Schedule Your Free Consultation</Link>
-                            <BsPlayCircle size={64} className="text-primary animate-pulse hover:cursor-pointer mx-auto" onClick={() => setToggler(!toggler)}/>
+            <div className="relative isolate bg-hero bg-cover bg-no-repeat h-[500px] md:h-screen">
+                <div className="h-full w-full bg-red-100/60 flex align-center">
+                    <div className="flex flex-col justify-center mx-auto max-w-4xl gap-4 p-4">
+                        
+                        <h1 className="font-['Libre_Baskerville'] text-3xl md:text-4xl lg:text-5xl my-4">{siteMetaData.description}</h1>
+                        <p className="font-['Source_Sans_Pro'] text-2xl md:text-3xl lg:text-4xl">{siteMetaData.tagline}</p>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            
+                            <Link to="/schedule-consultation" className="bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg text-center">Schedule Your Free Consultation</Link>
+                            
+                            <button className="flex flex-row items-center justify-center bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg">
+                                <BsPlayCircle size={28} className="text-white animate-pulse hover:cursor-pointer mr-4" onClick={() => setToggler(!toggler)}/>
+                                <p>Watch Intro Video</p>
+                            </button>
+
                         </div>
+
                     </div>
-                    <StaticImage 
-                        src="https://res.cloudinary.com/wnhollington/image/upload/e_improve:outdoor:100/q_60/e1eqadzarq4bjsapvwgy.jpg"
-                        alt="Altitude Injury Law"
-                    />
                 </div>
             </div>
             <FsLightbox 

@@ -8,10 +8,10 @@ module.exports = {
     DEV_SSR: true
   },
   siteMetadata: {
-    title: `Altitude Injury Law`,
+    title: `Hollington Law Firm`,
     description: 'Colorado Personal Injury Law Firm',
-    tagline: `For the People of Colorado`,
-    siteUrl: `https://altitudeinjurylaw.com`,
+    tagline: `After an injury, your health and family should be your top priority. We'll handle the rest.`,
+    siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
       phone: "",
       email: ""
