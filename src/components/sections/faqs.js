@@ -24,13 +24,12 @@ const Faqs = () => {
             <div className={`container my-16 lg:my-24 text-center animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl font-medium mb-2">Faqs</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                <div className="">
                     <Accordion collapseAll>
 
                             {faqs.map((faq, index) => {
                                 return (
                                     <Accordion.Panel key={index}>
-                                        <Accordion.Title className="text-lg sm:text-xl font-semibold px-2 py-4 text-gray-900">{faq.point}</Accordion.Title>
+                                        <Accordion.Title className="text-xl md:text-2xl px-2 py-4 text-gray-900">{faq.point}</Accordion.Title>
                                         <Accordion.Content>
                                             <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4">{faq.description}</p>
                                         </Accordion.Content>
@@ -39,7 +38,6 @@ const Faqs = () => {
                             })}
 
                     </Accordion>
-                </div>
             </div>
         </section>
     )

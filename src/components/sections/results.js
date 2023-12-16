@@ -54,7 +54,7 @@ const Results = () => {
                                         key={index}
                                         className="items-center justify-center p-4 rounded-lg bg-white text-center"
                                     >
-                                        <h3 className="text-gray-900 text-2xl">{result.node.caseType}</h3>
+                                        <h3 className="text-gray-900 text-lg md:text-2xl">{result.node.caseType}</h3>
                                         <p className=" text-gray-900 text-2xl"><span className="mr-0.5">$</span>{result.node.caseResult.toLocaleString("en-US")}</p>
                                     </div>
                                 )

@@ -31,13 +31,13 @@ const PracticeAreas = () => {
                             <Link 
                             to={`/${edge.node.slug}`}
                             key={edge.node.title}
-                            className="bg-primary hover:shadow-lg text-white text-lg font-semibold p-4 rounded-lg"
+                            className="bg-primary hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-lg"
                             >{edge.node.title}</Link>                          
                         )
                     })}
                 </div>
                 <div className="my-12">
-                    <Link to={`/practice-areas`} className="bg-primary hover:shadow-lg text-white text-lg font-bold p-4 rounded-lg">View All</Link>       
+                    <Link to={`/practice-areas`} className="bg-primary hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-lg">View All</Link>       
                 </div>
             </div>
         </section>

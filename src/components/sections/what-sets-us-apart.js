@@ -77,8 +77,8 @@ const WhatSetsUsApart = () => {
                     ))}                       
                 </Slider>
                 <div className="flex gap-4 justify-center">
-                    <BsFillArrowLeftCircleFill size={36} color="#6E0A05" onClick={sliderRef?.slickPrev}/>
-                    <BsFillArrowRightCircleFill size={36} color="#6E0A05" onClick={sliderRef?.slickNext}/>
+                    <BsFillArrowLeftCircleFill size={38} color="#6E0A05" onClick={sliderRef?.slickPrev}/>
+                    <BsFillArrowRightCircleFill size={38} color="#6E0A05" onClick={sliderRef?.slickNext}/>
                 </div>
             </div>
         </section>
