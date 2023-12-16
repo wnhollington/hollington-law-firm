@@ -33,4 +33,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <Seo title="Denver Personal Injury Attorney" />
+export const Head = () => <Seo title="Denver Trial Lawyer" />
