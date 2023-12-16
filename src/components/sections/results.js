@@ -12,6 +12,7 @@ const Results = () => {
                 edges {
                   node {
                     caseResult
+                    caseType
                   }
                 }
             }
@@ -53,7 +54,8 @@ const Results = () => {
                                         key={index}
                                         className="items-center justify-center p-4 rounded-lg bg-white text-center"
                                     >
-                                        <p className=" text-gray-900 font-bold text-2xl"><span className="mr-0.5">$</span>{result.node.caseResult.toLocaleString("en-US")}</p>
+                                        <h3 className="text-gray-900 text-2xl">{result.node.caseType}</h3>
+                                        <p className=" text-gray-900 text-2xl"><span className="mr-0.5">$</span>{result.node.caseResult.toLocaleString("en-US")}</p>
                                     </div>
                                 )
                             })
