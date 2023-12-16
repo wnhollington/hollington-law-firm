@@ -3,7 +3,7 @@ import Desktop from "./menus/desktop"
 import Mobile from "./menus/mobile"
 import { useEffect, useState } from "react"
 import { Link } from "gatsby"
-import {StaticImage} from "gatsby-plugin-image"
+import Logo from "../images/svg/logo.svg"
 import { useSiteMetadata } from "../utilities/use-site-metadata"
 
 const Header = () => {
@@ -34,7 +34,7 @@ const Header = () => {
         <header>
             <div className={`inset-x-0 top-0 z-50 bg-white shadow-lg transition-all ease-in-out delay-150 ${scrolled === false ? "relative" : "fixed"}`}>
                 <div className="flex justify-between items-center py-2 px-2">
-                    <Link to="/" aria-label={siteMetaData.title}><StaticImage src="../images/logo.png" alt={siteMetaData.title} className="max-w-[300px]"/></Link>
+                    <Link to="/" aria-label={siteMetaData.title}><Logo style={{width: "300px"}}/></Link>
                     <Desktop/>
                     <Mobile/>
                 </div>

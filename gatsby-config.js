@@ -9,8 +9,8 @@ module.exports = {
   },
   siteMetadata: {
     title: `Hollington Law Firm`,
-    description: 'Colorado Personal Injury Law Firm',
-    tagline: `After an injury, your health and family should be your top priority. We'll handle the rest.`,
+    description: 'Denver Trial Lawyer',
+    tagline: `For the people, not the powerful`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
       phone: "",
