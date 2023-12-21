@@ -1,12 +1,20 @@
 import * as React from "react"
+import { useState } from "react";
 import { useInView } from "react-intersection-observer"
 import { Accordion } from "flowbite-react"
+import { RiPieChartFill,  } from "react-icons/ri";
+import { CiClock2 } from "react-icons/ci";
+import { BiPieChartAlt2 } from "react-icons/bi";
+import { CgFileDocument } from "react-icons/cg";
+import { MdCurrencyExchange } from "react-icons/md";
 
 const Faqs = () => {
     const { ref, inView } = useInView({
         threshold: .1,
         triggerOnce: true
     })
+
+    const [activeTab, setActiveTab] = useState(0)
 
     const faqs = [
         {id: 0, point: "How long do I have to file a lawsuit?", description: "Each type of claim has a specific 'statute of limitations' or deadline to file a lawsuit. Typically, this deadline is between 2 and 3 years from the date of the injury, though certain facts may extend that deadline. It is important that you meet this deadline because, if you fail do so say, your claim could be 'barred'. If you have any questions about Colorado's statute of limitations for your specific case, please give us a call. We are always happy to discuss any questions, issues, or concerns you may have regarding your claim and the claim process."},
@@ -15,8 +23,14 @@ const Faqs = () => {
         {id: 1, point: "Do I need a Denver lawyer?", description: "It’s seldom a good idea to handle your case on your own. If you do, the other party’s lawyer or insurance company are much more likely to take advantage of you and not give you anywhere near the amount of money that you deserve. If you suffered any kind of injury or wrong, your own lawyer can be invaluable in seeking the compensation you deserve. Your lawyer will be experienced with similar cases and will be able to build up your case in a way that maximizes your claim and recovery."},
 
         {id: 2, point: "How long will my case take?", description: "It is difficult to answer this question precisely. Some cases settle relatively quickly in a matter of months, others that are highly contested could take a year or more to resolve. Typically, a good rule of thumb is to expect to be involved in this process for at least six months to a year. Regardless, throughout the process, you can rest assured that we will be in your corner fighting on your behalf and we will keep you adequately informed as to all happenings in your case."},
+    ]
 
-        {id: 3, point: "How is your law firm paid?", description: "The majority of our cases are taken on a contingency fee basis, meaning that we are paid out of the ultimate settlement or judgment in your case. The benefit for you is that we are only paid if we prevail in your action. Depending on the nature of your case, a pure contingency fee basis may not make sense. For these types of matters, we can enter into alternative fee agreements. No matter what fee agreement we do have, you will never be suprised as to how we are compensated for our services. Before any formal agreement is reached, we will take all the time you need to ensure that you are both informed and comfortable as to how our fees will be earned."},
+    const fees = [
+        {id:0, name: "Hourly", description: "About half of our clients hire us on an hourly basis, in which our attorneys and professionals charge by the hour for legal services. We require a retainer, and the monthly fees invoiced to the client are either charged against retainer funds deposited in our trust account or paid directly by the client." },
+        {id:1, name: "Contingency", description: "In some cases, both we and our clients benefit from contingent fee agreements. Details can vary, but essentially, in this arrangement the client pays the law firm an attorney fee only if the firm recovers a settlement or judgment for the client. The fee is usually a percentage of the recovery. If we lose the case, the client does not pay us a fee and is usually responsible only for litigation costs, such as copying costs or expert fees. Under this type of arrangement, we and our clients share both the risk and the reward." },
+        {id:3, name: "Hybrid Fees", description: "While there are various types of hybrid fee agreements, the most common is one in which we agree to accept a lower hourly rate than normal charge, but also take a percentage of any recovery if we are successful. In other words, part of our payment is contingent on success and part isn’t." },
+        {id:4, name: "Fixed Fee", description: "A fixed fee agreement is one in which the client pays a fixed fee for the legal representation, regardless of the time required. Fixed fees are often used in criminal defense representations, as well as many different types of litigation, such as a simple breach of contract case or foreclosure proceeding. The client often is required to pay litigation costs in addition to the fixed fee." },
+        {id:4, name: "Flat Fee", description: "A flat fee agreement is one in which the client pays a monthly flat fee for legal representation regardless of the time the law firm puts into the case during the month. Flat fee arrangements allow the client to manage costs and budget for a consistent fee. They can work well in a major case in which a team of attorneys and paralegals will spend substantial time on the case each month, or where there are a series of similar major cases. Again, the client usually is required to pay litigation costs along the way." },
     ]
 
     return (
@@ -36,7 +50,38 @@ const Faqs = () => {
                                     </Accordion.Panel>
                                 )
                             })}
-
+                            <Accordion.Panel key={4}>
+                                <Accordion.Title className="text-xl md:text-2xl px-2 py-4 text-gray-900">How is your law firm paid?</Accordion.Title>
+                                <Accordion.Content>
+                                    <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4">While we do represent clients on an hourly basis, we prefer alternative fee arangements to more traditional forms of billing. Alternative fee arrangements offer distinct benefits to the client that traditional hourly billing does not. This ties well with our firm's philosophy to never template or commoditize our legal services. Instead, like our approach to the practice of law, we tailor our fee agreements to the client's unique legal needs. Doing so ties our compensation to our success and the value we add to the client, which we believe allocates risk and reward more fairly. No matter what fee agreement we do have, you will never be suprised as to how we are compensated for our services. Before any formal agreement is reached, we will take all the time you need to ensure that you are both informed and comfortable as to how our fees will be earned. Following are forms of billing that we regularly utilize for our clients</p>
+                                    
+                                    <div className="max-w-5xl mx-auto my-8">
+                                        <ul className="flex flex-col md:flex-row justify-between">
+                                            <button className={activeTab === 0 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(0)}>
+                                                <CiClock2 size={56} className={"text-primary"}/>
+                                                <li className="text-lg font-semibold">Hourly</li>
+                                            </button>
+                                            <button className={activeTab === 1 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"}onClick={() => setActiveTab(1)}>
+                                                <RiPieChartFill size={56} className={"text-primary"}/>
+                                                <li className="text-lg font-semibold">Contingency</li>
+                                            </button>
+                                            <button className={activeTab === 2 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(2)}>
+                                                <BiPieChartAlt2  size={56} className={"text-primary"}/>
+                                                <li className="text-lg font-semibold">Hybrid</li>
+                                            </button>
+                                            <button className={activeTab === 3 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(3)}>
+                                                <CgFileDocument size={56} className={"text-primary"}/>
+                                                <li className="text-lg font-semibold">Fixed Fee</li>
+                                            </button>
+                                            <button className={activeTab === 4 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(4)}>
+                                                <MdCurrencyExchange size={56} className={"text-primary"}/>
+                                                <li className="text-lg font-semibold">Flat Fee</li>
+                                            </button>
+                                        </ul>
+                                    </div>
+                                    <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4 h-32 my-2">{fees[activeTab].description}</p>
+                                </Accordion.Content>
+                            </Accordion.Panel>
                     </Accordion>
             </div>
         </section>
