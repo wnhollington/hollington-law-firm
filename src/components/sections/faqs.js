@@ -2,11 +2,7 @@ import * as React from "react"
 import { useState } from "react";
 import { useInView } from "react-intersection-observer"
 import { Accordion } from "flowbite-react"
-import { RiPieChartFill,  } from "react-icons/ri";
-import { CiClock2 } from "react-icons/ci";
-import { BiPieChartAlt2 } from "react-icons/bi";
-import { CgFileDocument } from "react-icons/cg";
-import { MdCurrencyExchange } from "react-icons/md";
+import { RiPieChartFill, RiTimeLine, RiPieChart2Line, RiFileList3Line, RiMoneyDollarCircleLine } from "react-icons/ri";
 
 const Faqs = () => {
     const { ref, inView } = useInView({
@@ -27,9 +23,13 @@ const Faqs = () => {
 
     const fees = [
         {id:0, name: "Hourly", description: "About half of our clients hire us on an hourly basis, in which our attorneys and professionals charge by the hour for legal services. We require a retainer, and the monthly fees invoiced to the client are either charged against retainer funds deposited in our trust account or paid directly by the client." },
+
         {id:1, name: "Contingency", description: "In some cases, both we and our clients benefit from contingent fee agreements. Details can vary, but essentially, in this arrangement the client pays the law firm an attorney fee only if the firm recovers a settlement or judgment for the client. The fee is usually a percentage of the recovery. If we lose the case, the client does not pay us a fee and is usually responsible only for litigation costs, such as copying costs or expert fees. Under this type of arrangement, we and our clients share both the risk and the reward." },
+
         {id:3, name: "Hybrid Fees", description: "While there are various types of hybrid fee agreements, the most common is one in which we agree to accept a lower hourly rate than normal charge, but also take a percentage of any recovery if we are successful. In other words, part of our payment is contingent on success and part isn’t." },
+
         {id:4, name: "Fixed Fee", description: "A fixed fee agreement is one in which the client pays a fixed fee for the legal representation, regardless of the time required. Fixed fees are often used in criminal defense representations, as well as many different types of litigation, such as a simple breach of contract case or foreclosure proceeding. The client often is required to pay litigation costs in addition to the fixed fee." },
+        
         {id:4, name: "Flat Fee", description: "A flat fee agreement is one in which the client pays a monthly flat fee for legal representation regardless of the time the law firm puts into the case during the month. Flat fee arrangements allow the client to manage costs and budget for a consistent fee. They can work well in a major case in which a team of attorneys and paralegals will spend substantial time on the case each month, or where there are a series of similar major cases. Again, the client usually is required to pay litigation costs along the way." },
     ]
 
@@ -56,9 +56,9 @@ const Faqs = () => {
                                     <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4">While we do represent clients on an hourly basis, we prefer alternative fee arangements to more traditional forms of billing. Alternative fee arrangements offer distinct benefits to the client that traditional hourly billing does not. This ties well with our firm's philosophy to never template or commoditize our legal services. Instead, like our approach to the practice of law, we tailor our fee agreements to the client's unique legal needs. Doing so ties our compensation to our success and the value we add to the client, which we believe allocates risk and reward more fairly. No matter what fee agreement we do have, you will never be suprised as to how we are compensated for our services. Before any formal agreement is reached, we will take all the time you need to ensure that you are both informed and comfortable as to how our fees will be earned. Following are forms of billing that we regularly utilize for our clients</p>
                                     
                                     <div className="max-w-5xl mx-auto my-8">
-                                        <ul className="flex flex-col md:flex-row justify-between">
+                                        <ul className="flex flex-row justify-between flex-nowrap overflow-x-scroll gap-32 py-8 mx-4 ">
                                             <button className={activeTab === 0 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(0)}>
-                                                <CiClock2 size={56} className={"text-primary"}/>
+                                                <RiTimeLine size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Hourly</li>
                                             </button>
                                             <button className={activeTab === 1 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"}onClick={() => setActiveTab(1)}>
@@ -66,20 +66,20 @@ const Faqs = () => {
                                                 <li className="text-lg font-semibold">Contingency</li>
                                             </button>
                                             <button className={activeTab === 2 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(2)}>
-                                                <BiPieChartAlt2  size={56} className={"text-primary"}/>
+                                                <RiPieChart2Line   size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Hybrid</li>
                                             </button>
                                             <button className={activeTab === 3 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(3)}>
-                                                <CgFileDocument size={56} className={"text-primary"}/>
+                                                <RiFileList3Line size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Fixed Fee</li>
                                             </button>
                                             <button className={activeTab === 4 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(4)}>
-                                                <MdCurrencyExchange size={56} className={"text-primary"}/>
+                                                <RiMoneyDollarCircleLine size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Flat Fee</li>
                                             </button>
                                         </ul>
                                     </div>
-                                    <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4 h-32 my-2">{fees[activeTab].description}</p>
+                                    <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4 my-2">{fees[activeTab].description}</p>
                                 </Accordion.Content>
                             </Accordion.Panel>
                     </Accordion>
