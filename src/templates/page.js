@@ -5,15 +5,19 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 // Components
 import Layout from '../components/layout.js'
 import Seo from '../components/seo.js'
+import Sidebar from '../components/sidebar/index.js'
 
 // Render
 function Page({ data }) {
   return (
     <Layout pageTitle={data.contentfulPages.title}>
-      <article className='max-w-5xl my-8 p-4 xl:p-0 mx-auto'>
-        <h1 className="text-center">{data.contentfulPages.title}</h1>
-        <div>{renderRichText(data.contentfulPages.body)}</div>
-      </article>
+      <div className='flex flex-col md:flex-row my-8 p-4 gap-6 justify-center'>
+        <article className='md:w-2/3 max-w-6xl'>
+          <h1 className="text-center">{data.contentfulPages.title}</h1>
+          <div>{renderRichText(data.contentfulPages.body)}</div>
+        </article>
+        <Sidebar/>
+      </div>
     </Layout>
   )
 }

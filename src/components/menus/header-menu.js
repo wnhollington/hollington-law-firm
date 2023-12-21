@@ -1,21 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { Dropdown } from "flowbite-react"
-import { useStaticQuery, graphql } from "gatsby"
 
 const HeaderMenu = ({placement}) => {
-    const data = useStaticQuery(graphql`
-        query QueryPracticeAreasForHeaderMenu {
-            allContentfulPracticeAreas(sort: {title: ASC}){
-                edges {
-                    node {
-                        title
-                        slug
-                    }
-                }
-            }
-        }
-    `)
+
     return (            
         <>
             <Dropdown
@@ -28,19 +16,7 @@ const HeaderMenu = ({placement}) => {
 
             </Dropdown>
 
-            <Dropdown
-                inline
-                label="Practice Areas"
-                placement={placement}
-            >
-                {data.allContentfulPracticeAreas.edges.map((edge) => {
-                    return (
-                        <Dropdown.Item key={edge.title}><Link to={`/${edge.node.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
-                    )
-                })}
-                <Dropdown.Item key="All Practice Areas"><Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">View All Practice Areas</Link></Dropdown.Item>
-
-            </Dropdown>
+            <Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Practice Areas</Link>
             
             <Dropdown
                 inline

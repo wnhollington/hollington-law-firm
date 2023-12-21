@@ -17,7 +17,7 @@ const Header = () => {
             const isScrolled = window.scrollY > 50;
             // Check if Url is on Contact or Schedule Pages
             const url = typeof window !== 'undefined' ? window.location.href : ''
-            const urlCheck = url.includes("schedule-consultation") || url.includes("contact") || url.includes("practice-areas") ? true : false
+            const urlCheck = url.includes("schedule-consultation") || url.includes("contact") ? true : false
             if ((isScrolled !== scrolled) & (urlCheck === false)) {
                 setScrolled(!scrolled)
             }
@@ -34,7 +34,7 @@ const Header = () => {
         <header>
             <div className={`inset-x-0 top-0 z-50 bg-white shadow-lg transition-all ease-in-out delay-150 ${scrolled === false ? "relative" : "fixed"}`}>
                 <div className="flex justify-between items-center py-2 px-2">
-                    <Link to="/" aria-label={siteMetaData.title}><StaticImage src="../images/logo.webp" width={350}/></Link>
+                    <Link to="/" aria-label={siteMetaData.title}><StaticImage src="../images/logo.webp" width={275}/></Link>
                     <Desktop/>
                     <Mobile/>
                 </div>
