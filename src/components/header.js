@@ -34,7 +34,7 @@ const Header = () => {
         <header>
             <div className={`inset-x-0 top-0 z-50 bg-white shadow-lg transition-all ease-in-out delay-150 ${scrolled === false ? "relative" : "fixed"}`}>
                 <div className="flex justify-between items-center py-2 px-2">
-                    <Link to="/" aria-label={siteMetaData.title}><StaticImage src="../images/logo.webp" width={275}/></Link>
+                    <Link to="/" aria-label={siteMetaData.title}><StaticImage src="../images/logo.webp" width={300}/></Link>
                     <Desktop/>
                     <Mobile/>
                 </div>
