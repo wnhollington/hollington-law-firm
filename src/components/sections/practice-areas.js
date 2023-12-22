@@ -10,7 +10,11 @@ const PracticeAreas = () => {
     })
     const data = useStaticQuery(graphql`
         query PracticeAreas {
-            allContentfulPracticeAreas(limit: 4, sort: {title: ASC}){
+            allContentfulPracticeAreas(
+                filter: {category: {category: {eq: "Personal Injury"}}}
+                limit: 6
+                sort: {title: ASC}
+            ){
                 edges {
                     node {
                         title

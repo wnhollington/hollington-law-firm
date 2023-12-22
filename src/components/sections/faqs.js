@@ -56,24 +56,24 @@ const Faqs = () => {
                                     <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4">While we do represent clients on an hourly basis, we prefer alternative fee arangements to more traditional forms of billing. Alternative fee arrangements offer distinct benefits to the client that traditional hourly billing does not. This ties well with our firm's philosophy to never template or commoditize our legal services. Instead, like our approach to the practice of law, we tailor our fee agreements to the client's unique legal needs. Doing so ties our compensation to our success and the value we add to the client, which we believe allocates risk and reward more fairly. No matter what fee agreement we do have, you will never be suprised as to how we are compensated for our services. Before any formal agreement is reached, we will take all the time you need to ensure that you are both informed and comfortable as to how our fees will be earned. Following are forms of billing that we regularly utilize for our clients</p>
                                     
                                     <div className="max-w-5xl mx-auto my-8">
-                                        <ul className="flex flex-row justify-between flex-nowrap overflow-x-scroll gap-32 py-8 mx-4 ">
-                                            <button className={activeTab === 0 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(0)}>
+                                        <ul className="flex flex-row justify-between flex-nowrap overflow-x-scroll gap-20 py-8 mx-4 ">
+                                            <button className={activeTab === 0 ? "flex flex-col gap-1 items-center border-b-4 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(0)}>
                                                 <RiTimeLine size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Hourly</li>
                                             </button>
-                                            <button className={activeTab === 1 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"}onClick={() => setActiveTab(1)}>
+                                            <button className={activeTab === 1 ? "flex flex-col gap-1 items-center border-b-4 border-b-primary" : "flex flex-col gap-1 items-center"}onClick={() => setActiveTab(1)}>
                                                 <RiPieChartFill size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Contingency</li>
                                             </button>
-                                            <button className={activeTab === 2 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(2)}>
+                                            <button className={activeTab === 2 ? "flex flex-col gap-1 items-center border-b-4 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(2)}>
                                                 <RiPieChart2Line   size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Hybrid</li>
                                             </button>
-                                            <button className={activeTab === 3 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(3)}>
+                                            <button className={activeTab === 3 ? "flex flex-col gap-1 items-center border-b-4 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(3)}>
                                                 <RiFileList3Line size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Fixed Fee</li>
                                             </button>
-                                            <button className={activeTab === 4 ? "flex flex-col gap-1 items-center border-b-2 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(4)}>
+                                            <button className={activeTab === 4 ? "flex flex-col gap-1 items-center border-b-4 border-b-primary" : "flex flex-col gap-1 items-center"} onClick={() => setActiveTab(4)}>
                                                 <RiMoneyDollarCircleLine size={56} className={"text-primary"}/>
                                                 <li className="text-lg font-semibold">Flat Fee</li>
                                             </button>
