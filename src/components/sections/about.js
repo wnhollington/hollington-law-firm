@@ -22,9 +22,6 @@ const About = () => {
                             Life can change dramatically in the blink of an eye. Whether you are injured on the bustling streets of Denver, experience an unexpected and wrongful discharge from work, or find yourself involved in a business dispute, life has a way of dealing you a poor hand when you least expect it. It's in these moments of vulnerability that you need a trusted ally, someone who understands the intricacies of your legal claim right here in Colorado.
                             </p>
                             <p className="text-xl text-gray-900 text-justify my-4 lg:mx-4 hyphens-auto">
-                            The emotional aftermath can be just as profound. Anxiety, depression, and the strain on relationships often follow. The simplest tasks become monumental challenges, and the road to recovery seems endless. It's a dark tunnel, and finding the light can feel like an impossible task without the right support.
-                            </p>
-                            <p className="text-xl text-gray-900 text-justify my-4 lg:mx-4 hyphens-auto">
                             I'm sure you’ve seen a lot of law firms advertising on TV or plastered across billboards.  Most of those firms accept every case they can find and then settle them cheaply and fast, one after another.  Every client is just a number to be worked through the system as fast as possible, with minimal involvement from anyone who actually has a law degree.  Those firms are called “mills” because they grind out case after case.
                             </p>
                             <p className="text-xl text-gray-900 text-justify my-4 lg:mx-4 hyphens-auto">

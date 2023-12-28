@@ -35,14 +35,10 @@ const PracticeAreas = () => {
     let employeeRights = data.allContentfulPracticeAreas.edges.filter((edge) => {
         return edge.node.category.category === "Employee Rights"
     })
-    let consumerProtection = data.allContentfulPracticeAreas.edges.filter((edge) => {
-        return edge.node.category.category === "Consumer Protection"
-    })
     let practiceAreas = [
         {id: 0, name: "All Practice Areas", entries: data.allContentfulPracticeAreas.edges},
         {id: 1, name: "Personal Injury", entries: personalInjury},
         {id: 2, name: "Employee Rights", entries: employeeRights},
-        {id: 3, name: "Consumer Protection", entries: consumerProtection}
     ]
     
     const handleTabs = (item) => {
@@ -74,6 +70,7 @@ const PracticeAreas = () => {
                                     )
                                 })
                             }
+                            <li className="py-1 text-xl hover:cursor-pointer hover:bg-slate-100" key={3}><Link to="/business-torts-and-fraud">Business Torts & Fraud</Link></li>  
                         </ul>
                     </div>
 
