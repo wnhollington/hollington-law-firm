@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import { INLINES } from '@contentful/rich-text-types';
 
 // Components
 import Layout from '../components/layout.js'
@@ -11,6 +12,13 @@ import Schedule from "../components/sections/schedule.js"
 // Render
 function Article ({ data, pageContext }) {
   const {previous, next} = pageContext
+  const options = {
+    renderNode: {
+      [INLINES.HYPERLINK]: (node) => {
+       return <a href={node.data.uri} target={`${node.data.uri.startsWith('https://hollingtonlawfirm.') ? '_self' : '_blank'}`}>{node.content[0].value}</a>;
+      }
+    }
+  }
   return (
     <Layout>
 
@@ -20,7 +28,7 @@ function Article ({ data, pageContext }) {
           <img src={data.contentfulArticles.featuredImage[0].secure_url} alt={data.contentfulArticles.title} className='w-full'/>
           <p className='italic'>{data.contentfulArticles.seoDescription}</p>
         </header>
-        {renderRichText(data.contentfulArticles.body)}
+        {renderRichText(data.contentfulArticles.body, options)}
       </article>
 
       {/* Navigation */}
