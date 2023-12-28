@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { INLINES } from '@contentful/rich-text-types';
+import { Link } from 'gatsby';
 
 // Components
 import Layout from '../components/layout.js'
@@ -14,8 +15,13 @@ function Page({ data }) {
     renderNode: {
       [INLINES.HYPERLINK]: (node) => {
        return <a href={node.data.uri} target={`${node.data.uri.startsWith('https://hollingtonlawfirm.') ? '_self' : '_blank'}`}>{node.content[0].value}</a>;
-      }
+      },
+      [INLINES.ENTRY_HYPERLINK]: (node) => {
+        const entry = data.contentfulPracticeAreas.body.references.find(x => x.contentful_id === node.data.target.sys.id)
+        return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
+      },
     }
+
   }
   return (
     <Layout>
@@ -40,6 +46,11 @@ export const query = graphql`
       slug
       body {
         raw
+        references {
+          slug
+          title
+          contentful_id
+        }
       }
     }
   }
