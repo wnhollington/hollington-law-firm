@@ -11,7 +11,7 @@ const PracticeAreas = () => {
     const data = useStaticQuery(graphql`
         query queryPracticeAreas {
             allContentfulPracticeAreas(
-                filter: {category: {category: {eq: "Personal Injury"}}}
+                filter: {category: {category: {ne: "Pro Bono Representation"}}}
                 sort: {title: ASC}
                 ){
                 edges {
@@ -39,7 +39,7 @@ const PracticeAreas = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mx-8 lg:mx-auto text-center my-8">
                         {data.allContentfulPracticeAreas.edges.map((edge) => {
                             return (
-                                <Link to={`/${edge.node.slug}`}className="text-lg md:text-xl font-semibold leading-6 text-gray-900 hover:text-white hover:bg-primary py-8 bg-white shadow-lg border-1 border-gray-900">{edge.node.title}</Link>
+                                <Link to={`/practice-areas/${edge.node.slug}`}className="text-lg md:text-xl font-semibold leading-6 text-gray-900 hover:text-white hover:bg-primary py-8 bg-white shadow-lg border-1 border-gray-900">{edge.node.title}</Link>
                             )
                         })}
                     </div>

@@ -69,7 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const practiceAreas = result.data.practiceAreas.edges
   practiceAreas.forEach(practiceArea => {
     createPage({
-      path: `${practiceArea.node.slug}`,
+      path: `/practice-areas/${practiceArea.node.slug}`,
       component: require.resolve(practiceAreaTemplate),
       context: {
         title: practiceArea.node.title,

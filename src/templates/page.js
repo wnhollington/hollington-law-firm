@@ -19,7 +19,8 @@ function Page({ data }) {
       },
       [INLINES.ENTRY_HYPERLINK]: (node) => {
         const entry = data.contentfulPages.body.references.find(x => x.contentful_id === node.data.target.sys.id)
-        return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
+        const entryType = entry.internal.type === "ContentfulPracticeAreas" ? "practice-areas" : "articles"
+        return <Link to={`/${entryType}/${entry.slug}`}>{node.content[0].value}</Link>;
       },
     }
   }
@@ -50,6 +51,9 @@ export const query = graphql`
           slug
           title
           contentful_id
+          internal {
+            type
+          }
         }
       }
     }
