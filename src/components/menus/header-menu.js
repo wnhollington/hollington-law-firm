@@ -15,7 +15,7 @@ const HeaderMenu = ({placement}) => {
 
                 <Dropdown.Item key="W. Neal Hollington"><Link to={`/w-neal-hollington`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">W. Neal Hollington, Esq.</Link></Dropdown.Item>
 
-                <Dropdown.Item key="about the firm"><Link to={`/pro-bono-representation`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Pro Bono Representation</Link></Dropdown.Item>
+                <Dropdown.Item key="Pro Bono Representation"><Link to={`/pro-bono-representation`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Pro Bono Representation</Link></Dropdown.Item>
 
             </Dropdown>
 

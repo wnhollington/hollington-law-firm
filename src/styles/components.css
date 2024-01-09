@@ -1,8 +1,11 @@
 /* Custom Tailwind Components */
 
 /* Menus */
-.header-navigation button {
+.header-navigation button, .header-navigation a {
     @apply text-lg font-semibold leading-6 text-gray-900 hover:text-primary
+}
+.mobile-menu > * {
+    @apply my-2
 }
 
 .header-logo {

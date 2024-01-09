@@ -11,7 +11,7 @@ const PracticeAreas = () => {
     const data = useStaticQuery(graphql`
         query PracticeAreas {
             allContentfulPracticeAreas(
-                filter: {category: {category: {eq: "Personal Injury"}}}
+                filter: {category: {category: {ne: "Pro Bono Representation"}}}
                 limit: 6
                 sort: {title: ASC}
             ){
@@ -33,7 +33,7 @@ const PracticeAreas = () => {
                     {data.allContentfulPracticeAreas.edges.map((edge, index) => {
                         return (
                             <Link 
-                            to={`/${edge.node.slug}`}
+                            to={`/practice-areas/${edge.node.slug}`}
                             key={index}
                             className="bg-primary hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-lg"
                             >{edge.node.title}</Link>                          

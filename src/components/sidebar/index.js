@@ -6,7 +6,7 @@ import { FaStar } from "react-icons/fa6"
 const Sidebar = () => {
 
     return (
-        <aside className="m-2 p-2 flex flex-col gap-6">
+        <aside className="m-2 p-2 flex flex-col gap-6 max-w-lg mx-auto">
             <div className="bg-slate-600 p-2 rounded-md flex flex-col align-center">
                 
                 <StaticImage src="https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/f_auto/q_auto/v1699606613/e1eqadzarq4bjsapvwgy.webp" alt="W. Neal Hollington, Esq." className="rounded-md"/>
