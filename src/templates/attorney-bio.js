@@ -22,7 +22,7 @@ function Attorney ({ data }) {
     return (
         <Layout pageTitle={data.contentfulAttorneys.name}>
 
-            <article className='max-w-5xl mt-8 p-4 md:mx-auto'>
+            <article className='max-w-6xl mt-8 p-4 mx-auto'>
             <h1 className='text-center'>{data.contentfulAttorneys.name}</h1>
             <div className="flex flex-col sm:flex-row my-2 p-2 gap-6 shadow-md rounded-md">
                 <img src={data.contentfulAttorneys.bioImage[0].secure_url} alt={data.contentfulAttorneys.name}/>

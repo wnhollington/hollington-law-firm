@@ -22,7 +22,7 @@ function Article ({ data, pageContext }) {
   return (
     <Layout>
 
-      <article className='max-w-5xl mt-8 p-4 md:mx-auto'>
+      <article className='max-w-5xl mt-8 p-4 mx-auto'>
         <header className='text-center'>
           <h1>{data.contentfulArticles.title}</h1>
           <img src={data.contentfulArticles.featuredImage[0].secure_url} alt={data.contentfulArticles.title} className='w-full'/>
