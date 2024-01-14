@@ -6,7 +6,7 @@ import {FaXTwitter} from "react-icons/fa6"
 const Footer = () => {
 
     return (
-        <footer className="w-full bg-primary py-8">
+        <footer className="w-full py-8 bg-gradient-to-b from-primary to-red-950">
             
             <div className="flex flex-col items-center justify-center">
                 
