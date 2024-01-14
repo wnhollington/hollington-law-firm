@@ -11,7 +11,7 @@ const About = () => {
         <section id="about" ref={ref}>
             <div className={`container my-12 lg:my-24 xl:my-2 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <div>
-                    <h2 className="text-center text-3xl mb-2 font-medium">Denver Trial Lawyer</h2>
+                    <h2 className="text-center text-3xl mb-2 font-medium">Colorado Civil Trial Attorney</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                     <div className="lg:flex lg:flex-row lg:max-h-[400px] xl:max-h-[500px] text-center">
                         <div className="lg:w-1/3">
@@ -19,7 +19,7 @@ const About = () => {
                         </div>
                         <div className="lg:w-2/3 lg:max-h-full overflow-y-scroll">
                             <p className="text-xl text-gray-900 text-justify hyphens-auto my-4 lg:mx-4">
-                            Life can change dramatically in the blink of an eye. Whether you are injured on the bustling streets of Denver, experience an unexpected and wrongful discharge from work, or find yourself neck deep in a business dispute, life has a way of dealing you a poor hand when you least expect it. It's in these moments of vulnerability that you need a trusted ally, someone who understands the intricacies of your legal claim right here in Colorado.
+                            Life can change dramatically in the blink of an eye. Whether you are injured on the bustling streets of Denver, experience an unexpected and wrongful discharge from work, or find yourself neck deep in a business dispute, life has a way of dealing you a poor hand when you least expect it. It's in these moments of vulnerability that you need a trusted ally, a civil trial attorney who understands the intricacies of your legal claim right here in Colorado.
                             </p>
                             <p className="text-xl text-gray-900 text-justify my-4 lg:mx-4 hyphens-auto">
                             I'm sure you’ve seen a lot of law firms advertising on TV or plastered across billboards.  Most of those firms accept every case they can find and then settle them cheaply and fast, one after another.  Every client is just a number to be worked through the system as fast as possible, with minimal involvement from anyone who actually has a law degree.  Those firms are called “mills” because they grind out case after case.

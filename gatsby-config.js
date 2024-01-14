@@ -9,7 +9,7 @@ module.exports = {
   },
   siteMetadata: {
     title: `Hollington Law Firm`,
-    description: 'Denver Trial Lawyer',
+    description: 'Civil Litigation Attorney',
     tagline: `For the people, not the powerful`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {

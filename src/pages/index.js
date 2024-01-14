@@ -13,6 +13,7 @@ import Results from "../components/sections/results"
 import Testimonials from "../components/sections/testimonials"
 import Schedule from "../components/sections/schedule"
 import Faqs from "../components/sections/faqs"
+import { useSiteMetadata } from "../utilities/use-site-metadata"
 
 const IndexPage = () => {
   return (
@@ -33,4 +34,9 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <Seo title="Denver Trial Lawyer" />
+export const Head = () => {
+  const siteMetaData = useSiteMetadata()
+  return (
+    <Seo title={siteMetaData.description} />
+  )
+}
