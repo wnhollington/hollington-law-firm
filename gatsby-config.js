@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     title: `Hollington Law Firm`,
     description: 'Civil Litigation Attorney',
-    tagline: `For the people, not the powerful`,
+    tagline: `Plaintiff focused, trial ready`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
       phone: "",
