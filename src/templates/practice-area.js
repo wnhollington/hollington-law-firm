@@ -26,8 +26,8 @@ function Page({ data }) {
   }
   return (
     <Layout>
-      <div className='flex flex-col md:flex-row my-8 p-4 gap-6 justify-center'>
-        <article className='md:w-2/3 max-w-6xl mx-auto'>
+      <div className='flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center'>
+        <article className='lg:w-2/3 max-w-6xl mx-auto'>
           <h1 className="text-center">{data.contentfulPracticeAreas.title}</h1>
           <div>{renderRichText(data.contentfulPracticeAreas.body, options)}</div>
         </article>
