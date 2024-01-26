@@ -11,7 +11,7 @@ const PracticeAreas = () => {
     const data = useStaticQuery(graphql`
         query PracticeAreas {
             allContentfulPracticeAreas(
-                filter: {category: {category: {ne: "Pro Bono Representation"}}}
+                filter: {featuredPracticeArea: {eq: true}}
                 limit: 6
                 sort: {title: ASC}
             ){
