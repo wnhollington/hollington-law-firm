@@ -14,6 +14,10 @@ export const useSiteMetadata = () => {
                         contact {
                             phone
                             email
+                            address {
+                                street
+                                city
+                            }
                         }
                         social {
                             facebook

@@ -1,12 +1,13 @@
 import * as React from "react"
 import HeaderMenu from "./header-menu"
+import { useSiteMetadata } from "../../utilities/use-site-metadata"
 
 const Mobile = () => {
     const [isOpen, setIsOpen] = React.useState(false)
     const toggleMenu = () => {
         setIsOpen((prevState) => !prevState)
     }
-
+    const siteMetaData = useSiteMetadata()
     return (            
         <>
             <div className="flex lg:hidden">
@@ -36,7 +37,7 @@ const Mobile = () => {
                             </div>
                             <div className="my-6 py-6">
                                 <div className="flex flex-row justify-center phone">
-                                    <a href="tel:303.909.1227" className="flex gap-2 bg-primary p-3 rounded-lg phone text-lg font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">
+                                    <a href={`tel:${siteMetaData.contact.phone}`} className="flex gap-2 bg-primary p-3 rounded-lg phone text-lg font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">
                                         Call Now
                                     </a>
                                 </div>
