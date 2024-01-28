@@ -13,10 +13,10 @@ module.exports = {
     tagline: `Plaintiff focused, trial ready`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
-      phone: "(303) 874-5689",
+      phone: "(303) 276-2647",
       email: "",
       address: {
-        street: "123 Main Street",
+        street: "10940 S Parker Rd, Suite 100",
         city: "Parker, Colorado 80134"
       }
     },
