@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/v1703214824/video-v2-bg_pyohmk.jpg')",
+        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/v1706625778/hero-image.webp')",
         'herringbone': "url('https://res.cloudinary.com/wnhollington/image/upload/v1699606613/pijwvmzqmulmxpocc3iq.webp')"
       },
       colors: {

@@ -25,7 +25,7 @@ const Footer = () => {
                             <div className="text-xl xl:text-2xl text-gray-900">
                                 <p>{siteMetaData.contact.address.street}</p>
                                 <p className="mb-2">{siteMetaData.contact.address.city}</p>
-                                <a href={`tel:${siteMetaData.contact.phone}`} className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
+                                <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
                             </div>
 
                             <div className="flex flex-col gap-4 md:justify-between">
@@ -42,7 +42,7 @@ const Footer = () => {
 
                     {/* Google Maps */}
                     <div className="h-[310px] xl:h-[315px] w-[380px] md:w-[500px] lg:w-[650px]">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12311.309664568367!2d-104.760204!3d39.5183847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c91fbae5ad14b%3A0x5a7fcd0c8f6d3363!2sParker%20Station!5e0!3m2!1sen!2sus!4v1706473049615!5m2!1sen!2sus" width="100%" height="100%" style={{border: "0", borderRadius: "8px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.2922517439824!2d-104.7595407!3d39.507893200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c9149eef34c6f%3A0x84a58ef8811837c2!2s11479%20S%20Pine%20Dr%2C%20Parker%2C%20CO%2080134!5e0!3m2!1sen!2sus!4v1706626106221!5m2!1sen!2sus" width="100%" height="100%" style={{border: "0", borderRadius: "8px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title={`Directions to ${siteMetaData.title}`}></iframe>
                     </div>
 
                 </div>

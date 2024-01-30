@@ -16,7 +16,7 @@ module.exports = {
       phone: "(303) 276-2647",
       email: "",
       address: {
-        street: "10940 S Parker Rd, Suite 100",
+        street: "11479 S Pine Dr",
         city: "Parker, Colorado 80134"
       }
     },
@@ -38,7 +38,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/web-icon.png"
+        name: "Hollington Law Firm",
+        description: "Colorado Civil Litigation Attorney",
+        lang: "en",
+        background_color: "#e7e5e4",
+        theme_color: "#6E0A05",
+        icon: "src/images/web-icon.png",
+        icon_options: {
+          purpose: "any maskable"
+        }
       }
     }, 
     "gatsby-plugin-sharp", 
