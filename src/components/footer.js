@@ -35,13 +35,13 @@ const Footer = () => {
                                     <li><a href="https://www.youtube.com" aria-label="youtube" target="__blank"><BsYoutube size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
                                     <li><a href="https://www.twitter.com" aria-label="twitter" target="__blank"><FaXTwitter size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
                                 </ul>
-                                <a href="https://www.google.com/search?hl=en-US&gl=us&q=Pearman+Law+Firm,+P.C.,+4195+Wadsworth+Blvd,+Wheat+Ridge,+CO+80033&ludocid=875135514616406624&lsig=AB86z5Uae2-vxsFAuTugTeeUfs3X#lrd=0x876b8652f9590597:0xc251b1d270a2260,3" target="_blank" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Review Us</a>
+                                <a href="https://www.google.com/search?hl=en-US&gl=us&q=Pearman+Law+Firm,+P.C.,+4195+Wadsworth+Blvd,+Wheat+Ridge,+CO+80033&ludocid=875135514616406624&lsig=AB86z5Uae2-vxsFAuTugTeeUfs3X#lrd=0x876b8652f9590597:0xc251b1d270a2260,3" target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Review Us</a>
                             </div>
                         </div>
                     </div>
 
                     {/* Google Maps */}
-                    <div className="mx-4 min-h-[300px] xl:w-5/12">
+                    <div className="mx-4 min-h-[300px] xl:w-5/12 backdrop-blur-sm bg-white/80 rounded-md">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.2922517439824!2d-104.7595407!3d39.507893200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c9149eef34c6f%3A0x84a58ef8811837c2!2s11479%20S%20Pine%20Dr%2C%20Parker%2C%20CO%2080134!5e0!3m2!1sen!2sus!4v1706626106221!5m2!1sen!2sus" width="100%" height="100%" style={{border: "0", borderRadius: "8px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title={`Directions to ${siteMetaData.title}`}></iframe>
                     </div>
 
