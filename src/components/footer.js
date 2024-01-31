@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex flex-col items-center justify-center gap-8">
                 
                 {/* Review and Google Maps */}
-                <div className="lg:w-full flex flex-col lg:flex-row justify-around items-center gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:w-full xl:flex xl:justify-around xl:gap-0">
 
                     {/* Review and Social */}
                     <div className="bg-slate-100 p-8 rounded-md shadow-lg mx-4 lg:mx-0">
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
 
                     {/* Google Maps */}
-                    <div className="h-[310px] xl:h-[315px] w-[380px] md:w-[500px] lg:w-[650px]">
+                    <div className="mx-4 min-h-[300px] xl:w-5/12">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.2922517439824!2d-104.7595407!3d39.507893200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c9149eef34c6f%3A0x84a58ef8811837c2!2s11479%20S%20Pine%20Dr%2C%20Parker%2C%20CO%2080134!5e0!3m2!1sen!2sus!4v1706626106221!5m2!1sen!2sus" width="100%" height="100%" style={{border: "0", borderRadius: "8px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title={`Directions to ${siteMetaData.title}`}></iframe>
                     </div>
 

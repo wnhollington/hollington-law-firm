@@ -39,9 +39,9 @@ const PracticeAreas = () => {
         return edge.node.category.category === "Business Disputes"
     })
     let practiceAreas = [
-        {id: 0, name: "All Practice Areas", entries: data.allContentfulPracticeAreas.edges},
+        {id: 0, name: "Business Disputes", entries: businessDisputes},
         {id: 1, name: "Personal Injury", entries: personalInjury},
-        {id: 2, name: "Business Disputes", entries: businessDisputes},
+        {id: 2, name: "All Practice Areas", entries: data.allContentfulPracticeAreas.edges},
     ]
     const handleTabs = (item) => {
         setActiveTab(item);

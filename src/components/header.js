@@ -17,7 +17,7 @@ const Header = () => {
             const isScrolled = window.scrollY > 50;
             // Check if Url is on Contact or Schedule Pages
             const url = typeof window !== 'undefined' ? window.location.href : ''
-            const urlCheck = url.includes("schedule-consultation") || url.includes("contact") ? true : false
+            const urlCheck = url.includes("contact") ? true : false
             if ((isScrolled !== scrolled) & (urlCheck === false)) {
                 setScrolled(!scrolled)
             }
