@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Tabs } from 'flowbite-react'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { INLINES } from '@contentful/rich-text-types';
@@ -10,6 +11,8 @@ import Seo from '../components/seo.js'
 
 // Render
 function Attorney ({ data }) {
+
+    const attorneyBioImage = getImage(data.contentfulAttorneys.bioImage)
 
     const options = {
         renderNode: {
@@ -25,7 +28,8 @@ function Attorney ({ data }) {
             <article className='max-w-6xl mt-8 p-4 mx-auto'>
             <h1 className='text-center'>{data.contentfulAttorneys.name}</h1>
             <div className="flex flex-col sm:flex-row my-2 p-2 gap-6 shadow-md rounded-md">
-                <img src={data.contentfulAttorneys.bioImage[0].secure_url} alt={data.contentfulAttorneys.name}/>
+                {/* <img src={data.contentfulAttorneys.bioImage[0].secure_url} alt={data.contentfulAttorneys.name}/> */}
+                <GatsbyImage image={attorneyBioImage} alt={data.contentfulAttorneys.bioImage.description} />
                 <div className="mx-4 mb-4 w-full m-h-48 md:h-full md:w-2/3">
                     <Tabs.Group
                         aria-label="Default tabs"
@@ -97,7 +101,10 @@ export const query = graphql`
     contentfulAttorneys(id: {eq: $id}) {
         name
         bioImage {
-            secure_url
+            gatsbyImageData (
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+            )
         }
         education
         publications

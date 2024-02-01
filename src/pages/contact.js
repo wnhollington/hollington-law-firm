@@ -7,9 +7,9 @@ import Seo from "../components/seo"
 
 const Contact = () => (
   <Layout>
-    <div className="w-full flex flex-col items-center my-4 py-4 h-screen overflow-scroll">
+    <div className="w-full flex flex-col items-center my-4 py-4 2xl:h-screen overflow-hidden">
       <h1 className="max-w-lg mb-4 text-3xl leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">Get in Touch</h1>
-      <p className="text-xl font-medium text-gray-900 max-w-xl">Thank you for your interest in contacting our firm. Please fill out the below form and a representative will be in touch shortly.</p>
+      <p className="text-xl font-medium text-gray-900 max-w-xl mx-8">Thank you for your interest in contacting our firm. Please fill out the below form and a representative will be in touch shortly.</p>
       <form name="contact" method="POST" data-netlify="true" action="/thank-you" className="bg-white py-6 lg:px-28 px-8">
           <input type="hidden" name="form-name" value="contact"/>
           <div className="flex flex-wrap items-center mt-12">

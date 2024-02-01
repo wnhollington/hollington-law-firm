@@ -40,7 +40,7 @@ const Process = () => {
                         alt=""
                         // Assisi, Perúgia, Itália by Bernardo Ferrari, via Unsplash
                         src={
-                        "https://res.cloudinary.com/wnhollington/image/upload/v1699606613/pijwvmzqmulmxpocc3iq.webp"
+                        "https://images.ctfassets.net/irf9uehwbpr8/6XXlN5FHyyjEFaBygvH2f1/7b3233b851b612119e6f99798142cf07/pijwvmzqmulmxpocc3iq.webp"
                         }
                         formats={["auto", "webp", "avif"]}
                         className="rounded-lg"

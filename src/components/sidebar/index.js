@@ -9,7 +9,7 @@ const Sidebar = () => {
         <aside className="m-2 p-2 flex flex-col gap-6 max-w-lg mx-auto">
             <div className="bg-gradient-to-br from-slate-700 to-slate-400 p-2 rounded-md flex flex-col align-center shadow-lg">
                 
-                <StaticImage src="https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/f_auto/q_auto/v1699606613/e1eqadzarq4bjsapvwgy.webp" alt="W. Neal Hollington, Esq." className="rounded-md"/>
+                <StaticImage src="https://images.ctfassets.net/irf9uehwbpr8/zc4u3SXWOXh9ZEQZPDefu/dc7bbd11b81f570f48a131f6131804ea/e1eqadzarq4bjsapvwgy-Bio_Image_Enhanced.webp" alt="W. Neal Hollington, Esq." className="rounded-md"/>
                 
                 <h3 className="text-white text-center text-2xl my-6">Contact Now for Legal Help</h3>
                 

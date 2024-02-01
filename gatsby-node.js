@@ -31,15 +31,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      articles: allContentfulArticles {
-        edges {
-          node {
-            id
-            title
-            slug
-          }
-        }
-      }
       attorneys: allContentfulAttorneys{
         edges {
           node {
@@ -80,23 +71,23 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   // Create Posts and Pagination
-  const articles = result.data.articles.edges
-  articles.forEach((article, index) => {
-      // Create prev and next pages
-      const previous = index === articles.length - 1 ? null: articles[index + 1].node
-      const next = index === 0 ? null : articles[index - 1].node
-      // Previous and next are object props sent as pageContext object to articleTemplate
-      createPage({
-          path: `${article.node.slug}`,
-          component: require.resolve(articleTemplate),
-          context: {
-              id: article.node.id,
-              slug: article.node.slug,
-              previous,
-              next,
-          },
-      })
-  })
+  // const articles = result.data.articles.edges
+  // articles.forEach((article, index) => {
+  //     // Create prev and next pages
+  //     const previous = index === articles.length - 1 ? null: articles[index + 1].node
+  //     const next = index === 0 ? null : articles[index - 1].node
+  //     // Previous and next are object props sent as pageContext object to articleTemplate
+  //     createPage({
+  //         path: `${article.node.slug}`,
+  //         component: require.resolve(articleTemplate),
+  //         context: {
+  //             id: article.node.id,
+  //             slug: article.node.slug,
+  //             previous,
+  //             next,
+  //         },
+  //     })
+  // })
 
   // Create Attorney Bios
   const attorneys = result.data.attorneys.edges

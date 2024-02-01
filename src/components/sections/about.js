@@ -15,7 +15,7 @@ const About = () => {
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                     <div className="lg:flex lg:flex-row lg:max-h-[400px] xl:max-h-[500px] text-center">
                         <div className="lg:w-1/3">
-                            <StaticImage src="https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/f_auto/q_auto/v1699606613/e1eqadzarq4bjsapvwgy.webp" alt="W. Neal Hollington, Esq."/>
+                            <StaticImage src="https://images.ctfassets.net/irf9uehwbpr8/zc4u3SXWOXh9ZEQZPDefu/dc7bbd11b81f570f48a131f6131804ea/e1eqadzarq4bjsapvwgy-Bio_Image_Enhanced.webp" alt="W. Neal Hollington, Esq."/>
                         </div>
                         <div className="lg:w-2/3 lg:max-h-full overflow-y-scroll">
                             <p className="text-xl text-gray-900 text-justify hyphens-auto my-4 lg:mx-4">
