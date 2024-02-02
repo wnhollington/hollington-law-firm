@@ -15,7 +15,6 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@fontsource/cormorant-garamond": "^5.0.8",
     "@fontsource/libre-baskerville": "^5.0.8",
     "@fontsource/mr-dafoe": "^5.0.8",
     "@fontsource/source-sans-pro": "^5.0.8",

@@ -10,11 +10,11 @@ module.exports = {
   siteMetadata: {
     title: `Hollington Law Firm`,
     description: 'Civil Litigation Attorney',
-    tagline: `Plaintiff focused, trial ready`,
+    tagline: `Your Story Matters`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
       phone: "(303) 276-2647",
-      email: "",
+      email: "nhollington@hollingtonlawfirm.com",
       address: {
         street: "11479 S Pine Dr",
         city: "Parker, Colorado 80134"
