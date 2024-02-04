@@ -15,7 +15,7 @@ const Hero = () => {
                     <div className="flex flex-col justify-center mx-auto max-w-5xl gap-6 p-4">
                         
                         <h1 className="font-['Libre_Baskerville'] text-3xl md:text-4xl lg:text-5xl">{siteMetaData.description}</h1>
-                        <p className="font-['Source_Sans_Pro'] text-2xl md:text-3xl lg:text-4xl">{siteMetaData.tagline}</p>
+                        <p className="font-['Source_Sans_Pro'] text-2xl md:text-3xl lg:text-4xl italic">{siteMetaData.tagline}</p>
                         
                         <div className="flex flex-col sm:flex-row gap-4">
                             
