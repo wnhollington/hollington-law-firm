@@ -2,8 +2,6 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../utilities/use-site-metadata"
-import { BsFacebook, BsInstagram, BsYoutube } from "react-icons/bs"
-import {FaXTwitter} from "react-icons/fa6"
 
 const Footer = () => {
     const siteMetaData = useSiteMetadata()
@@ -20,24 +18,12 @@ const Footer = () => {
                     <div className="bg-slate-100 p-8 rounded-md shadow-lg mx-4 lg:mx-0">
                         <div className="max-w-[400px]"><StaticImage src="../images/logo.webp" alt="Hollington Law Firm, LLC"/></div>
 
-                        <div className="flex flex-col md:flex-row my-8 gap-12">
+                        <div className="text-xl xl:text-2xl text-gray-900 flex flex-col gap-4">
+                            <p className="mt-6">{siteMetaData.contact.address}<span className="block text-lg">(By Appointment Only)</span></p>
+                            
+                            <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
 
-                            <div className="text-xl xl:text-2xl text-gray-900">
-                                <p>{siteMetaData.contact.address.street}</p>
-                                <p>{siteMetaData.contact.address.city}</p>
-                                <p className="mb-2 text-lg">(By Appointment Only)</p>
-                                <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
-                            </div>
-
-                            <div className="flex flex-col gap-4 md:justify-end">
-                                <ul className="flex gap-6">
-                                    <li><a href="https://www.facebook.com" aria-label="facebook" target="__blank"><BsFacebook size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
-                                    <li><a href="https://www.instagram.com" aria-label="instagram" target="__blank"><BsInstagram size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
-                                    <li><a href="https://www.youtube.com" aria-label="youtube" target="__blank"><BsYoutube size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
-                                    <li><a href="https://www.twitter.com" aria-label="twitter" target="__blank"><FaXTwitter size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
-                                </ul>
-                                <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Review Us</a>
-                            </div>
+                            <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Leave Us a Review</a>
                         </div>
                     </div>
 
