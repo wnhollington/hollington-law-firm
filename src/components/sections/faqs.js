@@ -23,7 +23,7 @@ const Faqs = () => {
     ]
 
     const fees = [
-        {id:0, name: "Contingency", description: "Details can vary, but essentially, in this arrangement the client pays the law firm an attorney fee only if the firm recovers a settlement or judgment for the client. The fee is usually a percentage of the recovery. If we lose the case, the client does not pay us a fee and is usually responsible only for litigation costs, such as copying costs or expert fees. Under this type of arrangement, we and our clients share both the risk and the reward." },
+        {id:0, name: "Contingency", description: "Details can vary, but essentially, under this arrangement the client pays the law firm an attorney fee only if the firm recovers a settlement or judgment for the client. The fee is usually a percentage of the recovery. If we lose the case, the client does not pay us a fee and is usually responsible only for litigation costs, such as copying costs or expert fees. Under this type of arrangement, we and our clients share both the risk and the reward." },
 
         {id:1, name: "Hybrid Fees", description: "While there are various types of hybrid fee agreements, the most common is one in which we agree to accept a lower hourly rate than normal, but also take a percentage of any recovery if we are successful. In other words, part of our payment is contingent on success and part isn’t." },
 
@@ -55,10 +55,10 @@ const Faqs = () => {
                                 <Accordion.Title className="text-xl md:text-2xl px-2 py-4 text-gray-900">How is your law firm paid?</Accordion.Title>
                                 <Accordion.Content>
                                     <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4">
-                                        At Hollington Law Firm, we represent the majority of our clients on a contigency fee basis, meaning that our clients only pay us a fee upon receiving a successful settlement or judgment. Having said that, the firm does take on certain types of cases, where a contigency fee arrangement may not make sense. For those cases, alternative fee arrangements offer distinct benefits to the client that traditional hourly billing does not. These agreements compliment our firm's philosophy to never template or commoditize our legal services. Instead, like our approach to the practice of law, we tailor each of our fee agreements to the client's unique legal needs. Doing so ties our compensation to our success and the value we add to the client, which we believe allocates risk and reward more fairly. 
+                                        At Hollington Law Firm, we never template or commoditize our legal services. Instead, we tailor our approach to each client's unique circumstances. Like our approach to the practice of law, we also believe in aligning our compensation to our success and the value that we add to the client to more fairly allocate risk and reward. Unlike many law firms, we offer our clients a range of agreements that are tailored to their personal needs and goals.  
                                     </p>
                                     <p className="text-gray-900 text-xl text-justify hyphens-auto mx-auto py-4"> 
-                                        No matter what fee agreement we do have, you will never be surprised as to how we are compensated for our services. Before any formal agreement is reached, we will take all the time you need to ensure that you are both informed and comfortable as to how our fees will be earned. Following are forms of billing that we regularly utilize for our clients:
+                                        No matter what fee agreement we do have, you will never be surprised as to how we are compensated for our services. Before any formal agreement is reached, we will take all the time you need to ensure that you are both informed and comfortable as to how our fees will be earned. Following are forms of billing that we regularly offer our clients:
                                     </p>
                                     
                                     <div className="max-w-5xl mx-auto my-8">
