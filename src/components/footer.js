@@ -36,7 +36,7 @@ const Footer = () => {
                                     <li><a href="https://www.youtube.com" aria-label="youtube" target="__blank"><BsYoutube size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
                                     <li><a href="https://www.twitter.com" aria-label="twitter" target="__blank"><FaXTwitter size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
                                 </ul>
-                                <a href="https://www.google.com/search?hl=en-US&gl=us&q=Pearman+Law+Firm,+P.C.,+4195+Wadsworth+Blvd,+Wheat+Ridge,+CO+80033&ludocid=875135514616406624&lsig=AB86z5Uae2-vxsFAuTugTeeUfs3X#lrd=0x876b8652f9590597:0xc251b1d270a2260,3" target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Review Us</a>
+                                <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Review Us</a>
                             </div>
                         </div>
                     </div>
