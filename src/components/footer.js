@@ -19,7 +19,13 @@ const Footer = () => {
                         <div className="max-w-[400px]"><StaticImage src="../images/logo.webp" alt="Hollington Law Firm, LLC"/></div>
 
                         <div className="text-xl xl:text-2xl text-gray-900 flex flex-col gap-4">
-                            <p className="mt-6">{siteMetaData.contact.address}<span className="block text-lg">(By Appointment Only)</span></p>
+                            <div>
+                                <div className="flex flex-col lg:flex-row mt-4">
+                                    <p>{siteMetaData.contact.address.street}</p>
+                                    <p className="lg:ml-2">{siteMetaData.contact.address.city}</p>
+                                </div>
+                                <p className="text-lg">(By Appointment Only)</p>
+                            </div>
                             
                             <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
 

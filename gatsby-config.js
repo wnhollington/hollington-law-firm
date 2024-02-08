@@ -15,7 +15,10 @@ module.exports = {
     contact: {
       phone: "(303) 276-2647",
       email: "nhollington@hollingtonlawfirm.com",
-      address: "11479 S Pine Dr., Parker, Colorado 80134",
+      address: {
+        street: "11479 S Pine Dr., ",
+        city: " Parker, Colorado 80134"
+      },
     },
     social: {
       facebook: ` `,
