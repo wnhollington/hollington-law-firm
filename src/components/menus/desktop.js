@@ -1,6 +1,7 @@
 import * as React from "react"
 import HeaderMenu from "./header-menu"
 import { useSiteMetadata } from "../../utilities/use-site-metadata"
+import { FaPhone } from "react-icons/fa6";
 
 const Desktop = () => {
     const siteMetaData = useSiteMetadata()
@@ -15,8 +16,8 @@ const Desktop = () => {
             </nav>
 
             <div className="hidden lg:flex">
-                <a href={`tel:${siteMetaData.contact.phone}`} className="flex items-center gap-2 bg-primary p-3 rounded-lg phone text-lg font-semibold leading-6 text-gray-100 hover:text-gray-200 hover:shadow-lg transition-colors duration-300">
-                    Call Now
+                <a href={`tel:${siteMetaData.contact.phone}`} className="flex flex-row items-center gap-2 text-primary font-semibold text-xl">
+                    <FaPhone /><span>{siteMetaData.contact.phone}</span>
                 </a>
             </div>
         </>

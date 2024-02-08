@@ -1,13 +1,13 @@
 import * as React from "react"
 import { useSiteMetadata } from "../../utilities/use-site-metadata"
-import { BsPlayCircle } from "react-icons/bs"
-import { useState } from "react"
-import FsLightbox from "fslightbox-react"
+// import { BsPlayCircle } from "react-icons/bs"
+// import { useState } from "react"
+// import FsLightbox from "fslightbox-react"
 import { Link } from "gatsby"
 
 const Hero = () => {
     const siteMetaData = useSiteMetadata()
-    const [toggler, setToggler] = useState(false)
+    // const [toggler, setToggler] = useState(false)
     return (
         <section>
             <div className="relative isolate bg-hero bg-cover bg-no-repeat h-[500px] xl:h-screen">
@@ -21,22 +21,22 @@ const Hero = () => {
                             
                             <Link to="/schedule-consultation" className="bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg text-center">Schedule Your Free Consultation</Link>
                             
-                            <button className="flex flex-row items-center justify-center bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg" onClick={() => setToggler(!toggler)}>
+                            {/* <button className="flex flex-row items-center justify-center bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg" onClick={() => setToggler(!toggler)}>
                                 <BsPlayCircle size={28} className="text-white animate-pulse hover:cursor-pointer mr-4" />
                                 <p>Watch Intro Video</p>
-                            </button>
+                            </button> */}
 
                         </div>
 
                     </div>
                 </div>
             </div>
-            <FsLightbox 
+            {/* <FsLightbox 
                 toggler={toggler}
                 sources={[
                     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                 ]}
-            />
+            /> */}
         </section>
     )
 }
