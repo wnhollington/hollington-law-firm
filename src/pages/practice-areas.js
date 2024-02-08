@@ -59,7 +59,7 @@ const PracticeAreas = () => {
 
                      {/* Category Tabs */}
                      <div className="mx-8 lg:mx-0 w-64 bg-slate-100">
-                        <div className="flex flex-row justify-between items-center px-2 py-2 bg-slate-50 hover:cursor-pointer" onClick={() => setDropdownActive(!dropdownActive)}>
+                        <div className="flex flex-row justify-between items-center px-2 py-2 bg-slate-50 hover:cursor-pointer" onClick={() => setDropdownActive(!dropdownActive)} >
                             <p className="text-xl" >{practiceAreas[activeTab].name}</p>
                             <FaChevronDown/>
                         </div>

@@ -24,11 +24,12 @@ const Footer = () => {
 
                             <div className="text-xl xl:text-2xl text-gray-900">
                                 <p>{siteMetaData.contact.address.street}</p>
-                                <p className="mb-2">{siteMetaData.contact.address.city}</p>
+                                <p>{siteMetaData.contact.address.city}</p>
+                                <p className="mb-2 text-lg">(By Appointment Only)</p>
                                 <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
                             </div>
 
-                            <div className="flex flex-col gap-4 md:justify-between">
+                            <div className="flex flex-col gap-4 md:justify-end">
                                 <ul className="flex gap-6">
                                     <li><a href="https://www.facebook.com" aria-label="facebook" target="__blank"><BsFacebook size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
                                     <li><a href="https://www.instagram.com" aria-label="instagram" target="__blank"><BsInstagram size={"2em"} className="fill-gray-700 hover:fill-gray-800"/></a></li>
