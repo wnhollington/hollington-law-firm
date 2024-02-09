@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../utilities/use-site-metadata"
+import { FaPhone } from "react-icons/fa6";
 
 const Footer = () => {
     const siteMetaData = useSiteMetadata()
@@ -16,20 +17,22 @@ const Footer = () => {
 
                     {/* Review and Social */}
                     <div className="bg-slate-100 p-8 rounded-md shadow-lg mx-4 lg:mx-0">
-                        <div className="max-w-[400px]"><StaticImage src="../images/logo.webp" alt="Hollington Law Firm, LLC"/></div>
+                        <div className="max-w-[300px]"><StaticImage src="../images/logo.webp" alt="Hollington Law Firm, LLC"/></div>
 
-                        <div className="text-xl xl:text-2xl text-gray-900 flex flex-col gap-4">
+                        <div className="text-gray-900 flex flex-col gap-4">
                             <div>
-                                <div className="flex flex-col lg:flex-row mt-4">
+                                <div className="flex flex-col lg:flex-row mt-4 text-2xl">
                                     <p>{siteMetaData.contact.address.street}</p>
                                     <p className="lg:ml-2">{siteMetaData.contact.address.city}</p>
                                 </div>
                                 <p className="text-lg">(By Appointment Only)</p>
                             </div>
                             
-                            <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-bold text-2xl">{siteMetaData.contact.phone}</a>
+                            <div className="flex flex-row justify-between items-center">
+                                <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-primary font-semibold text-xl flex flex-row items-center gap-2"><FaPhone /><span>{siteMetaData.contact.phone}</span></a>
 
-                            <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Leave Us a Review</a>
+                                <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-primary hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-lg text-center max-w-[200px]">Leave Us a Review</a>
+                            </div>
                         </div>
                     </div>
 
@@ -47,7 +50,7 @@ const Footer = () => {
                         <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/disclaimer">Disclaimer</Link></li>
                         <li className="text-md md:text-lg text-white font-semibold mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/contact">Contact</Link></li>
                     </ul>
-                    <p className="text-sm text-white">© Copyright 2023. All Rights Reserved.</p>
+                    <p className="text-sm text-white">© Copyright <span>{new Date().getFullYear()}</span> All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
