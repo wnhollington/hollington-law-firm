@@ -1,6 +1,13 @@
 
 const path = require(`path`)
 
+// PartyTown
+const { copyLibFiles } = require('@builder.io/partytown/utils');
+
+exports.onPreBuild = async () => {
+  await copyLibFiles(path.join(__dirname, 'static', '~partytown'));
+};
+
 // Create blog pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -8,7 +15,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Templates
   const pageTemplate = path.resolve(`./src/templates/page.js`)
   const practiceAreaTemplate = path.resolve(`./src/templates/practice-area.js`)
-  const articleTemplate = path.resolve(`./src/templates/article.js`)
+  // const articleTemplate = path.resolve(`./src/templates/article.js`)
   const attorneyBioTemplate = path.resolve(`./src/templates/attorney-bio.js`)
 
   const result = await graphql(`

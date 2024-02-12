@@ -27,10 +27,6 @@ module.exports = {
       twitter: ` `,
     }
   },
-  partytownProxiedURLs: [
-    `https://www.googletagmanager.com/gtm.js?id=${process.env.GA_TRACKING_ID}`,
-    `https://www.google-analytics.com/analytics.js`,
-  ],
   plugins: 
   [
       "gatsby-plugin-image", 
