@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/sections/hero"
 import About from "../components/sections/about"
-import Accolades from "../components/sections/accolades"
 import PracticeAreas from "../components/sections/practice-areas"
 import WhatSetsUsApart from "../components/sections/what-sets-us-apart"
 import Process from "../components/sections/process"
@@ -19,7 +18,6 @@ const IndexPage = () => {
   return (
     <Layout>
       <Hero />
-      <Accolades />
       <About />
       <PracticeAreas />
       <WhatSetsUsApart />
