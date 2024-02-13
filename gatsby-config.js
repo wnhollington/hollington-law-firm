@@ -29,8 +29,16 @@ module.exports = {
   },
   plugins: 
   [
-      "gatsby-plugin-image", 
-      "gatsby-plugin-sitemap", 
+    "gatsby-plugin-image", 
+    "gatsby-plugin-sitemap", 
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.hollingtonlawfirm.com',
+        sitemap: 'https://www.hollingtonlawfirm.com/sitemap-index.xml',
+        policy: [{userAgent: '*', allow: '/'}],
+      }
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
