@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hollingtonlawfirm.com/sitemap-index.xml

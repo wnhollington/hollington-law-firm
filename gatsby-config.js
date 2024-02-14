@@ -32,13 +32,6 @@ module.exports = {
     "gatsby-plugin-image", 
     "gatsby-plugin-sitemap", 
     {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        sitemap: 'https://hollingtonlawfirm.com/sitemap-index.xml',
-        policy: [{userAgent: '*', allow: '/'}],
-      }
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: "Hollington Law Firm",
