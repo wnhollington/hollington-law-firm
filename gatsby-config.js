@@ -34,8 +34,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.hollingtonlawfirm.com',
-        sitemap: 'https://www.hollingtonlawfirm.com/sitemap-index.xml',
+        sitemap: 'https://hollingtonlawfirm.com/sitemap-index.xml',
         policy: [{userAgent: '*', allow: '/'}],
       }
     },
