@@ -57,3 +57,12 @@
 .svg-icons svg {
     max-height: 100px;
 }
+
+/* Algolia Search Hits */
+.ais-Hits-item {
+    @apply my-4
+}
+
+.ais-Highlight-highlighted {
+    @apply bg-primary text-white
+}

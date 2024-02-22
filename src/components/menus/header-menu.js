@@ -20,6 +20,15 @@ const HeaderMenu = ({placement}) => {
             </Dropdown>
 
             <Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Practice Areas</Link>
+
+            <Dropdown
+                inline
+                label="Resources"
+                placement={placement}
+            >
+                <Dropdown.Item key="Schedule Consultation"><Link to="/articles" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Articles</Link></Dropdown.Item>
+
+            </Dropdown>
             
             <Dropdown
                 inline

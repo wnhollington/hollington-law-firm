@@ -93,7 +93,7 @@ exports.createPages = async ({ graphql, actions }) => {
       const next = index === 0 ? null : articles[index - 1].node
       // Previous and next are object props sent as pageContext object to articleTemplate
       createPage({
-          path: `${article.node.slug}`,
+          path: `/articles/${article.node.slug}`,
           component: require.resolve(articleTemplate),
           context: {
               id: article.node.id,

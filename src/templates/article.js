@@ -37,15 +37,15 @@ function Article ({ data, pageContext }) {
             <ul className="flex flex-wrap justify-between mx-auto my-4">
               <li>
                 {previous && (
-                  <Link to={`/${previous.slug}`} rel="prev" aria-label={previous.title} title={previous.title} className="inline-flex items-center p-2 text-sm font-medium no-underline text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
-                    <h3 className="flex items-center gap-4">&larr; Previous Post</h3>
+                  <Link to={`/articles/${previous.slug}`} rel="prev" aria-label={previous.title} title={previous.title} className="inline-flex items-center p-2 text-md font-medium no-underline text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                    &larr; Previous Post
                   </Link>
                 )}
               </li>
               <li>
                 {next && (
-                  <Link to={`/${next.slug}`} rel="next" aria-label={next.title} title={next.title} className="inline-flex items-center p-2 text-sm font-medium no-underline  text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
-                    <h3 className="flex items-center justify-right gap-4">Next Post &rarr;</h3>
+                  <Link to={`/articles/${next.slug}`} rel="next" aria-label={next.title} title={next.title} className="inline-flex items-center p-2 text-md font-medium no-underline  text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                    Next Post &rarr;
                   </Link>
                 )}
               </li>
