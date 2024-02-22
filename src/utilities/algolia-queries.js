@@ -32,7 +32,7 @@ const queries = [
     indexName,
     settings: {
       attributesForFaceting: [
-        'filterOnly(metadata.tags.name)'
+        'searchable(metadata.tags.name)'
       ]
     },
   },

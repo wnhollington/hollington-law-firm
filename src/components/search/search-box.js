@@ -24,7 +24,6 @@ const SearchBox = ({ onFocus, onChange, className }) => {
       
       <RefinementList 
         attribute="metadata.tags.name"
-        title="Tags:"
         sortBy={['name:asc']}
         classNames={{
           count: 'hidden',
