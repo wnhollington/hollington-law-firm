@@ -8,6 +8,11 @@ const articleQuery = `{
             title
             seoDescription
             slug
+            metadata {
+              tags {
+                name
+              }
+            }
           }
         }
       }
@@ -26,8 +31,9 @@ const queries = [
     transformer: ({ data }) => data.articles.edges.map(pageToAlgoliaRecord),
     indexName,
     settings: {
-      attributesForFaceting: [`tags`],
-      // attributesToSnippet: [`description:20`],
+      attributesForFaceting: [
+        'filterOnly(metadata.tags.name)'
+      ]
     },
   },
 ]

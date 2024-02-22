@@ -27,11 +27,12 @@ export default function Search({ indices }) {
           onChange={query => setQuery(query)}
           onFocus={() => setFocus(true)}
           hasFocus={hasFocus}
-          className="lg:w-1/3"
+          className="flex flex-col gap-4 w-full lg:w-5/12"
         />
         <SearchResult
           show={query && query.length > 0 && hasFocus}
           indices={indices}
+          className="lg:w-7/12"
         />
       </div>
     </InstantSearch>
