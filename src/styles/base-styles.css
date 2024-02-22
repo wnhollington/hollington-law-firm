@@ -63,4 +63,8 @@ article {
     li {
         @apply py-1
     }
+    
+    nav ul {
+        list-style-type: none;
+    }
 }
