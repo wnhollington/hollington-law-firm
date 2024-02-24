@@ -48,5 +48,6 @@ export default Contact
 export const Head = () => (
   <Seo 
     title="Contact"
+    description="Thank you for your interest in contacting Hollington Law Firm. Please fill out the below form and a representative will be in touch shortly."
   />
 )

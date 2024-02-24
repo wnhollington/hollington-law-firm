@@ -28,5 +28,6 @@ export default ClientIntakeForm
 export const Head = () => (
   <Seo 
     title="Client Intake Form"
+    description="Thank you very much for giving Hollington Law Firm the opportunity to evaluate your legal matter. This form is part of a process that will allow us to determine whether our firm is the right fit for your matter and to run a conflict check"
   />
 )

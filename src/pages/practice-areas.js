@@ -96,5 +96,6 @@ export default PracticeAreas
 export const Head = () => (
   <Seo 
     title="Practice Areas"
+    description="Hollington Law Firm is a Colorado civil litigation firm. From housing & construction defects, to personal injury and consumer fraud, the firm has the knowledge, passion, and resources to fight on your behalf."
   />
 )

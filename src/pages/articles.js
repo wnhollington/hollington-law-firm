@@ -21,5 +21,6 @@ export default Articles
 export const Head = () => (
   <Seo 
     title="Articles"
+    description="We understand that navigating the complexities of the legal system can be daunting, which is why we've curated a collection of informative articles covering various practice areas."
   />
 )

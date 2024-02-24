@@ -35,6 +35,9 @@ export default IndexPage
 export const Head = () => {
   const siteMetaData = useSiteMetadata()
   return (
-    <Seo title={siteMetaData.description} />
+    <Seo 
+      title={siteMetaData.description} 
+      description="Hollington Law Firm is a Colorado civil litigation firm. From housing & construction defects, to personal injury and consumer fraud, the firm has the knowledge, passion, and resources to fight on your behalf."
+    />
   )
 }

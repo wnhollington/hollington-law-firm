@@ -18,5 +18,6 @@ export default ScheduleConsultation
 export const Head = () => (
   <Seo 
     title="Schedule Consultation"
+    description="Thank you for your interest in contacting Hollington Law Firm. Please fill out the below form and a representative will be in touch shortly."
   />
 )
