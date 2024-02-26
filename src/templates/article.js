@@ -19,8 +19,15 @@ function Article ({ data, pageContext }) {
       },
       [INLINES.ENTRY_HYPERLINK]: (node) => {
         const entry = data.contentfulArticles.body.references.find(x => x.contentful_id === node.data.target.sys.id)
-        const entryType = entry.internal.type === "ContentfulPracticeAreas" ? "practice-areas" : "articles"
-        return <Link to={`/${entryType}/${entry.slug}`}>{node.content[0].value}</Link>;
+        switch (entry.internal.type) {
+          case 'ContentfulPracticeAreas':
+            return <Link to={`/practice-areas}/${entry.slug}`}>{node.content[0].value}</Link>;
+          case 'ContentfulAttorneys':
+            return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
+          case 'ContentfulArticles':
+            return <Link to={`/articles/${entry.slug}`}>{node.content[0].value}</Link>;
+        }
+        
       },
     }
   }
@@ -88,6 +95,13 @@ export const query = graphql`
           ... on ContentfulPracticeAreas {
             contentful_id
             title
+            slug
+            internal {
+              type
+            }
+          }
+          ... on ContentfulAttorneys {
+            contentful_id
             slug
             internal {
               type
