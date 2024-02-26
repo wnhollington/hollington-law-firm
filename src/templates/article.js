@@ -16,7 +16,12 @@ function Article ({ data, pageContext }) {
     renderNode: {
       [INLINES.HYPERLINK]: (node) => {
        return <a href={node.data.uri} target={`${node.data.uri.startsWith('https://hollingtonlawfirm.') ? '_self' : '_blank'}`}>{node.content[0].value}</a>;
-      }
+      },
+      [INLINES.ENTRY_HYPERLINK]: (node) => {
+        const entry = data.contentfulArticles.body.references.find(x => x.contentful_id === node.data.target.sys.id)
+        const entryType = entry.internal.type === "ContentfulPracticeAreas" ? "practice-areas" : "articles"
+        return <Link to={`/${entryType}/${entry.slug}`}>{node.content[0].value}</Link>;
+      },
     }
   }
   return (
@@ -71,6 +76,24 @@ export const query = graphql`
       seoDescription
       body {
         raw
+        references {
+          ... on ContentfulArticles {
+            contentful_id
+            title
+            slug
+            internal {
+              type
+            }
+          }
+          ... on ContentfulPracticeAreas {
+            contentful_id
+            title
+            slug
+            internal {
+              type
+            }
+          }
+        }
       }
     }
   }
