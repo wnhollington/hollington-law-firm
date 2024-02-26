@@ -21,7 +21,7 @@ function Article ({ data, pageContext }) {
         const entry = data.contentfulArticles.body.references.find(x => x.contentful_id === node.data.target.sys.id)
         switch (entry.internal.type) {
           case 'ContentfulPracticeAreas':
-            return <Link to={`/practice-areas}/${entry.slug}`}>{node.content[0].value}</Link>;
+            return <Link to={`/practice-areas/${entry.slug}`}>{node.content[0].value}</Link>;
           case 'ContentfulAttorneys':
             return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
           case 'ContentfulArticles':
