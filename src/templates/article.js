@@ -43,6 +43,8 @@ function Article ({ data, pageContext }) {
           </header>
           
           {renderRichText(data.contentfulArticles.body, options)}
+
+          <p className='italic'>The information provided on this website is for general informational purposes only and should not be construed as legal advice or legal opinion. You should not act or refrain from acting on the basis of any information provided on this website without seeking legal advice from an attorney.</p>
           
           {/* Navigation */}
           <nav>
