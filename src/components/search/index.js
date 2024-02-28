@@ -1,9 +1,10 @@
 import React, { createRef, useState, useMemo } from "react"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch } from "react-instantsearch"
+import { InstantSearch, Pagination } from "react-instantsearch"
 import SearchBox from "./search-box"
 import SearchResult from "./search-result"
 import useClickOutside from "../../utilities/use-click-outside"
+import { FaAngleLeft, FaAngleRight, FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 export default function Search({ indices }) {
   const rootRef = createRef()
@@ -29,11 +30,21 @@ export default function Search({ indices }) {
           hasFocus={hasFocus}
           className="flex flex-col gap-4 w-full lg:w-5/12"
         />
-        <SearchResult
-          show={query && query.length > 0 && hasFocus}
-          indices={indices}
-          className="lg:w-7/12"
-        />
+        <div className="lg:w-7/12">
+          <SearchResult
+            show={query && query.length > 0 && hasFocus}
+            indices={indices}
+            className=""
+          />
+          <Pagination 
+            translations={{
+              firstPageItemText: <FaAngleDoubleLeft size={18}/>,
+              previousPageItemText: <FaAngleLeft size={18}/>,
+              lastPageItemText: <FaAngleDoubleRight size={18}/>,
+              nextPageItemText: <FaAngleRight size={18}/>
+            }}
+          />
+        </div>
       </div>
     </InstantSearch>
   )
