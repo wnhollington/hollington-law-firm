@@ -9,6 +9,7 @@ import Seo from "../components/seo"
 const ClientIntakeForm = () => {
   const [referral, setReferral] = useState(false)
   const [adverseIsBusiness, setAdverseIsBusiness] = useState(false)
+  const [otherSource, setOtherSource] = useState(false)
 
   return (
     <Layout>
@@ -59,7 +60,7 @@ const ClientIntakeForm = () => {
 
                       <div>
                         <label htmlFor="addressLine2" className="text-base leading-none text-gray-800">Address Line 2</label>
-                        <input type="text" name="addressLine2" id="addressLine2" className="mt-2 w-full text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" required/>
+                        <input type="text" name="addressLine2" id="addressLine2" className="mt-2 w-full text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100"/>
                       </div>
                       
                       <div className="flex flex-col md:flex-row gap-4">
@@ -232,7 +233,7 @@ const ClientIntakeForm = () => {
 
                       <div>
                         <label htmlFor="adverseAddressLine2" className="text-base leading-none text-gray-800">Address Line 2</label>
-                        <input type="text" name="adverseAddressLine2" id="adverseAddressLine2" className="mt-2 w-full text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" required/>
+                        <input type="text" name="adverseAddressLine2" id="adverseAddressLine2" className="mt-2 w-full text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" />
                       </div>
                       
                       <div className="flex flex-col md:flex-row gap-4">
@@ -394,9 +395,8 @@ const ClientIntakeForm = () => {
 
                     <div className="flex flex-row gap-2 items-center my-1">
                       <input type="checkbox" id="other" name="other" className="text-primary"/>
-                      <label htmlFor="other">
-                        <input type="text" placeholder="Other" className="h-8 text-base leading-none text-gray-900 py-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-500"/>
-                      </label>
+                      <label htmlFor="other" className="hidden"></label>
+                      <input type="text" id="otherReferralSource" name="otherReferralSource" placeholder="Other" className="h-8 text-base leading-none text-gray-900 py-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-500"/>
                     </div>
 
                   </fieldset>
