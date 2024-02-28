@@ -9,7 +9,6 @@ import Seo from "../components/seo"
 const ClientIntakeForm = () => {
   const [referral, setReferral] = useState(false)
   const [adverseIsBusiness, setAdverseIsBusiness] = useState(false)
-  const [otherSource, setOtherSource] = useState(false)
 
   return (
     <Layout>
@@ -182,7 +181,7 @@ const ClientIntakeForm = () => {
                       </div>
 
                       <div className="flex flex-row items-center gap-1">
-                        <input type="radio" name="adverseIsBusiness" id="no" className="text-primary" onClick={() => setAdverseIsBusiness(true)} />
+                        <input type="radio" name="adverseIsIndividual" id="no" className="text-primary" onClick={() => setAdverseIsBusiness(true)} />
                         <label htmlFor="no" className="text-base font-semibold leading-none text-gray-800">Business</label>
                       </div>
 
@@ -395,7 +394,7 @@ const ClientIntakeForm = () => {
 
                     <div className="flex flex-row gap-2 items-center my-1">
                       <input type="checkbox" id="other" name="other" className="text-primary"/>
-                      <label htmlFor="other" className="hidden"></label>
+                      <label htmlFor="other" className="hidden">Other</label>
                       <input type="text" id="otherOnlineSource" name="otherOnlineSource" placeholder="Other" className="h-8 text-base leading-none text-gray-900 py-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-500"/>
                     </div>
 
