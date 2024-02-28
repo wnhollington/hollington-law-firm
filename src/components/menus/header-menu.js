@@ -32,14 +32,13 @@ const HeaderMenu = ({placement}) => {
             
             <Dropdown
                 inline
-                label="Contact"
+                label="Schedule Consultation"
                 placement={placement}
             >
-                <Dropdown.Item key="Schedule Consultation"><Link to="/schedule-consultation" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Schedule Consultation</Link></Dropdown.Item>
 
                 <Dropdown.Item key="Schedule Consultation"><Link to="/client-intake-form" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Client Intake Form</Link></Dropdown.Item>
 
-                <Dropdown.Item key="Contact"><Link to="/contact" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Contact</Link></Dropdown.Item>
+                <Dropdown.Item key="Schedule Consultation"><Link to="/schedule-consultation" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Schedule Consultation</Link></Dropdown.Item>
 
             </Dropdown>
         </>
