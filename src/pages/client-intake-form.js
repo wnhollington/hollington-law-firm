@@ -177,12 +177,12 @@ const ClientIntakeForm = () => {
                       <p>Is the defendant or adverse party an individual or a business entity?</p>
                       
                       <div className="flex flex-row items-center gap-1 md:ml-6">
-                        <input type="radio" name="referral" id="yes" className="text-primary" onClick={() => setAdverseIsBusiness(false)} />
+                        <input type="radio" name="adverseIsIndividual" id="yes" className="text-primary" onClick={() => setAdverseIsBusiness(false)} />
                         <label htmlFor="yes" className="text-base font-semibold leading-none text-gray-800 mr-1">Individual</label>
                       </div>
 
                       <div className="flex flex-row items-center gap-1">
-                        <input type="radio" name="referral" id="no" className="text-primary" onClick={() => setAdverseIsBusiness(true)} />
+                        <input type="radio" name="adverseIsBusiness" id="no" className="text-primary" onClick={() => setAdverseIsBusiness(true)} />
                         <label htmlFor="no" className="text-base font-semibold leading-none text-gray-800">Business</label>
                       </div>
 
@@ -396,7 +396,7 @@ const ClientIntakeForm = () => {
                     <div className="flex flex-row gap-2 items-center my-1">
                       <input type="checkbox" id="other" name="other" className="text-primary"/>
                       <label htmlFor="other" className="hidden"></label>
-                      <input type="text" id="otherReferralSource" name="otherReferralSource" placeholder="Other" className="h-8 text-base leading-none text-gray-900 py-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-500"/>
+                      <input type="text" id="otherOnlineSource" name="otherOnlineSource" placeholder="Other" className="h-8 text-base leading-none text-gray-900 py-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-500"/>
                     </div>
 
                   </fieldset>
