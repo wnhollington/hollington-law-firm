@@ -358,7 +358,7 @@ const ClientIntakeForm = () => {
           
                     <div className={referral === true ? "flex flex-col gap-1 mt-6 opacity-100 transition ease-in-out delay-150 h-12" : "h-0 mt-6 flex flex-col gap-1 opacity-0 transition ease-in-out"}>
                       <label htmlFor="referralName" className="text-base leading-none text-gray-900">Referral Name</label>
-                      <input type="text" name="referralName" id="referralName" className="w-96 text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100"/>
+                      <input type="text" name="referralName" id="referralName" className="w-full max-w-md text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100"/>
                     </div>
 
 

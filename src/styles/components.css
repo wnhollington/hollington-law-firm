@@ -73,6 +73,9 @@
 .ais-Pagination-list {
     @apply flex flex-row gap-4 text-lg items-center justify-center
 }
+.ais-RefinementList-checkbox {
+    @apply text-primary
+}
 .ais-Pagination-item {
     @apply text-slate-800 font-semibold
 }
