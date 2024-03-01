@@ -35,6 +35,9 @@ const PracticeAreas = () => {
     let constructionLitigation = data.allContentfulPracticeAreas.edges.filter((edge) => {
         return edge.node.category.category === "Construction Litigation"
     })
+    let realEstateLitigation = data.allContentfulPracticeAreas.edges.filter((edge) => {
+        return edge.node.category.category === "Real Estate Litigation"
+    })
     let businessLitigation = data.allContentfulPracticeAreas.edges.filter((edge) => {
         return edge.node.category.category === "Business Litigation"
     })
@@ -44,9 +47,10 @@ const PracticeAreas = () => {
 
     let practiceAreas = [
         {id: 0, name: "Construction Litigation", entries: constructionLitigation},
-        {id: 1, name: "Business Litigation", entries: businessLitigation},
-        {id: 2, name: "Personal Injury", entries: personalInjury},
-        {id: 3, name: "All Practice Areas", entries: data.allContentfulPracticeAreas.edges},
+        {id: 1, name: "Real Estate Litigation", entries: realEstateLitigation},
+        {id: 2, name: "Business Litigation", entries: businessLitigation},
+        {id: 3, name: "Personal Injury", entries: personalInjury},
+        {id: 4, name: "All Practice Areas", entries: data.allContentfulPracticeAreas.edges},
     ]
     const handleTabs = (item) => {
         setActiveTab(item);
