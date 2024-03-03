@@ -13,7 +13,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlA
     // GTM
     <script
       key="google-tag-manager"
-      type="text/partytown"
+      // type="text/partytown"
       dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
