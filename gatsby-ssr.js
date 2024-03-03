@@ -9,7 +9,7 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlA
 
   setHtmlAttributes({ lang: 'en-US' });
   setHeadComponents([
-    <Partytown key="partytown" forward={['gtag']} />,
+    <Partytown key="partytown" debug={true} forward={['dataLayer.push']} />,
     // GTM
     <script
       key="google-tag-manager"
@@ -22,26 +22,12 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlA
         })(window,document,'script','dataLayer','${process.env.GTM_ID}');`
       }}
     />,
-    // Google Analytics
-    <script key="google-analytics" type="text/partytown" src={`${ORIGIN}/gtag/js?id=${process.env.GA_TRACKING_ID}`} />,
-    <script
-      key="google-analytics-config"
-      type="text/partytown"
-      dangerouslySetInnerHTML={{
-        __html: `window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag(){ window.dataLayer.push(arguments);}
-        gtag('js', new Date()); 
-        gtag('config', '${process.env.GA_TRACKING_ID}', { send_page_view: false })`
-      }}
-    />
   ]);
   setPreBodyComponents([
     <noscript
       key="google-tag-manager"
       dangerouslySetInnerHTML={{
-        __html: `
-          <iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-                `,
+        __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
       }}
     />
   ])
