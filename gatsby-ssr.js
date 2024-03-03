@@ -5,9 +5,9 @@ import { Partytown } from '@builder.io/partytown/react';
 const ORIGIN = 'https://www.googletagmanager.com';
 
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlAttributes }) => {
-  if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') return null;
 
   setHtmlAttributes({ lang: 'en-US' });
+
   setHeadComponents([
     <Partytown key="partytown" debug={true} forward={['dataLayer.push']} />,
     // GTM
