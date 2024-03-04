@@ -27,6 +27,7 @@ const ConstructionDefects = () => {
       <p className="text-xl text-gray-900 text-justify hyphens-auto my-4 lg:mx-4">
       We've seen firsthand how daunting it can be to pursue justice against powerful construction companies. However, with our experienced team by your side, you can transform uncertainty into confidence. We'll fight tirelessly to hold negligent parties accountable and ensure you receive the compensation you deserve.
       </p>
+
     </>
   )
   const timeline = [
@@ -67,7 +68,7 @@ const ConstructionDefects = () => {
         {/* Issues We Handle */}
         <IssuesWeHandle
           issueDescription={"At Hollington Law Firm, we specialize in representing property owners in claims against builders and contractors. Over the years, we have seen and litigated the gamut of construction defects in Colorado. From roofing issues to grading concerns, there is no property issue that we are not equipped to handle."}
-          issues={['Expansive Soils', 'Roofing', 'Windows and Doors', 'Balconies and Decks', 'Grading and Drainage', 'Water Intrusion', 'Foundation Cracks/Settlement', 'Plumbing Problems', 'Electrical Issues', 'HVAC Systems', 'Finish and Cosmetic Defects']}
+          issues={['Expansive Soils', 'Roofing', 'Windows and Doors', 'Balconies and Decks', 'Grading and Drainage', 'Water Intrusion', 'Foundations', 'Plumbing Problems', 'Electrical Issues', 'HVAC Systems', 'Poor Framing', 'Finish and Cosmetic Defects']}
         />
 
         <LandingPageProcess 

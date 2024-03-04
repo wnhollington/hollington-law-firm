@@ -15,10 +15,10 @@ const IssuesWeHandle = ({issueDescription, issues}) => {
                
                 <p className="text-xl text-gray-900 text-justify hyphens-auto my-4">{issueDescription}</p>
                 
-                <ul className="flex flex-col gap-4">
+                <ul className="my-8 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {issues.map((issue, index) => {
                         return (
-                            <li key={index} className="text-xl text-gray-900 font-semibold flex flex-row justify-start items-center gap-4"><FaCheckCircle className="text-primary"/>{issue}</li>                 
+                            <li key={index} className="text-xl text-gray-900 font-semibold flex flex-row gap-4"><FaCheckCircle className="text-primary"/>{issue}</li>                 
                         )
                     })}
                 </ul>
