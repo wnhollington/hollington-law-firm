@@ -105,6 +105,8 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
             )
+            title
+            description
         }
         bioDescription
         education
