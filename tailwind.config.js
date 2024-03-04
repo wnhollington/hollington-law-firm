@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero': "url('https://images.ctfassets.net/irf9uehwbpr8/bTPzPfEGlBHQKCkWmp1ko/c1210cb73b39adb255b91097e695dcfc/hero-image.webp')",
+        'landing-construction-defect': "url('https://res.cloudinary.com/wnhollington/image/upload/v1709567312/landing-page-construction-defects_li55eh.jpg')"
       },
       colors: {
         primary: "#6E0A05",
