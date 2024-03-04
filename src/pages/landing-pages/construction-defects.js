@@ -55,7 +55,7 @@ const ConstructionDefects = () => {
         <LandingPageHero 
           title="Dealing with Construction Defects in Colorado?" 
           tagline="Don't face the big builders and insurance companies alone. Schedule your free consultation with a seasoned construction defect lawyer today."
-          heroImage="landing-construction-defect"
+          heroImage="bg-landing-construction-defect"
         />
 
         {/* About */}

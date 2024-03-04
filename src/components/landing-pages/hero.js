@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const LandingPageHero = ({title, tagline, heroImage }) => {
     return (
         <section>
-            <div className={`relative isolate bg-${heroImage} bg-cover bg-no-repeat h-[500px] xl:h-screen`}>
+            <div className={`relative isolate ${heroImage} bg-cover bg-no-repeat h-[500px] xl:h-screen`}>
                 <div className="h-full w-full bg-neutral-50/70 flex align-center">
                     <div className="flex flex-col justify-center mx-auto max-w-5xl gap-6 p-4">
                         
