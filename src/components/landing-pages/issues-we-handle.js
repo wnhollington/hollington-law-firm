@@ -18,7 +18,7 @@ const IssuesWeHandle = ({issueDescription, issues}) => {
                 <ul className="my-8 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {issues.map((issue, index) => {
                         return (
-                            <li key={index} className="text-xl text-gray-900 font-semibold flex flex-row gap-4"><FaCheckCircle className="text-primary"/>{issue}</li>                 
+                            <li key={index} className="text-xl text-gray-900 font-semibold flex flex-row gap-4 items-center"><FaCheckCircle className="text-primary"/>{issue}</li>                 
                         )
                     })}
                 </ul>

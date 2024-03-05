@@ -34,16 +34,19 @@ const LandingPageHeader = () => {
                 <div className="flex justify-between items-center py-2 px-2">
                     
                     <StaticImage src="../../images/logo.webp" width={300} alt="Hollington Law Firm, LLC"/>
-                    
-                    <div className="flex flex-col hidden md:block">
-                        <div className="flex flex-row justify-center items-center">
-                            <FaStar size={24} color="#FDDF00"/>
-                            <FaStar size={24} color="#FDDF00"/>
-                            <FaStar size={24} color="#FDDF00"/>
-                            <FaStar size={24} color="#FDDF00"/>
-                            <FaStar size={24} color="#FDDF00"/>
+
+                    <div className="hidden lg:flex flex-row gap-12 items-center">
+                        <StaticImage src="../../images/accolades/Asset 2@4x.png" height={45} alt="Best Lawyers" />
+                        <div className="flex flex-col">
+                            <div className="flex flex-row justify-center items-center">
+                                <FaStar size={24} color="#FDDF00"/>
+                                <FaStar size={24} color="#FDDF00"/>
+                                <FaStar size={24} color="#FDDF00"/>
+                                <FaStar size={24} color="#FDDF00"/>
+                                <FaStar size={24} color="#FDDF00"/>
+                            </div>
+                            <p className="text-lg font-semibold leading-6 text-gray-900">Google Reviews</p>
                         </div>
-                        <p className="text-lg font-semibold leading-6 text-gray-900">Google Reviews</p>
                     </div>
                     
                     <div className="lg:flex hidden md:block">
