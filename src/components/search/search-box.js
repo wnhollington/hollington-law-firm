@@ -24,11 +24,11 @@ const SearchBox = ({ onFocus, onChange, className }) => {
       
       <RefinementList 
         attribute="metadata.tags.name"
-        sortBy={['name:asc']}
+        sortBy={['count:desc']}
         classNames={{
-          count: 'hidden',
+          count: 'mx-2',
           checkbox: 'mx-2',
-          labelText: 'text-lg',
+          labelText: 'text-lg  hover:cursor-pointer',
           item: 'my-2'
         }}
       />
