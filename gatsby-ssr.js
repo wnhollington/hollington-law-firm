@@ -1,4 +1,5 @@
 import React from 'react';
+import { Partytown } from '@builder.io/partytown/react';
 
 // GTM
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlAttributes }) => {
@@ -6,9 +7,11 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlA
   setHtmlAttributes({ lang: 'en-US' });
 
   setHeadComponents([
-    // GTM
+    // Partytown/GTM
+    <Partytown key="partytown" debug={true} forward={['dataLayer.push']} />,
     <script
       key="google-tag-manager"
+      type='text/partytown'
       dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

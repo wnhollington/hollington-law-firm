@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.0",
     "@fontsource/libre-baskerville": "^5.0.8",
     "@fontsource/mr-dafoe": "^5.0.8",
     "@fontsource/source-sans-pro": "^5.0.8",
