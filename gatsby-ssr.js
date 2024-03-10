@@ -1,17 +1,14 @@
 import React from 'react';
-import { Partytown } from '@builder.io/partytown/react';
 
-// Party Town, G-Tag
+// GTM
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlAttributes }) => {
 
   setHtmlAttributes({ lang: 'en-US' });
 
   setHeadComponents([
-    <Partytown key="partytown" debug={true} forward={['dataLayer.push']} />,
     // GTM
     <script
       key="google-tag-manager"
-      type="text/partytown"
       dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
