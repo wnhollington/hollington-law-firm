@@ -21,7 +21,7 @@ const ClientIntakeForm = () => {
         <p className="text-xl font-medium text-gray-900 max-w-5xl my-4">Please note that you are providing this information to us for the purpose of seeking legal representation, and we will treat this information exchange as an attorney-client communication for the purposes of the attorney-client privilege. Having said that, you acknowledge that Hollington Law Firm does not currently represent you with regard to the matter you present below. By filling out this form, you are providing us with preliminary information that we will use to evaluate whether we will represent you in the future. At this moment, we do not represent you, and we will not provide you with any legal advice, unless and until we execute a written agreement setting forth the terms and conditions for us to formally represent you.</p>
 
         {/* Begin Intake Form */}
-        <form name="client-intake-form" method="POST" data-netlify="true" action="/schedule-consultation" className="w-full max-w-5xl">
+        <form name="client-intake-form" method="POST" data-netlify="true" action="/thank-you" className="w-full max-w-5xl">
             <input type="hidden" name="form-name" value="client-intake-form"/>
             
             {/* Personal Information*/}

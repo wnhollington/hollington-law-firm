@@ -6,6 +6,7 @@ module.exports = {
     "./src/**/*.{html,js,jsx,ts,tsx,mdx}",
     "./node_modules/flowbite/**/*.js"
   ],
+  important: true,
   theme: {
     container: {
       center: true,
