@@ -1,11 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import { useSiteMetadata } from "../../utilities/use-site-metadata"
-import { FaPhone } from "react-icons/fa6";
 
 const LandingPageFooter = () => {
-    const siteMetaData = useSiteMetadata()
 
     return (
         <footer className="w-full py-8 bg-gradient-to-b from-primary to-red-950">
