@@ -7,7 +7,7 @@ const Sidebar = () => {
 
     return (
         <aside className="m-2 p-2 flex flex-col gap-6 max-w-lg mx-auto">
-            <div className="bg-gradient-to-br from-slate-700 to-slate-400 p-2 rounded-md flex flex-col align-center shadow-lg">
+            <div className="bg-gradient-to-br from-neutral-700 to-neutral-500 p-2 rounded-md flex flex-col align-center shadow-lg">
                 
                 <StaticImage src="https://images.ctfassets.net/irf9uehwbpr8/zc4u3SXWOXh9ZEQZPDefu/dc7bbd11b81f570f48a131f6131804ea/e1eqadzarq4bjsapvwgy-Bio_Image_Enhanced.webp" alt="W. Neal Hollington, Esq." className="rounded-md"/>
                 
@@ -17,7 +17,7 @@ const Sidebar = () => {
 
             </div>
 
-            <div className="bg-gradient-to-br from-slate-700 to-slate-400 p-2 rounded-md flex flex-col items-center gap-2 shadow-lg">
+            <div className="bg-gradient-to-br from-neutral-700 to-neutral-500 p-2 rounded-md flex flex-col items-center gap-2 shadow-lg">
                 
                 <div className="flex flex-row gap-1">
                     <FaStar size={25} fill={"white"}/>

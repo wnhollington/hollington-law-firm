@@ -2,7 +2,8 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { INLINES } from '@contentful/rich-text-types';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { INLINES, BLOCKS } from '@contentful/rich-text-types';
 
 // Components
 import Layout from '../components/layout.js'
@@ -28,6 +29,18 @@ function Article ({ data, pageContext }) {
             return <Link to={`/articles/${entry.slug}`}>{node.content[0].value}</Link>;
         }
         
+      },
+      [BLOCKS.EMBEDDED_ASSET]: (node) => {
+        const { gatsbyImageData, description } = node.data.target
+        return (
+          <div className='flex justify-center my-8 lg:my-12'>
+            <GatsbyImage 
+              image={getImage(gatsbyImageData)}
+              alt={description}
+              className='mx-auto'
+            />
+          </div>
+        )
       },
     }
   }
@@ -108,6 +121,14 @@ export const query = graphql`
             internal {
               type
             }
+          }
+          ... on ContentfulAsset {
+            contentful_id
+            id
+            title
+            description
+            gatsbyImageData(layout: CONSTRAINED, quality: 80, formats: [WEBP, AUTO], placeholder: BLURRED)
+            __typename
           }
         }
       }
