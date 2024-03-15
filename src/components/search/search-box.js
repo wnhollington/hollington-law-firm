@@ -11,7 +11,7 @@ const SearchBox = ({ onFocus, onChange, className }) => {
         <input
           className="w-full rounded-full"
           type="text"
-          placeholder="Search, e.g., 'Construction Accidents'"
+          placeholder="Search, e.g., 'Construction Defects'"
           aria-label="Search"
           onChange={e => {
             refine(e.target.value)

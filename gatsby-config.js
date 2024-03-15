@@ -9,12 +9,12 @@ module.exports = {
   },
   siteMetadata: {
     title: `Hollington Law Firm`,
-    description: 'Civil Litigation Attorney',
-    tagline: `Your Story Matters`,
+    description: 'Colorado Construction Defect Lawyer',
+    tagline: `Helping Home and Property Owners Statewide`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
       phone: "(303) 276-2647",
-      email: "nhollington@hollingtonlawfirm.com",
+      email: "info@hollingtonlawfirm.com",
       address: {
         street: "11479 S Pine Dr., ",
         city: " Parker, Colorado 80134"
@@ -35,7 +35,7 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: "Hollington Law Firm",
-        description: "Colorado Civil Litigation Attorney",
+        description: "Colorado Construction Defect Lawyer",
         lang: "en",
         background_color: "#e7e5e4",
         theme_color: "#6E0A05",

@@ -48,33 +48,22 @@ function Attorney ({ data }) {
                         </Tabs.Item>
 
                         <Tabs.Item
-                        title="Publications"
+                        title="Bar Admissions"
                         >
                             <ul className="text-lg mx-0">
-                                {data.contentfulAttorneys.publications.map((item, index) => {
+                                {data.contentfulAttorneys.barAdmissions.map((item, index) => {
                                     return (
                                         <li className='py-1' key={index}>{item}</li>
                                     )
                                 })}
                             </ul>
                         </Tabs.Item>
-
+                        
                         <Tabs.Item
                         title="Recognitions"
                         >
                             <ul className="text-lg mx-0">
                                 {data.contentfulAttorneys.recognitions.map((item, index) => {
-                                    return (
-                                        <li className='py-1' key={index}>{item}</li>
-                                    )
-                                })}
-                            </ul>
-                        </Tabs.Item>
-                        <Tabs.Item
-                        title="Bar Admissions"
-                        >
-                            <ul className="text-lg mx-0">
-                                {data.contentfulAttorneys.barAdmissions.map((item, index) => {
                                     return (
                                         <li className='py-1' key={index}>{item}</li>
                                     )
