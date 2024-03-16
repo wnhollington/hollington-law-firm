@@ -9,7 +9,6 @@ const SidebarForm = () => (
             name="sidebar-form" 
             method="POST" 
             data-netlify="true"
-            data-netlify-recaptcha="true"
             action="/thank-you" 
             className="flex flex-col gap-4"
         >
@@ -36,8 +35,6 @@ const SidebarForm = () => (
                 <label htmlFor="message" className="text-base font-semibold leading-none text-gray-800">Brief Description of Issue *</label>
                 <textarea type="text" name="message" id="message" className="h-36 text-base leading-none text-gray-900 p-3 focus:outline-none bg-white border rounded border-gray-200 placeholder-gray-100 resize-none" required></textarea>
             </div>
-
-            <div data-netlify-recaptcha="true"></div>
             
             <p className="text-sm leading-4 text-gray-600 mt-4">By clicking submit you agree to our terms of service, <Link to="/privacy-policy" className="text-primary underline decoration-dotted hover:text-primary hover:decoration-solid">privacy policy</Link> and how we use data as stated</p>
             
