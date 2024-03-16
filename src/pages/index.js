@@ -8,6 +8,7 @@ import About from "../components/sections/about"
 import PracticeAreas from "../components/sections/practice-areas"
 import WhatSetsUsApart from "../components/sections/what-sets-us-apart"
 import Process from "../components/sections/process"
+import Results from "../components/sections/results"
 import Testimonials from "../components/sections/testimonials"
 import Schedule from "../components/sections/schedule"
 import Faqs from "../components/sections/faqs"
@@ -22,6 +23,7 @@ const IndexPage = () => {
       <WhatSetsUsApart />
       <Process />
       <Faqs/>
+      <Results />
       <Testimonials />
       <Schedule />
     </Layout>
