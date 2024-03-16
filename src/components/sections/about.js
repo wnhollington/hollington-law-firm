@@ -11,7 +11,7 @@ const About = () => {
         <section id="about" ref={ref}>
             <div className={`container my-12 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <div>
-                    <h2 className="text-center text-3xl mb-2 font-medium">Construction Defect Attorney</h2>
+                    <h2 className="text-center text-3xl mb-2 font-medium">Who We Are</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                     <div className="lg:flex lg:flex-row lg:max-h-[400px] xl:max-h-[500px] text-center">
                         <div className="lg:w-1/3">

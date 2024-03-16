@@ -16,7 +16,7 @@ const Desktop = () => {
             </nav>
 
             <div className="hidden lg:flex">
-                <a href={`tel:${siteMetaData.contact.phone}`} className="flex flex-row items-center gap-2 text-primary font-semibold text-xl">
+                <a href={`tel:${siteMetaData.contact.phone}`} className="flex flex-row items-center gap-2 bg-primary text-white text-xl p-2 rounded-md hover:shadow-lg">
                     <FaPhone /><span>{siteMetaData.contact.phone}</span>
                 </a>
             </div>
