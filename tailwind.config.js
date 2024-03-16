@@ -14,8 +14,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('https://images.ctfassets.net/irf9uehwbpr8/bTPzPfEGlBHQKCkWmp1ko/c1210cb73b39adb255b91097e695dcfc/hero-image.webp')",
-        'landing-construction-defect': "url('https://beckerlawyers.com/wp-content/uploads/2023/07/7.19.23-Construction-Defect.jpg')",
+        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/v1710606588/7.19.23-Construction-Defect_i0xmaq.jpg')",
+        'landing-construction-defect': "url('https://res.cloudinary.com/wnhollington/image/upload/v1709567312/landing-page-construction-defects_li55eh.jpg')",
         'landing-non-compete': "url('https://res.cloudinary.com/wnhollington/image/upload/v1710344512/non-compete_2_rdlroj.jpg')"
       },
       colors: {
