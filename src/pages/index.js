@@ -4,6 +4,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/sections/hero"
+import Accolades from "../components/sections/accolades"
 import About from "../components/sections/about"
 import PracticeAreas from "../components/sections/practice-areas"
 import WhatSetsUsApart from "../components/sections/what-sets-us-apart"
@@ -18,6 +19,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Hero />
+      <Accolades />
       <About />
       <PracticeAreas />
       <WhatSetsUsApart />
