@@ -14,7 +14,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/v1710607462/7.19.23-Construction-Defect_zzkg4q.webp')",
+        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/e_improve,e_sharpen/v1710770792/7.19.23-Construction-Defect_zzkg4q.compress_aforwx.webp')",
         'landing-construction-defect': "url('https://res.cloudinary.com/wnhollington/image/upload/v1709567312/landing-page-construction-defects_li55eh.jpg')",
         'landing-non-compete': "url('https://res.cloudinary.com/wnhollington/image/upload/v1710344512/non-compete_2_rdlroj.jpg')"
       },
