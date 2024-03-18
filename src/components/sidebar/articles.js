@@ -7,6 +7,7 @@ const SidebarArticles = () => {
     const data = useStaticQuery(graphql`
         query queryRecentArticles {
             allContentfulArticles(
+                filter: {featuredArticle: {eq: true}}
                 limit: 6,
                 sort: {createdAt: DESC}
                 ){
