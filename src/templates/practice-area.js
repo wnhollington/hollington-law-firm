@@ -48,11 +48,21 @@ export const query = graphql`
       body {
         raw
         references {
-          slug
-          title
-          contentful_id
-          internal {
-            type
+          ... on ContentfulArticles {
+            contentful_id
+            title
+            slug
+            internal {
+              type
+            }
+          }
+          ... on ContentfulPracticeAreas {
+            contentful_id
+            title
+            slug
+            internal {
+              type
+            }
           }
         }
       }
