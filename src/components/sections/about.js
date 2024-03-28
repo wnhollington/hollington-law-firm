@@ -34,7 +34,7 @@ const About = () => {
                             Our team will work tirelessly to protect your interests and hold negligent parties accountable. Whether you're dealing with design flaws, material defects, or construction delays, we have the knowledge and resources to pursue the compensation you deserve.
                             </p>
                             <p className="text-xl text-gray-900 text-justify my-4 lg:mx-4 hyphens-auto">
-                            Don't wait until it's too late. Contact us today for a free consultation. We'll assess your case, outline your options, and provide expert guidance every step of the way. With our proven track record of success, you can trust us to fight for the justice you deserve.
+                            Don't wait until it's too late. Contact a Colorado construction defect lawyer at Hollington Law Firm today for a free consultation. We'll assess your case, outline your options, and provide expert guidance every step of the way. With our proven track record of success, you can trust us to fight for the justice you deserve.
                             </p>
                         </div>
                     </div>

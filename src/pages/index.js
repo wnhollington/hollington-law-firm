@@ -39,7 +39,7 @@ export const Head = () => {
   return (
     <Seo 
       title={siteMetaData.description} 
-      description="Hollington Law Firm is a Colorado civil litigation firm. From housing & construction defects, to personal injury and consumer fraud, the firm has the knowledge, passion, and resources to fight on your behalf."
+      description="If you suspect construction defects in your home, contact a Colorado construction defect lawyer at Hollington Law Firm today for your free consultation. We will help you obtain the compensation you deserve to fix your home."
     />
   )
 }
