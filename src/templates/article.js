@@ -27,6 +27,8 @@ function Article ({ data, pageContext }) {
             return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
           case 'ContentfulArticles':
             return <Link to={`/articles/${entry.slug}`}>{node.content[0].value}</Link>;
+          default:
+            return <Link to={`/`}>{node.content[0].value}</Link>;
         }
         
       },

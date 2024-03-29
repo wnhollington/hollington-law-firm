@@ -25,6 +25,8 @@ function Page({ data }) {
             return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
           case 'ContentfulArticles':
             return <Link to={`/articles/${entry.slug}`}>{node.content[0].value}</Link>;
+          default:
+            return <Link to={`/`}>{node.content[0].value}</Link>;
         }
       }
     }
@@ -33,7 +35,7 @@ function Page({ data }) {
     <Layout>
       <div className='flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center'>
         <article className='lg:w-2/3 max-w-6xl mx-auto'>
-          <h1 className="text-center">{data.contentfulPracticeAreas.title}</h1>
+          <h1 className="text-center">{data.contentfulPracticeAreas.seoTitle}</h1>
           <div>{renderRichText(data.contentfulPracticeAreas.body, options)}</div>
         </article>
         <Sidebar />
