@@ -39,7 +39,7 @@ const SidebarForm = () => (
             <p className="text-sm leading-4 text-gray-600 mt-4">By clicking submit you agree to our terms of service, <Link to="/privacy-policy" className="text-primary underline decoration-dotted hover:text-primary hover:decoration-solid">privacy policy</Link> and how we use data as stated</p>
             
             <div className="flex items-center justify-center w-full">
-                <button type="submit" name="submit" id="submit" className="text-base font-semibold leading-none text-white py-4 px-10 bg-primary hover:bg-primary rounded hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none w-full">SUBMIT</button>
+                <button type="submit" name="submit" id="submit" className="text-base font-semibold leading-none text-white py-4 px-10 bg-gradient-to-br from-primary to-red-800 hover:bg-primary rounded hover:shadow-lg focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none w-full">SUBMIT</button>
             </div>
         
         </form> 

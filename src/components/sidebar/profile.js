@@ -12,7 +12,7 @@ const SidebarProfile = () => {
                 
                 <h3 className="text-gray-900 text-center text-2xl my-6">Contact Now for Legal Help</h3>
                 
-                <Link to="/schedule-consultation" className="bg-primary text-white text-md sm:text-lg font-bold p-4 rounded-lg text-center">Schedule Your Free Consultation</Link>
+                <Link to="/schedule-consultation" className="bg-gradient-to-br from-primary to-red-800 hover:shadow-lg text-white text-md sm:text-lg font-bold p-4 rounded-lg text-center">Schedule Your Free Consultation</Link>
 
             </div>
 

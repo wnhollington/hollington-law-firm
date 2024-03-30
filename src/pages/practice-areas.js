@@ -37,7 +37,7 @@ const PracticeAreas = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-8 lg:mx-auto text-center my-8">
                         {data.allContentfulPracticeAreas.edges.map((edge) => {
                             return (
-                                <Link to={`/practice-areas/${edge.node.slug}`}className="text-lg md:text-xl font-semibold leading-6 text-gray-900 hover:text-white hover:bg-primary py-8 bg-white shadow-lg border-1 border-gray-900">{edge.node.title}</Link>
+                                <Link to={`/practice-areas/${edge.node.slug}`}className="text-lg md:text-xl font-semibold leading-6 text-gray-900 hover:text-white hover:bg-gradient-to-b from-primary to-red-800 py-8 bg-white shadow-lg border-1 border-gray-900">{edge.node.title}</Link>
                             )
                         })}
                     </div>
