@@ -2,8 +2,9 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 import { INLINES, BLOCKS } from '@contentful/rich-text-types';
+import { FaCalendarAlt, FaClock, FaTag } from "react-icons/fa";
 
 // Components
 import Layout from '../components/layout.js'
@@ -52,9 +53,23 @@ function Article ({ data, pageContext }) {
       <div className='flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center'>
         <article className='lg:w-2/3 max-w-6xl mx-auto'>
           
-          <header>
-            <h1>{data.contentfulArticles.title}</h1>
-            <p className='italic'>{data.contentfulArticles.seoDescription}</p>
+          <header className='mb-4'>
+            <h1 className='bg-gradient-to-br from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-lg shadow-md'>{data.contentfulArticles.title}</h1>
+            <div className='flex flex-col md:flex-row gap-1 md:gap-6'>
+              <p className='flex flex-row items-center gap-1'>
+                <StaticImage
+                  src="https://res.cloudinary.com/wnhollington/image/upload/c_crop,w_1240,h_1240,x_161,y_53,ar_1:1/v1707868812/Neal_Hollington_2_qy86dn.jpg"
+                  height={50}
+                  width={50}
+                  className='rounded-full'
+                  alt="W. Neal Hollington, Esq."
+                />
+                <span>W. Neal Hollington, Esq.</span>
+              </p>
+              <p className='flex flex-row items-center gap-1'><FaCalendarAlt className='text-primary inline'/><span>{data.contentfulArticles.updatedAt}</span></p>
+              <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline'/><span>3 minute read</span></p>
+              <p className='flex flex-row items-center gap-1'><FaTag className='text-primary inline'/><span><Link to="/articles">{data.contentfulArticles.metadata.tags[0].name}</Link></span></p>
+            </div>
           </header>
           
           {renderRichText(data.contentfulArticles.body, options)}
@@ -98,6 +113,11 @@ export const query = graphql`
       updatedAt(formatString: "MMM DD, YYYY")
       seoTitle
       seoDescription
+      metadata {
+        tags {
+          name
+        }
+      }
       body {
         raw
         references {

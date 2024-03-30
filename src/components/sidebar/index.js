@@ -8,7 +8,7 @@ import SidebarForm from "./form"
 const Sidebar = () => {
 
     return (
-        <aside className="m-2 p-2 flex flex-col gap-8 max-w-md mx-auto">
+        <aside className="px-2 flex flex-col gap-8 max-w-md mx-auto">
 
             <SidebarProfile />
             <SidebarReview />
