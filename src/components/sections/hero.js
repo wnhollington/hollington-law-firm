@@ -19,7 +19,7 @@ const Hero = () => {
                         
                         <div className="flex flex-col sm:flex-row gap-4">
                             
-                            <Link to="/schedule-consultation" className="bg-gradient-to-br from-primary to-red-800 hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg text-center">Schedule Your Free Consultation</Link>
+                            <Link to="/schedule-consultation" className="bg-gradient-to-br from-primary to-red-800 hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-md text-center">Schedule Your Free Consultation</Link>
                             
                             {/* <button className="flex flex-row items-center justify-center bg-primary hover:shadow-lg text-white text-md md:text-lg font-bold p-4 rounded-lg" onClick={() => setToggler(!toggler)}>
                                 <BsPlayCircle size={28} className="text-white animate-pulse hover:cursor-pointer mr-4" />

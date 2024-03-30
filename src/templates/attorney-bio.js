@@ -27,7 +27,7 @@ function Attorney ({ data }) {
 
             <article className='max-w-6xl mt-8 p-4 mx-auto'>
                 <div className='shadow-lg rounded-lg'>
-                    <h1 className='bg-gradient-to-br from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-t-lg'>{data.contentfulAttorneys.name}</h1>
+                    <h1 className='bg-gradient-to-b from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-t-md'>{data.contentfulAttorneys.name}</h1>
                     <div className="flex flex-col sm:flex-row my-2 p-2 gap-6">
                         {/* <img src={data.contentfulAttorneys.bioImage[0].secure_url} alt={data.contentfulAttorneys.name}/> */}
                         <GatsbyImage image={attorneyBioImage} alt={`${data.contentfulAttorneys.bioImage.title} | ${data.contentfulAttorneys.bioImage.description}`} />

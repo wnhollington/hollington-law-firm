@@ -50,7 +50,7 @@ const Results = () => {
             <div className={`container my-16 lg:my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">Recent Results</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                <div className="bg-gradient-to-b from-stone-300 to-stone-200 shadow-lg rounded-lg">
+                <div className="bg-gradient-to-b from-stone-300 to-stone-200 shadow-lg rounded-md">
                     <Slider {...sliderSettings}>                            
                         {
                             data.allContentfulResults.edges.map((result, index) => {
