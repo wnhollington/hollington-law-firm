@@ -26,58 +26,60 @@ function Attorney ({ data }) {
         <Layout pageTitle={data.contentfulAttorneys.name}>
 
             <article className='max-w-6xl mt-8 p-4 mx-auto'>
-            <h1 className='text-center'>{data.contentfulAttorneys.name}</h1>
-            <div className="flex flex-col sm:flex-row my-2 p-2 gap-6 shadow-md rounded-md">
-                {/* <img src={data.contentfulAttorneys.bioImage[0].secure_url} alt={data.contentfulAttorneys.name}/> */}
-                <GatsbyImage image={attorneyBioImage} alt={`${data.contentfulAttorneys.bioImage.title} | ${data.contentfulAttorneys.bioImage.description}`} />
-                <div className="mx-4 mb-4 w-full m-h-48 md:h-full md:w-2/3">
-                    <Tabs.Group
-                        aria-label="Default tabs"
-                    >
-                        <Tabs.Item
-                        active
-                        title="Education"
-                        >
-                            <ul className="text-lg mx-0">
-                                {data.contentfulAttorneys.education.map((item, index) => {
-                                    return (
-                                        <li className='py-1' key={index}>{item}</li>
-                                    )
-                                })}
-                            </ul>
-                        </Tabs.Item>
+                <div className='shadow-lg rounded-lg'>
+                    <h1 className='bg-gradient-to-br from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-t-lg'>{data.contentfulAttorneys.name}</h1>
+                    <div className="flex flex-col sm:flex-row my-2 p-2 gap-6">
+                        {/* <img src={data.contentfulAttorneys.bioImage[0].secure_url} alt={data.contentfulAttorneys.name}/> */}
+                        <GatsbyImage image={attorneyBioImage} alt={`${data.contentfulAttorneys.bioImage.title} | ${data.contentfulAttorneys.bioImage.description}`} />
+                        <div className="mx-4 mb-4 w-full m-h-48 md:h-full md:w-2/3">
+                            <Tabs.Group
+                                aria-label="Default tabs"
+                            >
+                                <Tabs.Item
+                                active
+                                title="Education"
+                                >
+                                    <ul className="text-lg mx-0">
+                                        {data.contentfulAttorneys.education.map((item, index) => {
+                                            return (
+                                                <li className='py-1' key={index}>{item}</li>
+                                            )
+                                        })}
+                                    </ul>
+                                </Tabs.Item>
 
-                        <Tabs.Item
-                        title="Bar Admissions"
-                        >
-                            <ul className="text-lg mx-0">
-                                {data.contentfulAttorneys.barAdmissions.map((item, index) => {
-                                    return (
-                                        <li className='py-1' key={index}>{item}</li>
-                                    )
-                                })}
-                            </ul>
-                        </Tabs.Item>
-                        
-                        <Tabs.Item
-                        title="Recognitions"
-                        >
-                            <ul className="text-lg mx-0">
-                                {data.contentfulAttorneys.recognitions.map((item, index) => {
-                                    return (
-                                        <li className='py-1' key={index}>{item}</li>
-                                    )
-                                })}
-                            </ul>
-                        </Tabs.Item>
+                                <Tabs.Item
+                                title="Bar Admissions"
+                                >
+                                    <ul className="text-lg mx-0">
+                                        {data.contentfulAttorneys.barAdmissions.map((item, index) => {
+                                            return (
+                                                <li className='py-1' key={index}>{item}</li>
+                                            )
+                                        })}
+                                    </ul>
+                                </Tabs.Item>
+                                
+                                <Tabs.Item
+                                title="Recognitions"
+                                >
+                                    <ul className="text-lg mx-0">
+                                        {data.contentfulAttorneys.recognitions.map((item, index) => {
+                                            return (
+                                                <li className='py-1' key={index}>{item}</li>
+                                            )
+                                        })}
+                                    </ul>
+                                </Tabs.Item>
 
-                    </Tabs.Group>
+                            </Tabs.Group>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div>
-                {renderRichText(data.contentfulAttorneys.bio, options)}
-                <p className="font-['Mr_Dafoe'] text-2xl">W. Neal Hollington, Esq.</p>
-            </div>
+                <div>
+                    {renderRichText(data.contentfulAttorneys.bio, options)}
+                    <p className="font-['Mr_Dafoe'] text-2xl">W. Neal Hollington, Esq.</p>
+                </div>
             </article>
 
         </Layout>

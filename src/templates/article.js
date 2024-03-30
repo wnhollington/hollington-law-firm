@@ -54,7 +54,7 @@ function Article ({ data, pageContext }) {
         <article className='lg:w-2/3 max-w-6xl mx-auto'>
           
           <header className='mb-4'>
-            <h1 className='bg-gradient-to-br from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-lg shadow-md'>{data.contentfulArticles.title}</h1>
+            <h1 className='bg-gradient-to-br from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-lg shadow-xl'>{data.contentfulArticles.title}</h1>
             <div className='flex flex-col md:flex-row gap-1 md:gap-6'>
               <p className='flex flex-row items-center gap-1'>
                 <StaticImage
@@ -64,11 +64,11 @@ function Article ({ data, pageContext }) {
                   className='rounded-full'
                   alt="W. Neal Hollington, Esq."
                 />
-                <span>W. Neal Hollington, Esq.</span>
+                <span><Link to="/w-neal-hollington">W. Neal Hollington, Esq.</Link></span>
               </p>
               <p className='flex flex-row items-center gap-1'><FaCalendarAlt className='text-primary inline'/><span>{data.contentfulArticles.updatedAt}</span></p>
               <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline'/><span>3 minute read</span></p>
-              <p className='flex flex-row items-center gap-1'><FaTag className='text-primary inline'/><span><Link to="/articles">{data.contentfulArticles.metadata.tags[0].name}</Link></span></p>
+              <p className='flex flex-row items-center gap-1'><FaTag className='text-primary inline'/><span><Link to="/articles">{data.contentfulArticles.metadata.tags[0]?.name}</Link></span></p>
             </div>
           </header>
           

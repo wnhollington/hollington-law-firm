@@ -30,6 +30,10 @@ article {
         @apply text-xl md:text-2xl
     }
 
+    h4 {
+        @apply text-lg md:text-xl
+    }
+
     p {
         text-align: justify;
         hyphens: auto;
