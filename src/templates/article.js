@@ -5,6 +5,19 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 import { INLINES, BLOCKS } from '@contentful/rich-text-types';
 import { FaCalendarAlt, FaClock, FaTag } from "react-icons/fa";
+import { 
+  EmailShareButton, 
+  EmailIcon, 
+  FacebookShareButton, 
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  LinkedinShareButton, 
+  LinkedinIcon 
+} from 'react-share'
+
+// Utilities
+import { useSiteMetadata } from '../utilities/use-site-metadata.js'
 
 // Components
 import Layout from '../components/layout.js'
@@ -12,7 +25,7 @@ import Seo from '../components/seo.js'
 import Sidebar from '../components/sidebar/index.js';
 
 // Render
-function Article ({ data, pageContext }) {
+function Article ({ data, pageContext}) {
   const {previous, next} = pageContext
   const options = {
     renderNode: {
@@ -47,6 +60,10 @@ function Article ({ data, pageContext }) {
       },
     }
   }
+
+  const siteMetaData = useSiteMetadata()
+  const shareUrl = `${siteMetaData.siteUrl}/articles/${data.contentfulArticles.slug}`
+
   return (
     <Layout>
 
@@ -62,9 +79,9 @@ function Article ({ data, pageContext }) {
                   height={50}
                   width={50}
                   className='rounded-full'
-                  alt="W. Neal Hollington, Esq."
+                  alt="W. Neal Hollington"
                 />
-                <span><Link to="/w-neal-hollington">W. Neal Hollington, Esq.</Link></span>
+                <span><Link to="/w-neal-hollington">W. Neal Hollington</Link></span>
               </p>
               <p className='flex flex-row items-center gap-1'><FaCalendarAlt className='text-primary inline'/><span>{data.contentfulArticles.updatedAt}</span></p>
               <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline'/><span>3 minute read</span></p>
@@ -75,6 +92,34 @@ function Article ({ data, pageContext }) {
           {renderRichText(data.contentfulArticles.body, options)}
 
           <p className='italic'>The information provided on this website is for general informational purposes only and should not be construed as legal advice or legal opinion. You should not act or refrain from acting on the basis of any information provided on this website without seeking legal advice from an attorney.</p>
+
+          {/* Social Share */}
+          <div className='my-2 py-2 flex flex-row gap-4'>
+            <EmailShareButton
+              url={shareUrl}
+              subject={`${siteMetaData.title} | ${data.contentfulArticles.title}`}
+            >
+              <EmailIcon size={40} round={true}/>
+            </EmailShareButton>
+
+            <FacebookShareButton
+              url={shareUrl}
+            >
+              <FacebookIcon size={40} round={true}/>
+            </FacebookShareButton>
+
+            <TwitterShareButton
+              url={shareUrl}
+            >
+              <TwitterIcon size={40} round={true}/>
+            </TwitterShareButton>
+
+            <LinkedinShareButton
+              url={shareUrl}
+            >
+              <LinkedinIcon size={40} round={true}/>
+            </LinkedinShareButton>
+          </div>
           
           {/* Navigation */}
           <nav>
@@ -113,6 +158,7 @@ export const query = graphql`
       updatedAt(formatString: "MMM DD, YYYY")
       seoTitle
       seoDescription
+      slug
       metadata {
         tags {
           name
