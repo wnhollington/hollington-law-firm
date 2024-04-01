@@ -8,7 +8,7 @@ const SidebarArticles = () => {
         query queryRecentArticles {
             allContentfulArticles(
                 filter: {featuredArticle: {eq: true}}
-                limit: 6,
+                limit: 8,
                 sort: {createdAt: DESC}
                 ){
                 edges {
