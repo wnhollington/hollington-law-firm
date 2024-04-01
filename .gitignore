@@ -2,5 +2,13 @@ node_modules/
 .cache/
 **/.env
 .env
-public
 static/~partytown
+public/_gatsby
+public/~partytown
+public/icons
+public/page-data
+public/static
+public/chunk-map.json
+public/favicon-32x32.png
+public/manifest.webmanifest
+public/webpack.stats.json
