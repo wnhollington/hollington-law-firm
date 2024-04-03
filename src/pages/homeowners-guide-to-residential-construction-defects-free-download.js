@@ -49,7 +49,7 @@ export default class EbookSignup extends React.Component {
         console.log(result)
         
         if (this.state.result === "success"){
-            this.setState({ message: "Thank you!  Please check your email to confirm your email for your free download.  Please note that this confirmation email may wind up in your 'spam' folder."})
+            this.setState({ message: "Thank you!  Please check your email for your free download."})
             document.getElementById(`signup-form`).reset()
         }
         
