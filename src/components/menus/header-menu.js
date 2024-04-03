@@ -25,6 +25,7 @@ const HeaderMenu = ({placement}) => {
                 placement={placement}
             >
                 <Dropdown.Item key="Articles"><Link to="/articles" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Articles</Link></Dropdown.Item>
+                <Dropdown.Item key="Ebook"><Link to="/homeowners-guide-to-residential-construction-defects-free-download" className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">Ebook</Link></Dropdown.Item>
 
             </Dropdown>
 
