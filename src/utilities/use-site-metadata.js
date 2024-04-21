@@ -21,8 +21,8 @@ export const useSiteMetadata = () => {
                         }
                         social {
                             facebook
-                            youtube
-                            instagram
+                            twitter
+                            linkedin
                         }
                     }
                 }

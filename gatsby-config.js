@@ -21,10 +21,9 @@ module.exports = {
       },
     },
     social: {
-      facebook: ` `,
-      youtube: ` `,
-      instagram: ` `,
-      twitter: ` `,
+      facebook: `https://www.facebook.com/profile.php?id=61556212625817`,
+      linkedin: `https://www.linkedin.com/in/wnhollington/`,
+      twitter: `https://twitter.com/wnealhollington`,
     }
   },
   plugins: 
