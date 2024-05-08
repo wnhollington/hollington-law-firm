@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../utilities/use-site-metadata"
-import { FaPhone, FaEnvelope, FaXTwitter, FaLinkedinIn, FaFacebookF, FaMap} from "react-icons/fa6";
+import { FaPhone, FaEnvelope, FaMap} from "react-icons/fa6";
 
 const Footer = () => {
     const siteMetaData = useSiteMetadata()
@@ -28,12 +28,12 @@ const Footer = () => {
                             </div>
                             
                             <div className="flex flex-col md:flex-row justify-between md:items-center gap-8 md:gap-12">
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col md:flex-row gap-4">
                                     <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-gray-900 text-xl md:text-2xl flex flex-row items-center gap-2"><FaPhone className="text-primary"/><span>{siteMetaData.contact.phone}</span></a>
 
                                     <a href={`mailto:${siteMetaData.contact.email}`} className="text-gray-900 text-xl md:text-2xl flex flex-row items-center gap-2"><FaEnvelope className="text-primary"/><span>{siteMetaData.contact.email}</span></a>
                                 </div>
-
+{/* 
                                 <div className="flex flex-col gap-4">
                                     <div className="flex flex-row gap-4 md:justify-around max-w-[200px]">
                                         <a href={siteMetaData.social.twitter} target="_blank"><FaXTwitter size={30} className="text-gray-900 hover:text-gray-700"/></a>
@@ -41,7 +41,7 @@ const Footer = () => {
                                         <a href={siteMetaData.social.facebook}  target="_blank"><FaFacebookF size={30} className="text-gray-900 hover:text-gray-700"/></a>
                                     </div>
                                     <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-gradient-to-br from-primary to-red-800 hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-md text-center max-w-[200px]">Leave Us a Review</a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
