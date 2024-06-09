@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Hero from "../components/sections/hero"
 import Accolades from "../components/sections/accolades"
 import About from "../components/sections/about"
-import PracticeAreas from "../components/sections/practice-areas"
+import TypesOfClaims from "../components/sections/types-of-claims"
 import WhatSetsUsApart from "../components/sections/what-sets-us-apart"
 import Process from "../components/sections/process"
 import Results from "../components/sections/results"
@@ -21,7 +21,7 @@ const IndexPage = () => {
       <Hero />
       <Accolades />
       <About />
-      <PracticeAreas />
+      <TypesOfClaims/>
       <WhatSetsUsApart />
       <Process />
       <Faqs/>

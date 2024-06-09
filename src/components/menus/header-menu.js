@@ -17,7 +17,7 @@ const HeaderMenu = ({placement}) => {
 
             </Dropdown>
 
-            <Link to={`/practice-areas`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Cases We Handle</Link>
+            <Link to={`/practice-areas/construction-defect-lawyer`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Construction Defects</Link>
 
             <Dropdown
                 inline
