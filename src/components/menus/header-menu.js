@@ -1,8 +1,34 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { Dropdown } from "flowbite-react"
+import { useStaticQuery, graphql } from "gatsby"
 
 const HeaderMenu = ({placement}) => {
+
+    const data = useStaticQuery(graphql`
+        query queryProjectsAndClaims {
+            allContentfulTypesOfProjects(
+                sort: {title: ASC}
+                ){
+                edges {
+                    node {
+                        title
+                        slug
+                    }
+                }
+            }
+            allContentfulTypesOfClaims(
+                sort: {title: ASC}
+                ){
+                edges {
+                    node {
+                        title
+                        slug
+                    }
+                }
+            }
+        }
+    `)
 
     return (            
         <>
@@ -17,7 +43,30 @@ const HeaderMenu = ({placement}) => {
 
             </Dropdown>
 
-            <Link to={`/practice-areas/construction-defect-lawyer`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary">Construction Defects</Link>
+            <Dropdown
+                inline
+                label="Types of Projects"
+                placement={placement}
+            >
+                {data.allContentfulTypesOfProjects.edges.map((edge, key) => {
+                    return (
+                        <Dropdown.Item key={key}><Link to={`/types-of-projects/${edge.node.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
+                    )
+                })}
+            </Dropdown>
+
+            <Dropdown
+                inline
+                label="Types of Claims"
+                placement={placement}
+            >
+                {data.allContentfulTypesOfClaims.edges.map((edge, key) => {
+                    return (
+                        <Dropdown.Item key={key}><Link to={`/types-of-claims/${edge.node.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
+                    )
+                })}
+
+            </Dropdown>
 
             <Dropdown
                 inline

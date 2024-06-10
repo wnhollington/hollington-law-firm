@@ -15,6 +15,8 @@ exports.createPages = async ({ graphql, actions }) => {
   // Templates
   const pageTemplate = path.resolve(`./src/templates/page.js`)
   const practiceAreaTemplate = path.resolve(`./src/templates/practice-area.js`)
+  const typesOfProjectsTemplate = path.resolve(`./src/templates/types-of-projects.js`)
+  const typesOfClaimsTemplate = path.resolve(`./src/templates/types-of-claims.js`)
   const articleTemplate = path.resolve(`./src/templates/article.js`)
   const attorneyBioTemplate = path.resolve(`./src/templates/attorney-bio.js`)
 
@@ -54,6 +56,22 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      typesOfProjects: allContentfulTypesOfProjects {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+      typesOfClaims: allContentfulTypesOfClaims {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
     }
   `)
 
@@ -84,6 +102,35 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // Create Types of Projects Pages
+  const typesOfProjects = result.data.typesOfProjects.edges
+  typesOfProjects.forEach(project => {
+    createPage({
+      path: `/types-of-projects/${project.node.slug}`,
+      component: require.resolve(typesOfProjectsTemplate),
+      context: {
+        title: project.node.title,
+        id: project.node.id,
+        slug: project.node.slug
+      },
+    })
+  })
+
+  // Create Types of Projects Pages
+  const typesOfClaims = result.data.typesOfClaims.edges
+  typesOfClaims.forEach(claim => {
+    createPage({
+      path: `/types-of-claims/${claim.node.slug}`,
+      component: require.resolve(typesOfClaimsTemplate),
+      context: {
+        title: claim.node.title,
+        id: claim.node.id,
+        slug: claim.node.slug
+      },
+    })
+  })
+
 
   // Create Articles and Pagination
   const articles = result.data.articles.edges
