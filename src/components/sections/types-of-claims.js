@@ -7,7 +7,7 @@ const TypesOfClaims = () => {
         triggerOnce: true
     })
 
-    const typesOfDefects = ['Design Defects', 'Material Defects', 'Poor Workmanship', 'Expansive & Swelling Soils', 'Mechanical Systems', 'Non Disclosure & Fraud',]
+    const typesOfDefects = ['Design Defects', 'Material Defects', 'Poor Workmanship', 'Insurance Claims', 'Nondisclosure & Fraud']
 
     return (
         <section id="types-of-claims" ref={ref}>
