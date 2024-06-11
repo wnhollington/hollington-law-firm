@@ -104,7 +104,7 @@ const Footer = () => {
                     <div>
                         <StaticImage src="../images/logo-white.webp" className="max-w-[300px] md:max-w-[400px]"/>
                         <div className="text-white text-lg max-w-2xl">
-                            <p className="my-4">Hollington Law Firm, LLC is a Colorado litigation law firm that handles residential and commercial construction defect and property insurance claims. Our dedicated team is committed to resolve your home defect and property claims.</p>
+                            <p className="my-4">Hollington Law Firm, LLC is a Colorado litigation law firm that handles residential and commercial construction defect and property insurance claims. Our dedicated team is committed to resolving your home defect and property claims.</p>
                             <p className="my-4">The accounts of recent trials, verdicts, and settlements contained in this website are intended only to illustrate the experience of the law firm. Prospective clients may not obtain the same or similar results as each case is unique.</p>
                         </div>
                     </div>
