@@ -48,6 +48,7 @@ const Footer = () => {
                             <nav>
                                 <ul className="text-lg">
                                     <li><Link to="/about-the-firm">About the Firm</Link></li>
+                                    <li><Link to="/practice-areas">All Practice Areas</Link></li>
                                     <li><Link to="/w-neal-hollington">W. Neal Hollington</Link></li>
                                     <li><Link to="/articles">Articles</Link></li>
                                     <li><Link to="/schedule-consultation">Schedule Consultation</Link></li>
