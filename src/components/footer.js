@@ -2,53 +2,109 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../utilities/use-site-metadata"
-import { FaPhone, FaEnvelope, FaMap} from "react-icons/fa6";
+import { useStaticQuery, graphql } from "gatsby"
+import { FaFacebook, FaLinkedin} from "react-icons/fa6";
 
 const Footer = () => {
     const siteMetaData = useSiteMetadata()
 
+    const data = useStaticQuery(graphql`
+        query queryClaimsAndProjects {
+            allContentfulTypesOfProjects(
+                sort: {title: ASC}
+                ){
+                edges {
+                    node {
+                        title
+                        slug
+                    }
+                }
+            }
+            allContentfulTypesOfClaims(
+                sort: {title: ASC}
+                ){
+                edges {
+                    node {
+                        title
+                        slug
+                    }
+                }
+            }
+        }
+    `)
     return (
         <footer className="w-full py-8 bg-gradient-to-b from-primary to-red-950">
             
-            <div className="flex flex-col items-center justify-center gap-8">
+            <div className="flex flex-col items-center justify-center gap-8 px-4">
                 
-                {/* Review and Google Maps */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:w-full xl:flex xl:justify-around xl:gap-0">
+                {/* Footer Menu */}
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
 
-                    {/* Review and Social */}
-                    <div className="bg-slate-100 p-8 rounded-md shadow-lg mx-4 lg:mx-0">
-                        <div className="max-w-[300px]"><StaticImage src="../images/logo.webp" alt="Hollington Law Firm, LLC"/></div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-white">
 
-                        <div className="text-gray-900 flex flex-col gap-4 md:gap-8 mt-8">
-                            <div>
-                                <div className="flex flex-col lg:flex-row text-xl md:text-2xl">
-                                    <p><FaMap className="text-primary inline mr-2"/><span>{siteMetaData.contact.address.street} {siteMetaData.contact.address.city}</span></p>
-                                </div>
-                                <p className="text-lg">(By Appointment Only)</p>
-                            </div>
-                            
-                            <div className="flex flex-col md:flex-row justify-between md:items-center gap-8 md:gap-12">
-                                <div className="flex flex-col md:flex-row gap-4">
-                                    <a href={`tel:${siteMetaData.contact.phone}`} rel="noreferrer" className="text-gray-900 text-xl md:text-2xl flex flex-row items-center gap-2"><FaPhone className="text-primary"/><span>{siteMetaData.contact.phone}</span></a>
+                        {/* Quick Links */}
+                        <div>
+                            <h3 className="text-xl mb-2">Quick Links</h3>
+                            <nav>
+                                <ul className="text-lg">
+                                    <li><Link to="/about-the-firm">About the Firm</Link></li>
+                                    <li><Link to="/w-neal-hollington">W. Neal Hollington</Link></li>
+                                    <li><Link to="/articles">Articles</Link></li>
+                                    <li><Link to="/schedule-consultation">Schedule Consultation</Link></li>
+                                    <li><Link to="/contact">Contact</Link></li>
+                                    <li><a href="http://maps.google.com/?q=11479 S Pine Dr, Parker, CO 80134"  target="__blank">Directions</a></li>
+                                </ul>
+                            </nav>
+                        </div>
 
-                                    <a href={`mailto:${siteMetaData.contact.email}`} className="text-gray-900 text-xl md:text-2xl flex flex-row items-center gap-2"><FaEnvelope className="text-primary"/><span>{siteMetaData.contact.email}</span></a>
-                                </div>
-{/* 
-                                <div className="flex flex-col gap-4">
-                                    <div className="flex flex-row gap-4 md:justify-around max-w-[200px]">
-                                        <a href={siteMetaData.social.twitter} target="_blank"><FaXTwitter size={30} className="text-gray-900 hover:text-gray-700"/></a>
-                                        <a href={siteMetaData.social.linkedin}  target="_blank"><FaLinkedinIn size={30} className="text-gray-900 hover:text-gray-700"/></a>
-                                        <a href={siteMetaData.social.facebook}  target="_blank"><FaFacebookF size={30} className="text-gray-900 hover:text-gray-700"/></a>
-                                    </div>
-                                    <a href="https://www.google.com/search?q=Hollington+Law+Firm&stick=H4sIAAAAAAAA_-NgU1I1qDCySLNMNk1LMra0SEo0TTG0MqgwSzRLSzQ0T0s1S0kzNk8zXsQq7JGfk5OZl16Sn6fgk1iu4JZZlAsAXk_E0j8AAAA&hl=en&mat=CepMbkCQWLifElUB7PxHsYBEoV3eZFKnGdD__mzClPzl338t9kTx9AbNUJotqu2WZMAKFdVATqKHSGU04cnLatjanJRwXLbESdYiFe5ehw6P65Zv2f97BjGUhV5mBKga&authuser=0#lrd=0x28f9c5fb398ba5d1:0x6a6fa17fe6df37f3,3,,,," target="_blank" rel="noreferrer" className="bg-gradient-to-br from-primary to-red-800 hover:shadow-lg text-white text-md sm:text-lg font-bold p-2 rounded-md text-center max-w-[200px]">Leave Us a Review</a>
-                                </div> */}
-                            </div>
+                        {/* Types of Projects */}
+                        <div>
+                            <h3 className="text-xl mb-2">Types of Projects</h3>
+                            <nav>
+                                <ul className="text-lg">
+                                    {data.allContentfulTypesOfProjects.edges.map((edge, key) => {
+                                        return (
+                                            <li key={key}><Link to={`/types-of-projects/${edge.node.slug}`}className="">{edge.node.title}</Link></li>
+                                        )
+                                    })}
+                                </ul>
+                            </nav>
+                        </div>
+
+                        {/* Types of Claims */}
+                        <div>
+                            <h3 className="text-xl mb-2">Types of Claims</h3>
+                            <nav>
+                                <ul className="text-lg">
+                                    {data.allContentfulTypesOfClaims.edges.map((edge, key) => {
+                                        return (
+                                            <li key={key}><Link to={`/types-of-claims/${edge.node.slug}`}className="">{edge.node.title}</Link></li>
+                                        )
+                                    })}
+                                </ul>
+                            </nav>
+                        </div> 
+
+                        {/* Follow Us */}
+                        <div>
+                            <h3 className="text-xl mb-2">Follow Us</h3>
+                            <nav>
+                                <ul className="text-lg flex flex-col gap-2">
+                                    <li><a href={siteMetaData.social.facebook} target="__blank" className="flex flex-row items-center"><FaFacebook className="inline mr-1" size={20}/>Facebook</a></li>
+                                    <li><a href={siteMetaData.social.linkedin} target="__blank" className="flex flex-row items-center"><FaLinkedin className="inline mr-1" size={20}/>LinkedIn</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
 
-                    {/* Google Maps */}
-                    <div className="mx-4 min-h-[300px] xl:w-5/12 backdrop-blur-sm bg-white/80 rounded-md">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.2922517439824!2d-104.7595407!3d39.507893200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c9149eef34c6f%3A0x84a58ef8811837c2!2s11479%20S%20Pine%20Dr%2C%20Parker%2C%20CO%2080134!5e0!3m2!1sen!2sus!4v1706626106221!5m2!1sen!2sus" width="100%" height="100%" style={{border: "0", borderRadius: "8px"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title={`Directions to ${siteMetaData.title}`}></iframe>
+
+                    {/* Logo and Disclaimer */}
+                    <div>
+                        <StaticImage src="../images/logo-white.webp" className="max-w-[300px] md:max-w-[400px]"/>
+                        <div className="text-white text-lg max-w-2xl">
+                            <p className="my-4">Hollington Law Firm, LLC is a Colorado litigation law firm that handles residential and commercial construction defect and property insurance claims. Our dedicated team is committed to resolve your home defect and property claims.</p>
+                            <p className="my-4">The accounts of recent trials, verdicts, and settlements contained in this website are intended only to illustrate the experience of the law firm. Prospective clients may not obtain the same or similar results as each case is unique.</p>
+                        </div>
                     </div>
 
                 </div>
@@ -58,7 +114,6 @@ const Footer = () => {
                     <ul className="flex my-4">
                         <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/privacy-policy">Privacy Policy</Link></li>
                         <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/disclaimer">Disclaimer</Link></li>
-                        <li className="text-md md:text-lg text-white font-semibold mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/contact">Contact</Link></li>
                     </ul>
                     <p className="text-sm text-white">© Copyright <span>{new Date().getFullYear()}</span> All Rights Reserved.</p>
                 </div>
