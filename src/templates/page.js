@@ -28,7 +28,7 @@ function Page({ data }) {
     <Layout pageTitle={data.contentfulPages.title}>
       <div className='flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center'>
         <article className='lg:w-2/3 max-w-6xl mx-auto'>
-          <h1 className="text-center">{data.contentfulPages.title}</h1>
+          <h1 className="bg-gradient-to-b from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-md shadow-xl">{data.contentfulPages.title}</h1>
           <div>{renderRichText(data.contentfulPages.body, options)}</div>
         </article>
         <Sidebar/>
