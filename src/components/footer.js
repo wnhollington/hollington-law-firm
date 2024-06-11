@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useSiteMetadata } from "../utilities/use-site-metadata"
 import { useStaticQuery, graphql } from "gatsby"
-import { FaFacebook, FaLinkedin} from "react-icons/fa6";
+import { FaFacebook, FaLinkedin, FaXTwitter} from "react-icons/fa6";
 
 const Footer = () => {
     const siteMetaData = useSiteMetadata()
@@ -46,7 +46,7 @@ const Footer = () => {
                         <div>
                             <h3 className="text-xl mb-2">Quick Links</h3>
                             <nav>
-                                <ul className="text-lg">
+                                <ul className="text-lg flex flex-col gap-1">
                                     <li><Link to="/about-the-firm">About the Firm</Link></li>
                                     <li><Link to="/w-neal-hollington">W. Neal Hollington</Link></li>
                                     <li><Link to="/practice-areas">All Practice Areas</Link></li>
@@ -63,7 +63,7 @@ const Footer = () => {
                         <div>
                             <h3 className="text-xl mb-2">Types of Projects</h3>
                             <nav>
-                                <ul className="text-lg">
+                                <ul className="text-lg flex flex-col gap-1">
                                     {data.allContentfulTypesOfProjects.edges.map((edge, key) => {
                                         return (
                                             <li key={key}><Link to={`/types-of-projects/${edge.node.slug}`}className="">{edge.node.title}</Link></li>
@@ -77,7 +77,7 @@ const Footer = () => {
                         <div>
                             <h3 className="text-xl mb-2">Types of Claims</h3>
                             <nav>
-                                <ul className="text-lg">
+                                <ul className="text-lg flex flex-col gap-1">
                                     {data.allContentfulTypesOfClaims.edges.map((edge, key) => {
                                         return (
                                             <li key={key}><Link to={`/types-of-claims/${edge.node.slug}`}className="">{edge.node.title}</Link></li>
@@ -94,6 +94,7 @@ const Footer = () => {
                                 <ul className="text-lg flex flex-col gap-2">
                                     <li><a href={siteMetaData.social.facebook} target="__blank" className="flex flex-row items-center"><FaFacebook className="inline mr-1" size={20}/>Facebook</a></li>
                                     <li><a href={siteMetaData.social.linkedin} target="__blank" className="flex flex-row items-center"><FaLinkedin className="inline mr-1" size={20}/>LinkedIn</a></li>
+                                    <li><a href={siteMetaData.social.twitter} target="__blank" className="flex flex-row items-center"><FaXTwitter className="inline mr-1" size={20}/>Twitter</a></li>
                                 </ul>
                             </nav>
                         </div>
