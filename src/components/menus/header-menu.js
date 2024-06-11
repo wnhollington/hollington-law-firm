@@ -53,6 +53,7 @@ const HeaderMenu = ({placement}) => {
                         <Dropdown.Item key={key}><Link to={`/types-of-projects/${edge.node.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
                     )
                 })}
+                <Dropdown.Item><Link to={`/types-of-projects/`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">View All</Link></Dropdown.Item>
             </Dropdown>
 
             <Dropdown
@@ -65,7 +66,7 @@ const HeaderMenu = ({placement}) => {
                         <Dropdown.Item key={key}><Link to={`/types-of-claims/${edge.node.slug}`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">{edge.node.title}</Link></Dropdown.Item>
                     )
                 })}
-
+                <Dropdown.Item><Link to={`/types-of-claims/`}className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">View All</Link></Dropdown.Item>
             </Dropdown>
 
             <Dropdown
