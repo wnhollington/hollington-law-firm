@@ -29,8 +29,8 @@ const TypesOfProjects = () => {
             <div className="flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center">
                 <div className="lg:w-2/3 max-w-6xl mx-auto">
                     <h1 className="mb-4 text-3xl leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">All Project Types</h1>
-                    <div className="mx-8 lg:mx-auto my-8 text-xl text-gray-900 text-justify">
-                        <p>Welcome to our projects page. Hollington Law Firm, LLC is one of the few Colorado law firms that handles construction defect and consumer complaints on behalf of Colorado home and property owners. Below are the types of projects we regularly get involved in. Having said that, if you do not see your particular project type, we still encourage your to reach out. If we cannot handle the matter ourselves, we are more than happy to refer you to another attorney in our network that can.</p>
+                    <div className="mx-8 lg:mx-auto my-8 text-xl text-gray-900 text-justify hyphens-auto">
+                        <p>Welcome to our projects page. Hollington Law Firm, LLC is one of the few Colorado law firms that handles construction defect and consumer complaints on behalf of Colorado home and property owners. Below are the types of projects we regularly get involved in. Having said that, if you do not see your particular project type, we still encourage you to reach out. If we cannot handle the matter ourselves, we are more than happy to refer you to another attorney in our network that can.</p>
                     </div>                
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mx-8 lg:mx-auto text-center my-8">

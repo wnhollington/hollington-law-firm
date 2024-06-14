@@ -29,7 +29,7 @@ const TypesOfClaims = () => {
             <div className="flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center">
                 <div className="lg:w-2/3 max-w-6xl mx-auto">
                     <h1 className="mb-4 text-3xl leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">All Claim Types</h1>
-                    <div className="mx-8 lg:mx-auto my-8 text-xl text-gray-900 text-justify">
+                    <div className="mx-8 lg:mx-auto my-8 text-xl text-gray-900 text-justify hyphens-auto">
                         <p>Welcome to our construction defect claims page. Hollington Law Firm, LLC is one of the few Colorado law firms that handles construction defect and consumer complaints on behalf of Colorado home and property owners. Below are the types of construction defect claims we regularly get involved in. Having said that, if you do not see your particular problem or concern, we still encourage your to reach out. As a leading Colorado construction defect law firm, we have experienced the gamut of construction defect issues. Having said that, if we cannot handle the matter ourselves, we are more than happy to refer you to another attorney in our network that can.</p>
                     </div>                
 
