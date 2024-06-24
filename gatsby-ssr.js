@@ -20,6 +20,17 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlA
         })(window,document,'script','dataLayer','${process.env.GTM_ID}');`
       }}
     />,
+    <script
+      key="google-tag-manager-calendly"
+      type='text/partytown'
+      dangerouslySetInnerHTML={{
+        __html: `  window.addEventListener('message', function(e) {
+          if (e.origin != "https://calendly.com") return;
+          if (e.data && e.data.event == "calendly.event_scheduled") {
+          }
+        });`
+      }}
+    />,
   ]);
   setPreBodyComponents([
     <noscript
