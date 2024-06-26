@@ -72,7 +72,7 @@ export default class EbookSignup extends React.Component {
                             
                             <p className="text-2xl leading-8 text-gray-900 p-2">Are you a Colorado homeowner experiencing construction defects? If so, our Ebook will answer your top questions and guide you through the process of obtaining compensation to fix or repair your property. For more information and a free case evaluation, call Neal Hollington today at <span><a href={`tel:303-276-2647`} className="text-primary underline decoration-dotted hover:text-primary hover:decoration-solid">(303) 276-2647</a></span> or <span><Link to="/schedule-consultation" className="text-primary underline decoration-dotted hover:text-primary hover:decoration-solid">Schedule Your Consultation Now</Link></span>.</p>
                             
-                            <form className="my-4 p-2" onSubmit={(this._handleSubmit)} id="signup-form">
+                            <form className="my-4 p-2" onSubmit={(this._handleSubmit)} id="ebook-signup-form">
                                 <div className="flex flex-wrap items-center">
     
                                     <div className="w-full flex flex-col gap-4">

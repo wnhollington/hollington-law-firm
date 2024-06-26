@@ -11,7 +11,8 @@ const Contact = () => (
       <h1 className="max-w-lg mb-4 text-3xl leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto text-center">Get in Touch</h1>
       <p className="text-xl font-medium text-gray-900 max-w-xl mx-8">Thank you for your interest in contacting our firm. Please fill out the below form and a representative will be in touch shortly.</p>
       <form 
-        name="contact" 
+        name="contact"
+        id="contact"
         method="POST" 
         data-netlify="true" 
         action="/thank-you" 

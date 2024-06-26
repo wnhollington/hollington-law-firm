@@ -6,7 +6,8 @@ const SidebarForm = () => (
     <div className="bg-gradient-to-br from-neutral-100 to-neutral-50 p-4 shadow-xl rounded-md">
         <h3 className="text-center text-2xl mt-2 mb-6">Consultation Request</h3>
         <form 
-            name="sidebar-form" 
+            name="sidebar-form"
+            id="sidebar-form"
             method="POST" 
             data-netlify="true"
             action="/thank-you" 
