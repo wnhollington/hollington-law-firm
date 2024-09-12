@@ -2,7 +2,6 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { INLINES } from '@contentful/rich-text-types';
-import { Link } from 'gatsby';
 
 // Components
 import Layout from '../components/layout.js'
