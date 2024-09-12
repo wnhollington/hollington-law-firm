@@ -109,21 +109,11 @@
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/predatory-lending-attorney"
-  to = "/"
-  status = 301
-
-[[redirects]]
   from = "/practice-areas/landlord-tenant-attorney"
   to = "/"
   status = 301
 
 [[redirects]]
   from = "/practice-areas/hoa-attorney"
-  to = "/"
-  status = 301
-
-[[redirects]]
-  from = "/practice-areas/fair-debt-collection-attorney"
   to = "/"
   status = 301
