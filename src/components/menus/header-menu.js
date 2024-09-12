@@ -8,7 +8,8 @@ const HeaderMenu = ({placement}) => {
     const data = useStaticQuery(graphql`
         query queryProjectsAndClaims {
             allContentfulTypesOfProjects(
-                sort: {title: ASC}
+                sort: {title: ASC},
+                limit: 4
                 ){
                 edges {
                     node {
@@ -18,7 +19,8 @@ const HeaderMenu = ({placement}) => {
                 }
             }
             allContentfulTypesOfClaims(
-                sort: {title: ASC}
+                sort: {title: ASC},
+                limit: 6
                 ){
                 edges {
                     node {
