@@ -1,49 +1,84 @@
 [[redirects]]
-  from = "/practices-areas/wrongful-termination-lawyer/"
+  from = "/practices-areas/wrongful-termination-lawyer"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/breach-of-contract-lawyer/"
+  from = "/practice-areas/breach-of-contract-lawyer"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/business-tort-lawyer/"
+  from = "/practice-areas/business-tort-lawyer"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/motorcycle-accident-attorney/"
+  from = "/practice-areas/motorcycle-accident-attorney"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/unpaid-wages-lawyer/"
+  from = "/practice-areas/unpaid-wages-lawyer"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/1099-misclassification/"
+  from = "/practice-areas/1099-misclassification"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/auto-accident-attorney/"
+  from = "/practice-areas/auto-accident-attorney"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/trucking-accident-lawyer/"
+  from = "/practice-areas/trucking-accident-lawyer"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/tenant-rights-lawyer/"
+  from = "/practice-areas/tenant-rights-lawyer"
   to = "/"
   status = 301
 
 [[redirects]]
-  from = "/practice-areas/property-damage-lawyer/"
+  from = "/practice-areas/property-damage-lawyer"
   to = "/types-of-claims/property-damage"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/construction-contract-lawyer "
+  to = "/practice-areas/construction-contract-lawyer"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/premise-liability-lawyer"
+  to = "/practice-areas/premises-liability-lawyer/"
+  status = 301
+
+[[redirects]]
+  from = "/landing-pages/construction-defects"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/landing-pages/non-compete-lawyer"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/a-premise-liability-lawyers-guide-to-premises-liability-claims-in-colorado"
+  to = "/a-premises-liability-lawyers-guide-to-premises-liability-claims-in-colorado/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/three-key-"
+  to = "/articles"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/housing-and-construction-defect-lawyer"
+  to = "/"
   status = 301
