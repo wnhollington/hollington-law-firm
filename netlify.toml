@@ -2,3 +2,48 @@
   from = "/practices-areas/wrongful-termination-lawyer/"
   to = "/"
   status = 301
+
+[[redirects]]
+  from = "/practice-areas/breach-of-contract-lawyer/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/business-tort-lawyer/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/motorcycle-accident-attorney/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/unpaid-wages-lawyer/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/1099-misclassification/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/auto-accident-attorney/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/trucking-accident-lawyer/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/tenant-rights-lawyer/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/practice-areas/property-damage-lawyer/"
+  to = "/types-of-claims/property-damage"
+  status = 301
