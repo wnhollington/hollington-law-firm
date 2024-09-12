@@ -16,12 +16,7 @@ function Page({ data }) {
     renderNode: {
       [INLINES.HYPERLINK]: (node) => {
        return <a href={node.data.uri} target={`${node.data.uri.startsWith('https://hollingtonlawfirm.') ? '_self' : '_blank'}`}>{node.content[0].value}</a>;
-      },
-      [INLINES.ENTRY_HYPERLINK]: (node) => {
-        const entry = data.contentfulPages.body.references.find(x => x.contentful_id === node.data.target.sys.id)
-        const entryType = entry.internal.type === "ContentfulPracticeAreas" ? "practice-areas" : "articles"
-        return <Link to={`/${entryType}/${entry.slug}`}>{node.content[0].value}</Link>;
-      },
+      }
     }
   }
   return (
@@ -47,14 +42,6 @@ export const query = graphql`
       slug
       body {
         raw
-        references {
-          slug
-          title
-          contentful_id
-          internal {
-            type
-          }
-        }
       }
     }
   }
