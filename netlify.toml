@@ -117,3 +117,8 @@
   from = "/practice-areas/hoa-attorney"
   to = "/"
   status = 301
+
+[[redirects]]
+  from = "pro-bono-representation/"
+  to = "/"
+  status = 301

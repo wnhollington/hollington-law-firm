@@ -9,7 +9,7 @@ const ScheduleConsultation = () => (
     <div className="my-4 py-4 2xl:h-screen overflow-hidden">
       <h1 className="mb-4 text-3xl leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto text-center">Schedule Consultation</h1>
       <InlineWidget url="https://calendly.com/wnhollington?primary_color=6E0A05" />
-    </div>ga
+    </div>
   </Layout>
 )
 
