@@ -18,8 +18,13 @@ const SidebarForm = () => (
             
 
             <div className="w-full flex flex-col gap-2">
-                <label htmlFor="name" className="text-base font-semibold leading-none text-gray-800">Name *</label>
-                <input type="text" name="name" id="name" className="text-base leading-none text-gray-900 p-3 focus:outline-none bg-white border rounded border-gray-200 placeholder-gray-100" required/>
+                <label htmlFor="firstName" className="text-base font-semibold leading-none text-gray-800">First Name *</label>
+                <input type="text" name="firstName" id="firstName" className="text-base leading-none text-gray-900 p-3 focus:outline-none bg-white border rounded border-gray-200 placeholder-gray-100" required/>
+            </div>
+
+            <div className="w-full flex flex-col gap-2">
+                <label htmlFor="lastName" className="text-base font-semibold leading-none text-gray-800">Last Name *</label>
+                <input type="text" name="lastName" id="lastName" className="text-base leading-none text-gray-900 p-3 focus:outline-none bg-white border rounded border-gray-200 placeholder-gray-100" required/>
             </div>
 
             <div className="w-full flex flex-col gap-2">
