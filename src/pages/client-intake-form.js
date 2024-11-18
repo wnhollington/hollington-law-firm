@@ -136,7 +136,7 @@ const ClientIntakeForm = () => {
 
                   </fieldset>
 
-                  {/* Email, Phone, DOB */}
+                  {/* Email, Phone */}
                   <fieldset className="my-6">
                     
                     <legend className="font-semibold">Contact Information <span className="text-primary">*</span></legend>
@@ -164,12 +164,12 @@ const ClientIntakeForm = () => {
 
                 <div className="my-6">
                   <label htmlFor="descriptionOfCase" className="text-base font-semibold leading-none text-gray-800">Please provide a brief description of the case. <span className="text-primary">*</span></label>
-                  <textarea type="descriptionOfCase" name="descriptionOfCase" id="descriptionOfCase" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" required></textarea>
+                  <textarea type="descriptionOfCase" name="descriptionOfCase" id="descriptionOfCase" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"></textarea>
                 </div>
 
                   {/* Adverse Party Name */}
                   <fieldset className="my-6">
-                    <legend className="font-semibold">Name of Defendant or Adverse Party<span className="text-primary">*</span></legend>
+                    <legend className="font-semibold">Name of Defendant or Adverse Party</legend>
 
                     <div className="flex flex-col md:flex-row gap-2 mt-6">
 
@@ -221,13 +221,13 @@ const ClientIntakeForm = () => {
 
                   {/* Adverse Address */}
                   <fieldset className="my-6">
-                    <legend className="font-semibold">Address of Defendant or Adverse Party<span className="text-primary">*</span></legend>
+                    <legend className="font-semibold">Address of Defendant or Adverse Party</legend>
                     
                     <div className="flex flex-col gap-4">
 
                       <div>
                         <label htmlFor="adverseAddressLine1" className="text-base leading-none text-gray-800">Address Line 1</label>
-                        <input type="text" name="adverseAddressLine1" id="adverseAddressLine1" className="mt-2 w-full text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" required/>
+                        <input type="text" name="adverseAddressLine1" id="adverseAddressLine1" className="mt-2 w-full text-base leading-none text-gray-900 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100"/>
                       </div>
 
                       <div>
@@ -238,12 +238,12 @@ const ClientIntakeForm = () => {
                       <div className="flex flex-col md:flex-row gap-4">
                         <div className="flex flex-col md:w-1/3">
                           <label htmlFor="adverseCity" className="text-base leading-none text-gray-800">City</label>
-                          <input type="text" name="adverseCity" id="adverseCity" className="mt-2 text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" required/>
+                          <input type="text" name="adverseCity" id="adverseCity" className="mt-2 text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100"/>
                         </div>
                         
                         <div className="flex flex-col md:w-1/3">
                           <label htmlFor="adverseState" className="text-base leading-none text-gray-800">State</label>
-                          <select name="adverseState" id="adverseState" className="mt-2 h-12 text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" required>
+                          <select name="adverseState" id="adverseState" className="mt-2 h-12 text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100">
                             <option value=""></option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
@@ -301,7 +301,7 @@ const ClientIntakeForm = () => {
                         
                         <div className="flex flex-col md:w-1/3">
                           <label htmlFor="adverseZipCode" className="text-base leading-none text-gray-800">Zip Code</label>
-                          <input type="text" name="adverseZipCode" id="adverseZipCode" className="mt-2 text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100" required/>
+                          <input type="text" name="adverseZipCode" id="adverseZipCode" className="mt-2 text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100"/>
                         </div>
                       </div>
 
@@ -312,23 +312,23 @@ const ClientIntakeForm = () => {
                   {/* Additional Matter Information */}
 
                   <div className="my-6">
-                    <label htmlFor="priorDiscussionsOfCase" className="text-base font-semibold leading-none text-gray-800">Have you had any discussions with the defendant(s) about resolving the claim? If so, please describe them and attach any correspondence. <span className="text-primary">*</span></label>
-                    <textarea type="priorDiscussionsOfCase" name="priorDiscussionsOfCase" id="priorDiscussionsOfCase" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" required></textarea>
+                    <label htmlFor="priorDiscussionsOfCase" className="text-base font-semibold leading-none text-gray-800">Have you had any discussions with the defendant(s) about resolving the claim? If so, please describe them and attach any correspondence.</label>
+                    <textarea type="priorDiscussionsOfCase" name="priorDiscussionsOfCase" id="priorDiscussionsOfCase" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"></textarea>
                   </div>
 
                   <div className="my-6">
-                    <label htmlFor="damages" className="text-base font-semibold leading-none text-gray-800">What are the damages (e.g., out-of-pocket losses, amount promised under a contract but not paid, etc.)? <span className="text-primary">*</span></label>
-                    <textarea type="damages" name="damages" id="damages" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" required></textarea>
+                    <label htmlFor="damages" className="text-base font-semibold leading-none text-gray-800">What are the damages (e.g., out-of-pocket losses, amount promised under a contract but not paid, etc.)? </label>
+                    <textarea type="damages" name="damages" id="damages" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"></textarea>
                   </div>
 
                   <div className="my-6">
-                    <label htmlFor="priorAttorney" className="text-base font-semibold leading-none text-gray-800">Have you consulted or retained any other attorney(s) concerning this matter before coming to this office? If so, please identity who and when. <span className="text-primary">*</span></label>
-                    <textarea type="priorAttorney" name="priorAttorney" id="priorAttorney" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" required></textarea>
+                    <label htmlFor="priorAttorney" className="text-base font-semibold leading-none text-gray-800">Have you consulted or retained any other attorney(s) concerning this matter before coming to this office? If so, please identity who and when.</label>
+                    <textarea type="priorAttorney" name="priorAttorney" id="priorAttorney" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"></textarea>
                   </div>
 
                   <div className="my-6">
-                    <label htmlFor="additionalInformation" className="text-base font-semibold leading-none text-gray-800">Is there any additional information that would help us evaluate your matter? Please describe: <span className="text-primary">*</span></label>
-                    <textarea type="additionalInformation" name="additionalInformation" id="additionalInformation" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" required></textarea>
+                    <label htmlFor="additionalInformation" className="text-base font-semibold leading-none text-gray-800">Is there any additional information that would help us evaluate your matter? Please describe:</label>
+                    <textarea type="additionalInformation" name="additionalInformation" id="additionalInformation" className="mt-2 h-36 w-full text-base leading-none text-gray-900 p-3 focus:outline-none bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none"></textarea>
                   </div>
 
             </div>
@@ -339,7 +339,7 @@ const ClientIntakeForm = () => {
 
               <div className="flex flex-col gap-6">
                 <fieldset className="mt-6">
-                    <legend className="mb-2 font-semibold">Were you referred to this office by another individual?<span className="text-primary">*</span></legend>
+                    <legend className="mb-2 font-semibold">Were you referred to this office by another individual?</legend>
 
                     <div className="flex flex-row gap-2">
                       
@@ -365,7 +365,7 @@ const ClientIntakeForm = () => {
                   </fieldset>
 
                   <fieldset>
-                    <legend className="mb-2 font-semibold">Did you find our firm online? If so, please identity which online sources brought you to us. <span className="text-primary">*</span></legend>
+                    <legend className="mb-2 font-semibold">Did you find our firm online? If so, please identity which online sources brought you to us</legend>
                     
                     <div className="flex flex-row gap-2 items-center my-1">
                       <input type="checkbox" id="googleBusinessListing" name="googleBusinessListing" className="text-primary"/>
