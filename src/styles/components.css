@@ -88,6 +88,6 @@
 
 /* Lawmatics Forms */
 /* Contact Form */
-#iFrameResizer0[src*="https://app.lawmatics.com/forms/embedded/1e53ea02-d778-4cd6-882c-d96152846adf?uid=2-kflv3mxo-m3qn80ly&"] {
+#contact-page iframe {
     @apply xl:min-w-0 xl:w-1/2 m-auto !important
 }
