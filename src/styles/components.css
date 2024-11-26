@@ -88,6 +88,6 @@
 
 /* Lawmatics Forms */
 /* Contact Form */
-#contact-page iframe {
+#contact-page iframe, #scheduling-page iframe {
     @apply xl:min-w-0 xl:w-1/2 m-auto !important
 }
