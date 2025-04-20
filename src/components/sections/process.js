@@ -47,7 +47,7 @@ const Process = () => {
                         src={
                         "https://images.ctfassets.net/irf9uehwbpr8/6XXlN5FHyyjEFaBygvH2f1/7b3233b851b612119e6f99798142cf07/pijwvmzqmulmxpocc3iq.webp"
                         }
-                        formats={["auto", "webp", "avif"]}
+                        formats={["auto", "webp"]}
                         className="rounded-lg"
                     />
                     <div
