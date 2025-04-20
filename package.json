@@ -9,7 +9,6 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "postinstall": "npm rebuild sharp",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
