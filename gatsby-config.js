@@ -44,7 +44,17 @@ module.exports = {
         }
       }
     }, 
-    "gatsby-plugin-sharp", 
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          // remove "avif" here
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+          quality: 50,
+        },
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     {
