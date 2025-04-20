@@ -1,3 +1,6 @@
+[build.environment]
+  NODE_VERSION = "18"
+  
 [[redirects]]
   from = "/practice-areas/wrongful-termination-lawyer"
   to = "/"
