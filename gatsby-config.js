@@ -48,7 +48,6 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          // remove "avif" here
           formats: [`auto`, `webp`],
           placeholder: `blurred`,
           quality: 50,

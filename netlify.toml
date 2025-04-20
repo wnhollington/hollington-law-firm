@@ -1,5 +1,7 @@
-[build.environment]
-  NODE_VERSION = "18"
+# netlify.toml
+[build]
+  command   = "npm run clean && npm run build"
+  publish   = "public"
   
 [[redirects]]
   from = "/practice-areas/wrongful-termination-lawyer"
