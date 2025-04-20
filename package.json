@@ -18,6 +18,8 @@
     "@fontsource/libre-baskerville": "^5.2.5",
     "@fontsource/mr-dafoe": "^5.2.5",
     "@fontsource/source-sans-pro": "^5.2.5",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "algoliasearch": "^4.22.1",
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.5.0",
