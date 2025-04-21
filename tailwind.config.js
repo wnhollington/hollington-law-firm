@@ -13,9 +13,6 @@ module.exports = {
       padding: '2rem',
     },
     extend: {
-      backgroundImage: {
-        'hero': "url('https://res.cloudinary.com/wnhollington/image/upload/f_auto/q_auto/e_improve,e_sharpen/v1710770792/7.19.23-Construction-Defect_zzkg4q.compress_aforwx.webp')",
-      },
       colors: {
         primary: "#6E0A05",
         secondary: "#055b6e"

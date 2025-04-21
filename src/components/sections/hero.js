@@ -15,7 +15,7 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover"
         placeholder="blurred"
         layout="fullWidth"
-        formats={["auto", "webp", "avif"]}
+        formats={["auto", "webp"]}
         quality={80}
       />
 
