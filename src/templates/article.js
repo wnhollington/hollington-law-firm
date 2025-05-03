@@ -84,8 +84,17 @@ function Article ({ data, pageContext}) {
                 <span><Link to="/w-neal-hollington">W. Neal Hollington</Link></span>
               </p>
               <p className='flex flex-row items-center gap-1'><FaCalendarAlt className='text-primary inline'/><span>{data.contentfulArticles.updatedAt}</span></p>
-              <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline'/><span>3 minute read</span></p>
-              <p className='flex flex-row items-center gap-1'><FaTag className='text-primary inline'/><span><Link to="/articles">{data.contentfulArticles.metadata.tags[0]?.name}</Link></span></p>
+              <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline'/><span>{data.contentfulArticles.readingTime} minute read</span></p>
+              {data.contentfulArticles.metadata?.tags?.length > 0 && (
+                <p className="flex flex-row items-center gap-1">
+                  <FaTag className="text-primary inline" />
+                  <span>
+                    <Link to="/articles">
+                      {data.contentfulArticles.metadata.tags[0].name}
+                    </Link>
+                  </span>
+                </p>
+              )}
             </div>
           </header>
           
@@ -164,6 +173,7 @@ export const query = graphql`
           name
         }
       }
+      readingTime
       body {
         raw
         references {

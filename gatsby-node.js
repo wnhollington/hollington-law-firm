@@ -179,4 +179,37 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-}
+};
+
+// Add Reading Time to Articles
+const readingTime = require("reading-time");
+const { documentToPlainTextString } =
+  require("@contentful/rich-text-plain-text-renderer");
+
+exports.createResolvers = ({ createResolvers }) => {
+  createResolvers({
+    // 1️⃣  100 % match your node typename
+    ContentfulArticles: {
+      // 2️⃣  new GraphQL field
+      readingTime: {
+        type: "Int",
+        resolve(source) {
+          /* -------------------------------------------
+           *  Extract plain text from body.raw (Rich Text)
+           * ------------------------------------------- */
+          let text = "";
+
+          if (source.body && source.body.raw) {
+            text = documentToPlainTextString(JSON.parse(source.body.raw));
+          }
+
+          // Fallback keeps field from being pruned
+          if (!text) return 1;
+
+          // reading‑time returns { minutes, words }
+          return Math.ceil(readingTime(text).minutes);
+        },
+      },
+    },
+  });
+};

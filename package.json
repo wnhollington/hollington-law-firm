@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^17.0.0",
     "@fontsource/libre-baskerville": "^5.2.5",
     "@fontsource/mr-dafoe": "^5.2.5",
     "@fontsource/source-sans-pro": "^5.2.5",
@@ -42,6 +43,7 @@
     "react-intersection-observer": "^9.5.2",
     "react-share": "^5.1.0",
     "react-slick": "^0.30.3",
+    "reading-time": "^1.5.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
