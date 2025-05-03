@@ -12,6 +12,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const typesOfClaimsTemplate = path.resolve(`./src/templates/types-of-claims.js`)
   const articleTemplate = path.resolve(`./src/templates/article.js`)
   const attorneyBioTemplate = path.resolve(`./src/templates/attorney-bio.js`)
+  const areasServedTemplate = path.resolve(`./src/templates/area-served.js`)
 
   const result = await graphql(`
     {
@@ -65,6 +66,14 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      areasServed: allContentfulAreasServed {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
     }
   `)
 
@@ -110,7 +119,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // Create Types of Projects Pages
+  // Create Types of Claims Pages
   const typesOfClaims = result.data.typesOfClaims.edges
   typesOfClaims.forEach(claim => {
     createPage({
@@ -153,6 +162,19 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         id: attorney.node.id,
         slug: attorney.node.slug
+      },
+    })
+  })
+
+  // Create Areas Served Pages
+  const areasServed = result.data.areasServed.edges
+  areasServed.forEach(area => {
+    createPage({
+      path: `/areas-served/${area.node.slug}`,
+      component: require.resolve(areasServedTemplate),
+      context: {
+        id: area.node.id,
+        slug: area.node.slug
       },
     })
   })

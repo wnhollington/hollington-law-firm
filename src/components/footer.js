@@ -50,6 +50,7 @@ const Footer = () => {
                                     <li><Link to="/about-the-firm">About the Firm</Link></li>
                                     <li><Link to="/w-neal-hollington">W. Neal Hollington</Link></li>
                                     <li><Link to="/practice-areas">All Practice Areas</Link></li>
+                                    <li><Link to="/areas-served">Areas Served</Link></li>
                                     <li><Link to="/articles">Articles</Link></li>
                                     <li><Link to="/schedule-consultation">Schedule Consultation</Link></li>
                                     <li><Link to="/contact">Contact</Link></li>
