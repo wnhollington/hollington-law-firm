@@ -20,13 +20,13 @@ const IndexPage = () => {
     <Layout>
       <Hero />
       <Accolades />
+      <Results />
       <About />
       <TypesOfClaims/>
       <WhatSetsUsApart />
       <Process />
-      <Faqs/>
-      <Results />
       <Testimonials />
+      <Faqs/>
       <Schedule />
     </Layout>
   )
