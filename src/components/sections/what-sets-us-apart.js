@@ -65,7 +65,7 @@ const WhatSetsUsApart = () => {
     return (
         <section id="what-sets-us-apart" ref={ref}>
             <div className={`container my-16 lg:my-24 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <h2 className="text-center text-3xl mb-2 font-medium">What Sets Us Apart</h2>
+                <h2 className="text-center text-3xl mb-2 font-medium">Why Hire Our Construction Defect Attorney</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <Slider ref={setSliderRef} {...sliderSettings}>     
                     {process.map((step, index) => (

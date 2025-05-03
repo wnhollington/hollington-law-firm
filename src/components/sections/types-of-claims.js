@@ -11,7 +11,7 @@ const TypesOfClaims = () => {
     return (
         <section id="types-of-claims" ref={ref}>
             <div className={`container my-16 lg:my-24 text-center animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
-                <h2 className="text-center text-3xl font-medium mb-2">Claims We Handle</h2>
+                <h2 className="text-center text-3xl font-medium mb-2">Types of Construction Defect Claims We Handle</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
 
