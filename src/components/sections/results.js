@@ -29,7 +29,7 @@ const Results = () => {
         dots: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        infinite: true,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 1200,
@@ -47,7 +47,7 @@ const Results = () => {
     }
     return (
         <section id="results" ref={ref}>
-            <div className={`container animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
+            <div className={`container my-12 animated animatedFadeInUp ${inView ? 'fadeInUp' : null}`}>
                 <h2 className="text-center text-3xl mb-2 font-medium">Recent Results</h2>
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <div className="bg-gradient-to-b from-stone-300 to-stone-200 shadow-lg rounded-md">

@@ -32,7 +32,7 @@ const Testimonials = () => {
         dots: true,
         slidesToShow: 2,
         slidesToScroll: 1,
-        infinite: true,
+        infinite: false,
         responsive: [
             {
             breakpoint: 1275,
