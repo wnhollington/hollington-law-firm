@@ -27,7 +27,7 @@ const AreasServed = () => {
     }
   `);
 
-  const regions = ["Metro Denver", "Northern Colorado", "Southern Colorado", "Eastern Plains"];
+  const regions = ["Metro Denver", "Northern Colorado", "Southern Colorado"];
   const [activeArea, setActiveArea] = useState();
 
   const filteredAreas = data.allContentfulAreasServed.edges
