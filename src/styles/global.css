@@ -6,3 +6,13 @@
 
 @import "tailwindcss/utilities";
 @import "./utilities.css";
+
+@layer utilities {
+    .mobile-item {
+      @apply py-4 lg:py-0 lg:inline-block;
+    }
+  }
+
+  @layer base {
+    body { @apply pt-[72px] lg:pt-[72px]; }
+  }
