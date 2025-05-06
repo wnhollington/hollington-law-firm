@@ -39,7 +39,6 @@ const Accolades = () => {
                 key={edge.node.id}
                 href={link}
                 target="_blank"
-                rel="noopener noreferrer"
               >
                 <GatsbyImage
                   image={edge.node.childImageSharp.gatsbyImageData}
