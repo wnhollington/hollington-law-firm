@@ -25,31 +25,31 @@ const About = () => {
                         </div>
                         <div className="lg:w-2/3 h-full overflow-y-auto max-h-[500px] text-left">
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
-                                At Hollington Law Firm, we focus exclusively on representing homeowners and property owners as a <strong>Colorado construction defect law firm</strong>. Led by attorney Neal Hollington, a dedicated and experienced <strong>construction defect lawyer</strong>, our firm is committed to helping clients hold negligent builders, contractors, and developers accountable for defective construction and poor workmanship.
+                                At Hollington Law Firm, we focus exclusively on representing homeowners and property owners as a Colorado construction defect law firm. Led by attorney Neal Hollington, a dedicated and experienced construction defect lawyer our firm is committed to helping clients hold negligent builders, contractors, and developers accountable for defective construction and poor workmanship.
                             </p>
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
                                 We understand that construction defects can disrupt your life, reduce your property’s value, and lead to costly repairs. That’s why we provide personalized legal representation to guide you through every step of the claims process.
                             </p>
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
-                                Our <strong>construction defect attorney</strong> helps clients with claims involving:
+                                Our construction defect attorney helps clients with claims involving:
                             </p>
                             <ul className="list-disc text-xl text-gray-900 ml-8 my-4 space-y-2">
-                                <li><strong>Structural defects</strong> (foundation issues, framing problems, load-bearing failures)</li>
-                                <li><strong>Water intrusion, leaks, and mold</strong> due to improper construction</li>
-                                <li><strong>Roofing defects and building envelope failures</strong></li>
-                                <li><strong>Defective windows, doors, and siding installations</strong></li>
-                                <li><strong>Poor workmanship and code violations</strong></li>
+                                <li>Structural defects (foundation issues, framing problems, load-bearing failures)</li>
+                                <li>Water intrusion, leaks, and mold due to improper construction</li>
+                                <li>Roofing defects and building envelope failures</li>
+                                <li>Defective windows, doors, and siding installations</li>
+                                <li>Poor workmanship and code violations</li>
                             </ul>
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
                                 At Hollington Law Firm, we combine deep knowledge of Colorado construction defect law with a client-centered approach. We offer:
                             </p>
                             <ul className="list-disc text-xl text-gray-900 ml-8 my-4 space-y-2">
-                                <li><strong>Responsive communication</strong> with a focus on your goals</li>
-                                <li><strong>Strategic legal advocacy</strong> in negotiations, mediation, and litigation</li>
-                                <li><strong>Results-driven representation</strong> to protect your property rights</li>
+                                <li>Responsive communication with a focus on your goals</li>
+                                <li>Strategic legal advocacy in negotiations, mediation, and litigation</li>
+                                <li>Results-driven representation to protect your property rights</li>
                             </ul>
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
-                                Whether you are pursuing a claim against a builder, contractor, subcontractor, or developer, our <strong>construction defect attorney</strong> will work tirelessly to hold them accountable and help you recover the compensation you deserve.
+                                Whether you are pursuing a claim against a builder, contractor, subcontractor, or developer, our construction defect attorney will work tirelessly to hold them accountable and help you recover the compensation you deserve.
                             </p>
                         </div>
                     </div>
