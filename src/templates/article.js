@@ -24,13 +24,15 @@ import Layout from '../components/layout.js'
 import Seo from '../components/seo.js'
 import Sidebar from '../components/sidebar/index.js';
 
-// Render
-function Article ({ data, pageContext}) {
-  const {previous, next} = pageContext
+function Article ({ data, pageContext }) {
+  const { previous, next } = pageContext
+  const siteMetaData = useSiteMetadata()
+  const shareUrl = `${siteMetaData.siteUrl}/articles/${data.contentfulArticles.slug}`
+
   const options = {
     renderNode: {
       [INLINES.HYPERLINK]: (node) => {
-       return <a href={node.data.uri} target={`${node.data.uri.startsWith('https://hollingtonlawfirm.') ? '_self' : '_blank'}`}>{node.content[0].value}</a>;
+        return <a href={node.data.uri} target={`${node.data.uri.startsWith('https://hollingtonlawfirm.') ? '_self' : '_blank'}`}>{node.content[0].value}</a>;
       },
       [INLINES.ENTRY_HYPERLINK]: (node) => {
         const entry = data.contentfulArticles.body.references.find(x => x.contentful_id === node.data.target.sys.id)
@@ -44,7 +46,6 @@ function Article ({ data, pageContext}) {
           default:
             return <Link to={`/`}>{node.content[0].value}</Link>;
         }
-        
       },
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const { gatsbyImageData, description } = node.data.target
@@ -61,17 +62,27 @@ function Article ({ data, pageContext}) {
     }
   }
 
-  const siteMetaData = useSiteMetadata()
-  const shareUrl = `${siteMetaData.siteUrl}/articles/${data.contentfulArticles.slug}`
-
   return (
     <Layout>
-
       <div className='flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center'>
         <article className='lg:w-2/3 max-w-6xl mx-auto'>
           
           <header className='mb-4'>
-            <h1 className='bg-gradient-to-b from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-md shadow-xl'>{data.contentfulArticles.title}</h1>
+            <h1 className='bg-gradient-to-b from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-md shadow-xl'>
+              {data.contentfulArticles.title}
+            </h1>
+
+            {data.contentfulArticles.heroImage?.gatsbyImageData && (
+              <div className="relative w-full h-[400px] mb-6 rounded shadow-md overflow-hidden">
+                <GatsbyImage
+                  image={getImage(data.contentfulArticles.heroImage)}
+                  alt={data.contentfulArticles.heroImage.description || 'Hero image'}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gray-800 bg-opacity-50"></div>
+              </div>
+            )}
+
             <div className='flex flex-col md:flex-row gap-1 md:gap-6'>
               <p className='flex flex-row items-center gap-1'>
                 <StaticImage
@@ -83,8 +94,8 @@ function Article ({ data, pageContext}) {
                 />
                 <span><Link to="/w-neal-hollington">W. Neal Hollington</Link></span>
               </p>
-              <p className='flex flex-row items-center gap-1'><FaCalendarAlt className='text-primary inline'/><span>{data.contentfulArticles.updatedAt}</span></p>
-              <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline'/><span>{data.contentfulArticles.readingTime} minute read</span></p>
+              <p className='flex flex-row items-center gap-1'><FaCalendarAlt className='text-primary inline' /><span>{data.contentfulArticles.updatedAt}</span></p>
+              <p className='flex flex-row items-center gap-1'><FaClock className='text-primary inline' /><span>{data.contentfulArticles.readingTime} minute read</span></p>
               {data.contentfulArticles.metadata?.tags?.length > 0 && (
                 <p className="flex flex-row items-center gap-1">
                   <FaTag className="text-primary inline" />
@@ -97,39 +108,29 @@ function Article ({ data, pageContext}) {
               )}
             </div>
           </header>
-          
+
           {renderRichText(data.contentfulArticles.body, options)}
 
-          <p className='italic'>The information provided on this website is for general informational purposes only and should not be construed as legal advice or legal opinion. You should not act or refrain from acting on the basis of any information provided on this website without seeking legal advice from an attorney.</p>
+          <p className='italic mt-6'>
+            The information provided on this website is for general informational purposes only and should not be construed as legal advice or legal opinion. You should not act or refrain from acting on the basis of any information provided on this website without seeking legal advice from an attorney.
+          </p>
 
           {/* Social Share */}
           <div className='my-2 py-2 flex flex-row gap-4'>
-            <EmailShareButton
-              url={shareUrl}
-              subject={`${siteMetaData.title} | ${data.contentfulArticles.title}`}
-            >
-              <EmailIcon size={40} round={true}/>
+            <EmailShareButton url={shareUrl} subject={`${siteMetaData.title} | ${data.contentfulArticles.title}`}>
+              <EmailIcon size={40} round={true} />
             </EmailShareButton>
-
-            <FacebookShareButton
-              url={shareUrl}
-            >
-              <FacebookIcon size={40} round={true}/>
+            <FacebookShareButton url={shareUrl}>
+              <FacebookIcon size={40} round={true} />
             </FacebookShareButton>
-
-            <TwitterShareButton
-              url={shareUrl}
-            >
-              <TwitterIcon size={40} round={true}/>
+            <TwitterShareButton url={shareUrl}>
+              <TwitterIcon size={40} round={true} />
             </TwitterShareButton>
-
-            <LinkedinShareButton
-              url={shareUrl}
-            >
-              <LinkedinIcon size={40} round={true}/>
+            <LinkedinShareButton url={shareUrl}>
+              <LinkedinIcon size={40} round={true} />
             </LinkedinShareButton>
           </div>
-          
+
           {/* Navigation */}
           <nav>
             <ul className="flex flex-wrap justify-between mx-auto my-4">
@@ -142,7 +143,7 @@ function Article ({ data, pageContext}) {
               </li>
               <li>
                 {next && (
-                  <Link to={`/articles/${next.slug}`} rel="next" aria-label={next.title} title={next.title} className="inline-flex items-center p-2 text-md font-medium no-underline  text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
+                  <Link to={`/articles/${next.slug}`} rel="next" aria-label={next.title} title={next.title} className="inline-flex items-center p-2 text-md font-medium no-underline text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
                     Next Post &rarr;
                   </Link>
                 )}
@@ -159,7 +160,6 @@ function Article ({ data, pageContext}) {
   )
 }
 
-// Graphql call
 export const query = graphql`
   query ($id: String!) {
     contentfulArticles(id: {eq: $id}) {
@@ -174,6 +174,14 @@ export const query = graphql`
         }
       }
       readingTime
+      heroImage {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+        )
+        description
+      }
       body {
         raw
         references {
@@ -213,9 +221,10 @@ export const query = graphql`
     }
   }
 `
+
 export default Article
 
-export const Head = ({data}) => (
+export const Head = ({ data }) => (
   <Seo 
     title={data.contentfulArticles.seoTitle}
     description={data.contentfulArticles.seoDescription}
