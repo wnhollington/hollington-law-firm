@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Optimized Hero Image */}
       <StaticImage
         src="https://res.cloudinary.com/wnhollington/image/upload/f_auto/q_auto/e_improve,e_sharpen/v1710770792/7.19.23-Construction-Defect_zzkg4q.compress_aforwx.webp"
-        alt="Hero Background"
+        alt="Colorado Construction Defect Lawyer"
         className="absolute inset-0 w-full h-full object-cover"
         placeholder="blurred"
         layout="fullWidth"

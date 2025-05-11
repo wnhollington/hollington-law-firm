@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { INLINES } from '@contentful/rich-text-types';
 import { Link } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 // Components
 import Layout from '../components/layout.js'
@@ -36,6 +37,16 @@ function Page({ data }) {
       <div className='flex flex-col lg:flex-row my-8 p-4 gap-6 justify-center'>
         <article className='lg:w-2/3 max-w-6xl mx-auto'>
           <h1 className="bg-gradient-to-b from-primary to-red-800 text-center text-white mb-2 py-8 px-2 rounded-md shadow-xl">{data.contentfulPracticeAreas.seoTitle}</h1>
+          {data.contentfulPracticeAreas.heroImage?.gatsbyImageData && (
+            <div className="relative w-full h-[400px] mb-6 rounded shadow-md overflow-hidden">
+              <GatsbyImage
+                image={getImage(data.contentfulPracticeAreas.heroImage)}
+                alt={data.contentfulPracticeAreas.heroImage.description || 'Hero image'}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gray-800 bg-opacity-50"></div>
+            </div>
+          )}
           <div>{renderRichText(data.contentfulPracticeAreas.body, options)}</div>
         </article>
         <Sidebar />
@@ -52,6 +63,13 @@ export const query = graphql`
       seoTitle
       seoDescription
       slug
+      heroImage {
+        gatsbyImageData (
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+        )
+        description
+      }
       body {
         raw
         references {
