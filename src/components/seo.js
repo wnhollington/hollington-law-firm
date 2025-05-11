@@ -47,6 +47,26 @@ const Seo = ({ description, title, children }) => {
       "postalCode": "80134",
       "addressCountry": "US"
     },
+    "areaServed": [
+      { "@type": "City", "name": "Denver" },
+      { "@type": "City", "name": "Colorado Springs" },
+      { "@type": "City", "name": "Boulder" },
+      { "@type": "City", "name": "Fort Collins" },
+      { "@type": "City", "name": "Aurora" },
+      { "@type": "City", "name": "Boulder" },
+      { "@type": "City", "name": "Centennial" },
+      { "@type": "City", "name": "Littleton" },
+      { "@type": "City", "name": "Parker" },
+      { "@type": "City", "name": "Highlands Ranch" },
+      { "@type": "City", "name": "Longmont" },
+      { "@type": "City", "name": "Pueblo" },
+    ],
+    "serviceType": [
+      "Construction Defect Litigation",
+      "Mechanic’s Liens",
+      "Property Damage",
+      "Toxic Tort and Environmental Damage"
+    ],
     "sameAs": [
       site.siteMetadata?.social.facebook,
       site.siteMetadata?.social.linkedin,
