@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Tabs } from 'flowbite-react'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { INLINES } from '@contentful/rich-text-types';
+import '@fontsource/mr-dafoe/400.css';
 
 // Components
 import Layout from '../components/layout.js'

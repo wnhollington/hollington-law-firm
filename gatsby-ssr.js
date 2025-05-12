@@ -16,13 +16,6 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setHtmlA
         __html: `!function(e,t,n,a,i,s,c,o,l){e[i]||(c=e[i]=function(){c.process?c.process.apply(c,arguments):c.queue.push(arguments)},c.queue=[],c.t=1*new Date,o=t.createElement(n),o.async=1,o.src=a+'?t='+Math.ceil(new Date/s)*s,l=t.getElementsByTagName(n)[0],l.parentNode.insertBefore(o,l))}(window,document,'script','https://navi.lawmatics.com/navi.min.js','lm_navi',864e5),lm_navi('init','${process.env.LAWMATICS_ID}'),lm_navi('event','pageload')`
       }}
     />,
-    <link
-    key="preload-hero"
-    rel="preload"
-    as="image"
-    href="https://res.cloudinary.com/wnhollington/image/upload/f_auto/q_auto/e_improve,e_sharpen/v1710770792/7.19.23-Construction-Defect_zzkg4q.compress_aforwx.webp"
-    type="image/webp"
-  />,
   ]);
   setPreBodyComponents([
     <noscript

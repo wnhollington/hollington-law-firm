@@ -49,7 +49,7 @@ module.exports = {
           // Performance‑friendly placeholder for heroes / LCP elements
           placeholder: `dominantColor`,
           // Ship next‑gen formats first; JPEG/PNG fallbacks auto
-          formats: [`auto`, `webp`, `avif`],
+          formats: [`auto`, `webp`],
           // Good visual fidelity at ~80 % of original weight
           quality: 80,
           // Sensible responsive breakpoints for laptops → 4K
