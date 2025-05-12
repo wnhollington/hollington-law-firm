@@ -65,7 +65,7 @@ module.exports = {
       options: {
         defaults: {
           placeholder: `dominantColor`,
-          formats: [`auto`, `webp`, `avif`],
+          formats: [`auto`, `webp`],
           quality: 80,
         },
       },
