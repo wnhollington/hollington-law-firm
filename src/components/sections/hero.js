@@ -23,7 +23,7 @@ const Hero = () => {
         alt="Colorado Construction Defect Lawyer"
         layout="fullWidth"
         placeholder="dominantColor"
-        formats={['auto', 'webp', 'avif']}
+        formats={['auto', 'webp',]}
         loading="eager"
         preload
         fetchpriority="high"
