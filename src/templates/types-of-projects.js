@@ -27,11 +27,14 @@ function TypesOfProjects({ data }) {
           </h1>
 
           {data.contentfulTypesOfProjects.heroImage?.gatsbyImageData && (
-            <div className="relative w-full h-[400px] mb-6 rounded shadow-md overflow-hidden">
+            <div className="relative mb-6 rounded shadow-md overflow-hidden" style={{ height: '60vh' }}>
               <GatsbyImage
                 image={getImage(data.contentfulTypesOfProjects.heroImage)}
                 alt={data.contentfulTypesOfProjects.heroImage.description || 'Hero image'}
-                className="w-full h-full object-cover"
+                loading="eager"
+                fetchpriority="high"
+                className="w-full h-full"
+                imgStyle={{ objectFit: 'cover' }}
               />
               <div className="absolute inset-0 bg-gray-800 bg-opacity-50"></div>
             </div>
@@ -55,8 +58,6 @@ export const query = graphql`
       heroImage {
         gatsbyImageData(
           layout: FULL_WIDTH
-          placeholder: BLURRED
-          formats: [AUTO, WEBP]
         )
         description
       }

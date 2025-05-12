@@ -4,9 +4,18 @@
 require('dotenv').config();
 
 module.exports = {
+  /* ------------------------------------------------------------------ */
+  /*   FLAGS & TYPEGEN                                                   */
+  /* ------------------------------------------------------------------ */
   flags: {
-    DEV_SSR: true
+    DEV_SSR: true,
+    PARALLEL_DATA_SOURCING: true,   // faster Contentful ingest
   },
+  graphqlTypegen: process.env.NODE_ENV === 'production',             // typed GraphQL queries in IDE
+
+  /* ------------------------------------------------------------------ */
+  /*   SITE  METADATA  (unchanged)                                       */
+  /* ------------------------------------------------------------------ */
   siteMetadata: {
     title: `Hollington Law Firm`,
     description: 'Colorado Construction Defect Lawyer',
@@ -26,90 +35,109 @@ module.exports = {
       twitter: `https://twitter.com/wnealhollington`,
     }
   },
-  plugins: 
-  [
-    "gatsby-plugin-image", 
-    "gatsby-plugin-sitemap", 
+
+  /* ------------------------------------------------------------------ */
+  /*   PLUG‑IN STACK                                                     */
+  /* ------------------------------------------------------------------ */
+  plugins: [
+    /* ---------------- GLOBAL IMAGE DEFAULTS -------------------------- */
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-image`,
       options: {
-        name: "Hollington Law Firm",
-        description: "Colorado Construction Defect Lawyer",
-        lang: "en",
-        background_color: "#e7e5e4",
-        theme_color: "#6E0A05",
-        icon: "src/images/web-icon.png",
-        icon_options: {
-          purpose: "any maskable"
-        }
-      }
-    }, 
+        // These apply to EVERY gatsbyImageData() call unless you override.
+        defaults: {
+          // Performance‑friendly placeholder for heroes / LCP elements
+          placeholder: `dominantColor`,
+          // Ship next‑gen formats first; JPEG/PNG fallbacks auto
+          formats: [`auto`, `webp`, `avif`],
+          // Good visual fidelity at ~80 % of original weight
+          quality: 80,
+          // Sensible responsive breakpoints for laptops → 4K
+          breakpoints: [480, 768, 1024, 1360, 1920],
+          backgroundColor: `transparent`,
+        },
+      },
+    },
+
+    /* ------------- SHARP (for local assets like logos) --------------- */
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`],
-          placeholder: `blurred`,
-          quality: 50,
+          placeholder: `dominantColor`,
+          formats: [`auto`, `webp`, `avif`],
+          quality: 80,
         },
       },
     },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-postcss",
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "images",
-        "path": "./src/images/"
-      },
-      __key: "images"
-    }, 
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        "name": "pages",
-        "path": "./src/pages/"
-      },
-      __key: "pages"
-    },
+    `gatsby-transformer-sharp`,
+
+    /* -------------------- CONTENTFUL SOURCE -------------------------- */
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        spaceId:     process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        enableTags: true,
+        enableTags:  true,
+        // Leave originals on Contentful’s CDN; use Image API transforms
+        downloadLocal: false,
       },
     },
+
+    /* --------------------- PWA / MANIFEST ---------------------------- */
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        rule: {
-          include: `${__dirname}/src/images/svg`
-        }
-      }
-    },
-    'gatsby-plugin-sitemap',
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: false,
+        name: 'Hollington Law Firm',
+        description: 'Colorado Construction Defect Lawyer',
+        lang: 'en',
+        background_color: '#e7e5e4',
+        theme_color: '#6E0A05',
+        icon: 'src/images/web-icon.png',
+        icon_options: { purpose: 'any maskable' },
       },
+    },
+
+    /* ---------------------- DATA & ASSETS ---------------------------- */
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: { name: 'images', path: './src/images/' },
+      __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: { name: 'pages', path: './src/pages/' },
+      __key: 'pages',
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: { include: `${__dirname}/src/images/svg` },
+      },
+    },
+
+    /* ----------------------- SITEMAP --------------------------------- */
+    `gatsby-plugin-sitemap`,
+
+    /* ------------------- PERF / ANALYTICS ---------------------------- */
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: { devMode: false },
     },
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        appId:  process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries: require("./src/utilities/algolia-queries")
+        queries: require('./src/utilities/algolia-queries'),
       },
     },
     {
       resolve: 'gatsby-plugin-mailchimp',
-      options: {
-          endpoint: process.env.MAILCHIMP_ENDPOINT
-      }
+      options: { endpoint: process.env.MAILCHIMP_ENDPOINT },
     },
+
+    /* ----------------------- STYLES ---------------------------------- */
+    'gatsby-plugin-postcss',
   ],
-
 };
-
