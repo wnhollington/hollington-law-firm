@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "prebuild": "node scripts/fetch-lawmatics.js",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",

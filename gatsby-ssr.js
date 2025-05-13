@@ -1,27 +1,25 @@
 // gatsby-ssr.js
-import React from 'react';
+import React from "react";
 
 export const onRenderBody = ({
   setHeadComponents,
   setPreBodyComponents,
   setHtmlAttributes,
 }) => {
-  /* ✱ 1.  Language attribute for <html> */
-  setHtmlAttributes({ lang: 'en-US' });
+  setHtmlAttributes({ lang: "en-US" });
 
-  /* Gather env vars once (avoids undefined in preview) */
-  const GTM_ID = process.env.GTM_ID || '';
-  const LAWMATICS_ID = process.env.LAWMATICS_ID || '';
+  const GTM_ID = process.env.GTM_ID || "";
 
-  /* ✱ 2.  Preconnect hints: lets DNS + TLS handshake run in parallel */
+  /* — 1.  Preconnect to GTM — */
   const preconnect = (
-    <>
-      <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://navi.lawmatics.com" crossOrigin="anonymous" />
-    </>
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossOrigin="anonymous"
+    />
   );
 
-  /* ✱ 3.  Inline GTM bootstrap (kept in <head> for dataLayer timing) */
+  /* — 2.  Async GTM bootstrap — */
   const gtmInline = (
     <script
       key="gtm-inline"
@@ -36,32 +34,16 @@ export const onRenderBody = ({
     />
   );
 
-  /* ✱ 4.  Lawmatics NAVI bootstrap */
-  const lawmaticsInline = (
-    <script
-      key="lawmatics-inline"
-      dangerouslySetInnerHTML={{
-        __html: `!function(e,t,n,a,i,s,c,o,l){e[i]||(c=e[i]=function(){
-          c.process?c.process.apply(c,arguments):c.queue.push(arguments)},
-          c.queue=[],c.t=1*new Date,o=t.createElement(n),o.async=1,
-          o.src=a+'?t='+Math.ceil(new Date/s)*s,l=t.getElementsByTagName(n)[0],
-          l.parentNode.insertBefore(o,l))}(window,document,'script',
-          'https://navi.lawmatics.com/navi.min.js','lm_navi',864e5),
-          lm_navi('init','${LAWMATICS_ID}'),lm_navi('event','pageload');`,
-      }}
-    />
-  );
+  setHeadComponents([preconnect, gtmInline]);
 
-  setHeadComponents([preconnect, gtmInline, lawmaticsInline]);
-
-  /* ✱ 5.  <noscript> fallback for GTM (as recommended by Google) */
+  /* — 4.  <noscript> GTM fallback — */
   setPreBodyComponents([
     <noscript key="gtm-noscript">
       <iframe
         src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
         height="0"
         width="0"
-        style={{ display: 'none', visibility: 'hidden' }}
+        style={{ display: "none", visibility: "hidden" }}
         title="gtm"
       />
     </noscript>,
