@@ -8,39 +8,58 @@ import Seo from "../components/seo";
 const LAW_ID = "1e53ea02-d778-4cd6-882c-d96152846adf";
 const SCRIPT_ID = "lm-lawmatics-contact-loader";
 const PLACEHOLDER_ID = "lm-embedded-script";
+const CONTAINER_ID = "contact-form-container";
 
 const Contact = () => {
   useEffect(() => {
-    // Reset placeholder div to ensure Lawmatics always re-renders
-    const existing = document.getElementById(PLACEHOLDER_ID);
-    if (existing) existing.remove();
+    const loadLawmatics = () => {
+      // Remove existing embed if it exists
+      const existing = document.getElementById(PLACEHOLDER_ID);
+      if (existing) existing.remove();
 
-    const newDiv = document.createElement("div");
-    newDiv.id = PLACEHOLDER_ID;
+      const newDiv = document.createElement("div");
+      newDiv.id = PLACEHOLDER_ID;
 
-    const container = document.getElementById("contact-form-container");
-    if (container) container.appendChild(newDiv);
+      const container = document.getElementById(CONTAINER_ID);
+      if (container) container.appendChild(newDiv);
 
-    // Inject Lawmatics if not already loaded
-    if (!document.getElementById(SCRIPT_ID)) {
-      const script = document.createElement("script");
-      script.id = SCRIPT_ID;
-      script.async = true;
-      script.innerHTML = `
-        !function(e,t,n,a,s,c,i){if(!e[s]){i=e[s]=function(){
-        i.process?i.process.apply(i,arguments):i.queue.push(arguments)},
-        i.queue=[],i.t=1*new Date;var o=t.createElement(n);o.async=1,
-        o.src=a+"?t="+Math.ceil(new Date/c)*c;
-        var r=t.getElementsByTagName(n)[0]; r.parentNode.insertBefore(o,r)
-        }}(window,document,"script","https://navi.lawmatics.com/intake.min.js","lm_intake",864e5);
-        lm_intake("${LAW_ID}");
-      `.trim();
-      document.body.appendChild(script);
-    } else {
-      if (window.lm_intake) {
-        window.lm_intake(LAW_ID);
+      if (!document.getElementById(SCRIPT_ID)) {
+        const script = document.createElement("script");
+        script.id = SCRIPT_ID;
+        script.async = true;
+        script.innerHTML = `
+          !function(e,t,n,a,s,c,i){if(!e[s]){i=e[s]=function(){
+          i.process?i.process.apply(i,arguments):i.queue.push(arguments)},
+          i.queue=[],i.t=1*new Date;var o=t.createElement(n);o.async=1,
+          o.src=a+"?t="+Math.ceil(new Date/c)*c;
+          var r=t.getElementsByTagName(n)[0]; r.parentNode.insertBefore(o,r)
+          }}(window,document,"script","https://navi.lawmatics.com/intake.min.js","lm_intake",864e5);
+          lm_intake("${LAW_ID}");
+        `.trim();
+        document.body.appendChild(script);
+      } else {
+        if (window.lm_intake) {
+          window.lm_intake(LAW_ID);
+        }
       }
-    }
+    };
+
+    // Use IntersectionObserver + requestIdleCallback
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(loadLawmatics);
+        } else {
+          setTimeout(loadLawmatics, 200);
+        }
+        observer.disconnect();
+      }
+    });
+
+    const target = document.getElementById(CONTAINER_ID);
+    if (target) observer.observe(target);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -53,7 +72,7 @@ const Contact = () => {
           Thank you for your interest in contacting our firm. Please fill out the below form and a representative will be in touch shortly.
         </p>
         <div id="contact-form-container" className="w-full flex justify-center mt-8 px-4">
-          <div id="lm-embedded-script" className="w-full max-w-xl" />
+          <div id="lm-embedded-script" className="w-full max-w-xl min-h-[600px]" />
         </div>
       </div>
     </Layout>
