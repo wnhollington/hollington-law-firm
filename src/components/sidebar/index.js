@@ -13,8 +13,9 @@ const Sidebar = () => {
             <SidebarProfile />
             <SidebarReview />
             <SidebarArticles />
-            <SidebarForm />
-
+            <div className="self-start w-full">
+                <SidebarForm />
+            </div>
         </aside>
     )
 }

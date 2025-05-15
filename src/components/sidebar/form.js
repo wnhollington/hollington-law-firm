@@ -10,11 +10,9 @@ export default function SidebarForm() {
     const placeholderId = "lm-embedded-sidebar";
 
     const loadLawmatics = () => {
-      // Remove any existing embed
       const existing = document.getElementById(placeholderId);
       if (existing) existing.remove();
 
-      // Create new placeholder
       const newDiv = document.createElement("div");
       newDiv.id = placeholderId;
 
@@ -42,22 +40,61 @@ export default function SidebarForm() {
       }
     };
 
-    // Lazy load only when form scrolls into view
-    const observer = new IntersectionObserver(([entry]) => {
+    const intersectionObserver = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         if ("requestIdleCallback" in window) {
           requestIdleCallback(loadLawmatics);
         } else {
           setTimeout(loadLawmatics, 200);
         }
-        observer.disconnect();
+        intersectionObserver.disconnect();
       }
     });
 
     const target = document.getElementById(containerId);
-    if (target) observer.observe(target);
+    if (target) intersectionObserver.observe(target);
 
-    return () => observer.disconnect();
+    // Watch for Lawmatics injecting the iframe and override styles
+    const resizeObserver = new MutationObserver(() => {
+      const iframe = document.querySelector('iframe[src*="lawmatics"]');
+      if (iframe) {
+        iframe.removeAttribute("style");
+        iframe.style.height = "650px";
+        iframe.style.maxHeight = "100%";
+        iframe.style.overflow = "auto";
+        iframe.style.width = "100%";
+        iframe.style.minWidth = "100%";
+        iframe.style.display = "block";
+
+        const wrapper = iframe.parentElement;
+        if (wrapper) {
+          wrapper.removeAttribute("style");
+          wrapper.style.height = "auto";
+          wrapper.style.maxHeight = "100%";
+          wrapper.style.overflow = "visible";
+          wrapper.style.width = "100%";
+          wrapper.style.maxWidth = "100%";
+        }
+
+        const grandparent = wrapper?.parentElement;
+        if (grandparent) {
+          grandparent.removeAttribute("style");
+          grandparent.style.height = "auto";
+          grandparent.style.maxHeight = "100%";
+          grandparent.style.overflow = "visible";
+          grandparent.style.width = "100%";
+        }
+      }
+    });
+
+    if (target) {
+      resizeObserver.observe(target, { childList: true, subtree: true });
+    }
+
+    return () => {
+      intersectionObserver.disconnect();
+      resizeObserver.disconnect();
+    };
   }, []);
 
   return (
@@ -66,7 +103,25 @@ export default function SidebarForm() {
       className="bg-gradient-to-br from-neutral-100 to-neutral-50 p-4 shadow-xl rounded-md"
     >
       <h3 className="text-center text-2xl mt-2 mb-6">Consultation Request</h3>
-      <div id="lm-embedded-script" />
+
+      <div
+        className="relative w-full overflow-auto"
+        style={{
+          maxHeight: "650px",
+          height: "650px",
+          scrollbarGutter: "stable",
+          WebkitOverflowScrolling: "touch",
+        }}
+      >
+        <div
+          id="lm-embedded-script"
+          style={{
+            height: "100%",
+            maxHeight: "100%",
+            overflow: "auto",
+          }}
+        />
+      </div>
     </div>
   );
 }

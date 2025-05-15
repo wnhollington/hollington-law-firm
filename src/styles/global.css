@@ -12,3 +12,30 @@
     @apply py-4 lg:py-0 lg:inline-block;
   }
 }
+
+/* Hard override for Lawmatics iframe and wrapper */
+#sidebar-form-container iframe {
+  height: 650px !important;
+  max-height: 100% !important;
+  overflow: auto !important;
+  display: block;
+  width: 100% !important;
+  min-width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+#sidebar-form-container iframe::-webkit-resizer {
+  display: none;
+}
+
+#sidebar-form-container iframe:focus {
+  outline: none;
+}
+
+/* Optional: if wrapper div is detectable */
+#sidebar-form-container > div > div {
+  height: auto !important;
+  max-height: 100% !important;
+  overflow: visible !important;
+}
