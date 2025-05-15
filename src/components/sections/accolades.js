@@ -22,7 +22,7 @@ const Accolades = () => {
   const linkMap = {
     "avvo": "https://www.avvo.com/attorneys/80134-co-william-hollington-5009840.html",
     "super_lawyers": "https://profiles.superlawyers.com/colorado/parker/lawyer/w-neal-hollington/fdca2269-04d7-42b2-b7e6-aeb8e3aa51b2.html",
-    "best_lawyers": "https://www.bestlawyers.com.",
+    "best_lawyers": "https://www.bestlawyers.com",
     "national-trial-lawyers": "https://thenationaltriallawyers.org/members/w-neal-hollington/"
   }
 
