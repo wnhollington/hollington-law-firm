@@ -14,7 +14,7 @@ const About = () => {
                 <div>
                     <h2 className="text-center text-3xl mb-2 font-medium">Who We Are</h2>
                     <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
-                    <div className="lg:flex lg:items-stretch text-center">
+                    <div className="lg:flex lg:items-stretch text-center gap-2">
                         <div className="lg:w-1/3 flex justify-center">
                             <StaticImage
                                 src="https://images.ctfassets.net/irf9uehwbpr8/zc4u3SXWOXh9ZEQZPDefu/dc7bbd11b81f570f48a131f6131804ea/e1eqadzarq4bjsapvwgy-Bio_Image_Enhanced.webp"
@@ -23,7 +23,7 @@ const About = () => {
                                 style={{ maxHeight: '500px', maxWidth: '100%' }}
                             />
                         </div>
-                        <div className="lg:w-2/3 h-full overflow-y-auto max-h-[500px] text-left">
+                        <div className="lg:w-2/3 h-full overflow-y-auto max-h-[500px] text-left my-2 lg:my-0">
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
                                 At Hollington Law Firm, we focus exclusively on representing homeowners and property owners as a Colorado construction defect law firm. Led by attorney Neal Hollington, a dedicated and experienced construction defect lawyer our firm is committed to helping clients hold negligent builders, contractors, and developers accountable for defective construction and poor workmanship.
                             </p>
