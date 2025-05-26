@@ -115,6 +115,7 @@ const Footer = () => {
                 {/* Footer Links */}
                 <div className="text-center">
                     <ul className="flex my-4">
+                        <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/mission-statement">Mission Statement</Link></li>
                         <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/privacy-policy">Privacy Policy</Link></li>
                         <li className="text-md md:text-lg font-semibold text-white mx-2 transition-colors duration-300 hover:text-gray-200"><Link to="/disclaimer">Disclaimer</Link></li>
                     </ul>
