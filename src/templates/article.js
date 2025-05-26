@@ -12,6 +12,7 @@ import {
   FacebookIcon,
   TwitterShareButton,
   TwitterIcon,
+  XIcon,
   LinkedinShareButton, 
   LinkedinIcon 
 } from 'react-share'
@@ -127,7 +128,7 @@ function Article ({ data, pageContext }) {
               <FacebookIcon size={40} round={true} />
             </FacebookShareButton>
             <TwitterShareButton url={shareUrl}>
-              <TwitterIcon size={40} round={true} />
+              <XIcon size={40} round={true} />
             </TwitterShareButton>
             <LinkedinShareButton url={shareUrl}>
               <LinkedinIcon size={40} round={true} />
