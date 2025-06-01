@@ -25,7 +25,7 @@ const About = () => {
                         </div>
                         <div className="lg:w-2/3 h-full overflow-y-auto max-h-[500px] text-left my-2 lg:my-0">
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
-                                At Hollington Law Firm, we focus exclusively on representing homeowners and property owners as a Colorado construction defect law firm. Led by attorney Neal Hollington, a dedicated and experienced construction defect lawyer our firm is committed to helping clients hold negligent builders, contractors, and developers accountable for defective construction and poor workmanship.
+                                At Hollington Law Firm, we focus exclusively on representing homeowners and property owners as a Colorado construction defect law firm. Led by attorney Neal Hollington, a dedicated and experienced construction defect attorney our firm is committed to helping clients hold negligent builders, contractors, and developers accountable for defective construction and poor workmanship.
                             </p>
                             <p className="text-xl text-gray-900 my-4 lg:mx-4 hyphens-auto">
                                 We understand that construction defects can disrupt your life, reduce your property’s value, and lead to costly repairs. That’s why we provide personalized legal representation to guide you through every step of the claims process.

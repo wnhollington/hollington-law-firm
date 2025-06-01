@@ -20,7 +20,7 @@ const Hero = () => {
     >
       <StaticImage
         src={HERO_IMG}
-        alt="Colorado Construction Defect Lawyer"
+        alt="Colorado Construction Defect Attorney"
         layout="fullWidth"
         placeholder="dominantColor"
         formats={['auto', 'webp',]}

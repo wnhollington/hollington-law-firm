@@ -18,8 +18,8 @@ module.exports = {
   /* ------------------------------------------------------------------ */
   siteMetadata: {
     title: `Hollington Law Firm`,
-    description: 'Colorado Construction Defect Lawyer',
-    tagline: `Helping Home and Property Owners Statewide`,
+    description: 'Colorado Construction Defect Attorney',
+    tagline: `Protecting homeowners from construction negligence`,
     siteUrl: `https://hollingtonlawfirm.com`,
     contact: {
       phone: "(303) 276-2647",
