@@ -39,7 +39,7 @@ export const Head = () => {
   return (
     <Seo 
       title={siteMetaData.description} 
-      description="If you suspect construction defects in your home, contact a Colorado construction defect lawyer at Hollington Law Firm today for your free consultation. We will help you obtain the compensation you deserve to fix your home."
+      description="Free consultation with an experienced Colorado construction defect attorney. Learn your CDARA rights, deadlines, and next steps today."
     />
   )
 }
