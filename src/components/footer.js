@@ -52,6 +52,7 @@ const Footer = () => {
                                     <li><Link to="/practice-areas">All Practice Areas</Link></li>
                                     <li><Link to="/areas-served">Areas We Serve</Link></li>
                                     <li><Link to="/articles">Articles</Link></li>
+                                    <li><Link to="/tools">Tools</Link></li>
                                     <li><Link to="/schedule-consultation">Schedule Consultation</Link></li>
                                     <li><Link to="/contact">Contact</Link></li>
                                     <li><a href="http://maps.google.com/?q=11479 S Pine Dr, Parker, CO 80134"  target="__blank">Directions</a></li>

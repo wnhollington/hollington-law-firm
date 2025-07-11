@@ -112,6 +112,15 @@ export default function HeaderMenu({ placement = "bottom-start", onClick }) {
           </Dropdown.Item>
           <Dropdown.Item>
             <Link
+              to="/tools"
+              onClick={onClick}
+              className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2"
+            >
+              Tools
+            </Link>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <Link
               to="/homeowners-guide-to-residential-construction-defects-free-download"
               onClick={onClick}
               className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2"
