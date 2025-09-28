@@ -17,7 +17,7 @@ module.exports = {
   /*   SITE  METADATA  (unchanged)                                       */
   /* ------------------------------------------------------------------ */
   siteMetadata: {
-    title: `Hollington Law Firm`,
+    title: `Hollington Law Firm: Colorado Construction Defect Attorney`,
     description: 'Colorado Construction Defect Attorney',
     tagline: `Protecting homeowners from construction negligence`,
     siteUrl: `https://hollingtonlawfirm.com`,

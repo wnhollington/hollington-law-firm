@@ -39,7 +39,7 @@ export const Head = () => {
   return (
     <Seo 
       title={siteMetaData.description} 
-      description="Free consultation with an experienced Colorado construction defect attorney. Learn your CDARA rights, deadlines, and next steps today."
+      description="Hollington Law Firm LLC offers trusted construction law services in Colorado, handling claims and disputes with expertise. Contact us for legal guidance."
     />
   )
 }
