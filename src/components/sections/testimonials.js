@@ -58,7 +58,6 @@ const Testimonials = () => {
                                     className="items-center justify-center rounded-md shadow-lg p-4"
                                 >
                                     <p className="mt-6 text-gray-900 text-xl text-justify hyphens-auto"><span className="text-5xl font-semibold text-primary inline"><RiChatQuoteFill/></span>{testimonial.node.testimonial.testimonial}</p>
-                                    <h3 className="mt-6 text-lg text-center font-medium text-primary">{testimonial.node.name}</h3>
                                 </div>
                             )
                         })
