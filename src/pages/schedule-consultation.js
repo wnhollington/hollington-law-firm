@@ -80,7 +80,7 @@ export default ScheduleConsultation;
 
 export const Head = () => (
   <Seo
-    title="Schedule Consultation"
-    description="Thank you for your interest in contacting Hollington Law Firm. Please fill out the below form and a representative will be in touch shortly."
+    title="Schedule a Consultation with Hollington Law Firm"
+    description="Learn how Hollington Law Firm helps Colorado homeowners pursue claims for real estate nondisclosure and fraud involving hidden property defects."
   />
 );

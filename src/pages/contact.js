@@ -83,7 +83,7 @@ export default Contact;
 
 export const Head = () => (
   <Seo
-    title="Contact"
-    description="Thank you for your interest in contacting Hollington Law Firm. Please fill out the below form and a representative will be in touch shortly."
+    title="Contact the Hollington Law Firm in Colorado"
+    description="Reach out to Hollington Law Firm for trusted legal guidance. Fill out our contact form, and a representative will respond to your inquiry shortly."
   />
 );
