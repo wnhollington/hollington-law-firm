@@ -11,7 +11,6 @@ import {
   FacebookShareButton, 
   FacebookIcon,
   TwitterShareButton,
-  TwitterIcon,
   XIcon,
   LinkedinShareButton, 
   LinkedinIcon 

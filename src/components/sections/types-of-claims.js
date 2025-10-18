@@ -18,12 +18,8 @@ const TypesOfClaims = () => {
                     <Link to="/types-of-claims/design-defects" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Design Defects</Link>
 
                     <Link to="/types-of-claims/material-defects" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Material Defects</Link>
-
-                    <Link to="/types-of-claims/expansive-soils" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Expansive Soils</Link>
                     
                     <Link to="/types-of-claims/poor-workmanship" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Poor Workmanship</Link>
-                    
-                    <Link to="/types-of-claims/insurance-claim-lawyer" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Insurance Claims</Link>
 
                     <Link to="/types-of-claims/nondisclosure-and-fraud" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Nondisclosure & Fraud</Link>           
 

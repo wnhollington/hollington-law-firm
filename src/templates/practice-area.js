@@ -20,8 +20,6 @@ function Page({ data }) {
       [INLINES.ENTRY_HYPERLINK]: (node) => {
         const entry = data.contentfulPracticeAreas.body.references.find(x => x.contentful_id === node.data.target.sys.id)
         switch (entry.internal.type) {
-          case 'ContentfulPracticeAreas':
-            return <Link to={`/practice-areas/${entry.slug}`}>{node.content[0].value}</Link>;
           case 'ContentfulAttorneys':
             return <Link to={`/${entry.slug}`}>{node.content[0].value}</Link>;
           case 'ContentfulArticles':
@@ -76,14 +74,6 @@ export const query = graphql`
         raw
         references {
           ... on ContentfulArticles {
-            contentful_id
-            title
-            slug
-            internal {
-              type
-            }
-          }
-          ... on ContentfulPracticeAreas {
             contentful_id
             title
             slug
