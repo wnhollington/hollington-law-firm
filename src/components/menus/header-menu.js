@@ -26,7 +26,7 @@ export default function HeaderMenu({ placement = "bottom-start", onClick }) {
   // desired order
   const order = [
     "construction-defect-lawyer",
-    "remodeling-disputes",
+    "contractor-disputes",
     "contractor-lien-colorado",
     "real-estate-fraud",
   ];
