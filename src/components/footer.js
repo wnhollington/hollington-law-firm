@@ -24,7 +24,8 @@ const Footer = () => {
                                 <ul className="text-lg flex flex-col gap-1">
                                     <li><Link to="/about-the-firm">About the Firm</Link></li>
                                     <li><Link to="/w-neal-hollington">W. Neal Hollington</Link></li>
-                                    <li><Link to="/practice-areas">Cases We Handle</Link></li>
+                                    <li><Link to="/types-of-claims">Types of Claims</Link></li>
+                                    <li><Link to="/practice-areas">All Practice Areas</Link></li>
                                     <li><Link to="/areas-served">Areas We Serve</Link></li>
                                     <li><Link to="/articles">Articles</Link></li>
                                 </ul>

@@ -3,41 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby";
 import { Dropdown } from "flowbite-react";
 
 export default function HeaderMenu({ placement = "bottom-start", onClick }) {
-  const data = useStaticQuery(graphql`
-    {
-      allContentfulPracticeAreas(
-        filter: {
-          slug: { in: [
-            "construction-defect-lawyer",
-            "remodeling-disputes",
-            "contractor-lien-colorado",
-            "real-estate-fraud"
-          ] }
-        }
-      ) {
-        nodes {
-          title
-          slug
-        }
-      }
-    }
-  `);
-
-  // desired order
-  const order = [
-    "construction-defect-lawyer",
-    "contractor-disputes",
-    "contractor-lien-colorado",
-    "real-estate-fraud",
-  ];
-
-  // sort by the order array; anything not in the list goes to the end
-  const items = [...data.allContentfulPracticeAreas.nodes].sort((a, b) => {
-    const ia = order.indexOf(a.slug);
-    const ib = order.indexOf(b.slug);
-    return (ia === -1 ? Number.MAX_SAFE_INTEGER : ia) -
-           (ib === -1 ? Number.MAX_SAFE_INTEGER : ib);
-  });
 
   return (
     <>
@@ -59,24 +24,11 @@ export default function HeaderMenu({ placement = "bottom-start", onClick }) {
 
       {/* What We Do */}
       <div className="mobile-item">
-        <Dropdown inline label="What We Do" placement={placement}>
-          {items.map((node) => (
-            <Dropdown.Item key={node.slug}>
-              <Link
-                to={`/practice-areas/${node.slug}`}
-                onClick={onClick}
-                className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2"
-              >
-                {node.title}
-              </Link>
-            </Dropdown.Item>
-          ))}
-          <Dropdown.Item>
-            <Link to="/practice-areas" onClick={onClick} className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2">
-              View All
-            </Link>
-          </Dropdown.Item>
-        </Dropdown>
+        <Link
+          to={`/colorado-construction-defect-lawyer`}
+          onClick={onClick}
+          className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2"
+        >What We Do</Link>
       </div>
 
       {/* Resources */}

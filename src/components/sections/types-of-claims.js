@@ -15,13 +15,13 @@ const TypesOfClaims = () => {
                 <div className="w-10 mx-auto border-b-4 border-primary mb-8"></div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
 
-                    <Link to="/types-of-claims/design-defects" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Design Defects</Link>
+                    <Link to="/types-of-claims/foundation-movement-and-settlement" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Foundation Movement & Settlement</Link>
 
-                    <Link to="/types-of-claims/material-defects" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Material Defects</Link>
+                    <Link to="/types-of-claims/roof-leaks-and-defective-roofing" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Roof Leaks & Defective Roofing</Link>
                     
-                    <Link to="/types-of-claims/poor-workmanship" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Poor Workmanship</Link>
+                    <Link to="/types-of-claims/siding-stucco-and-eifs-failures" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Siding, Stucco & EIFS Failures</Link>
 
-                    <Link to="/types-of-claims/nondisclosure-and-fraud" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Nondisclosure & Fraud</Link>           
+                    <Link to="/types-of-claims/mold-and-microbial-contamination" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">Mold & Microbial Contamination</Link>           
 
                 </div>
                 <Link to="/types-of-claims" className="bg-gradient-to-b from-primary to-red-800 hover:shadow-lg text-white text-lg md:text-2xl font-semibold p-4 rounded-md">View All</Link>
