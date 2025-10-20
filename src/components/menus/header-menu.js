@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import { Dropdown } from "flowbite-react";
 
 export default function HeaderMenu({ placement = "bottom-start", onClick }) {
@@ -27,7 +27,7 @@ export default function HeaderMenu({ placement = "bottom-start", onClick }) {
         <Link
           to={`/colorado-construction-defect-lawyer`}
           onClick={onClick}
-          className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary mx-2"
+          className="text-lg font-semibold leading-6 text-gray-900 hover:text-primary"
         >What We Do</Link>
       </div>
 
