@@ -30,9 +30,9 @@ module.exports = {
       },
     },
     social: {
-      facebook: `https://www.facebook.com/profile.php?id=61556212625817`,
+      facebook: `https://www.facebook.com/people/Hollington-Law-Firm-LLC/61556212625817/`,
       linkedin: `https://www.linkedin.com/company/hollington-law-firm/`,
-      twitter: `https://twitter.com/wnealhollington`,
+      twitter: `https://x.com/wnealhollington`,
     }
   },
 
