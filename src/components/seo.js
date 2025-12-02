@@ -1,3 +1,4 @@
+// src/components/seo.js
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -31,7 +32,6 @@ const Seo = ({ description, title, children }) => {
   const defaultDescription = site.siteMetadata?.description
   const defaultTitle = site.siteMetadata?.title
 
-  // Construct schema.org JSON-LD object
   const schema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
@@ -53,13 +53,12 @@ const Seo = ({ description, title, children }) => {
       { "@type": "City", "name": "Boulder" },
       { "@type": "City", "name": "Fort Collins" },
       { "@type": "City", "name": "Aurora" },
-      { "@type": "City", "name": "Boulder" },
       { "@type": "City", "name": "Centennial" },
       { "@type": "City", "name": "Littleton" },
       { "@type": "City", "name": "Parker" },
       { "@type": "City", "name": "Highlands Ranch" },
       { "@type": "City", "name": "Longmont" },
-      { "@type": "City", "name": "Pueblo" },
+      { "@type": "City", "name": "Pueblo" }
     ],
     "serviceType": [
       "Construction Defect Litigation",
@@ -74,19 +73,26 @@ const Seo = ({ description, title, children }) => {
     ]
   }
 
+  const fullTitle = defaultTitle && title
+    ? `${title} | ${defaultTitle}`
+    : (title || defaultTitle)
+
+  const metaDescription = description || defaultDescription
+
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta property="og:title" content={defaultTitle ? `${title} | ${defaultTitle}` : title} />
-      <meta name="description" content={description ? description : defaultDescription} />
-      <meta property="og:description" content={description ? description : defaultDescription} />
+      <title>{fullTitle}</title>
+      <meta property="og:title" content={fullTitle} />
+      <meta name="description" content={metaDescription} />
+      <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
 
-      {/* Inject JSON-LD schema */}
+      {/* Global LegalService JSON-LD */}
       <script type="application/ld+json">
         {JSON.stringify(schema)}
       </script>
 
+      {/* Page-specific extras (e.g., BlogPosting schema) */}
       {children}
     </>
   )

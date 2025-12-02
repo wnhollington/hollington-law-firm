@@ -225,9 +225,47 @@ export const query = graphql`
 
 export default Article
 
-export const Head = ({ data }) => (
-  <Seo 
-    title={data.contentfulArticles.seoTitle}
-    description={data.contentfulArticles.seoDescription}
-  />
-)
+export const Head = ({ data, location }) => {
+  const article = data.contentfulArticles
+  // If you prefer, you can use useSiteMetadata() here instead of location
+  // but location.href is perfectly fine for the URL:
+  const url = location?.href || `https://hollingtonlawfirm.com/articles/${article.slug}`
+
+  const seoTitle = article.seoTitle || article.title
+  const seoDescription = article.seoDescription || ''
+
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${url}#blogposting`
+    },
+    "headline": seoTitle,
+    "description": seoDescription,
+    "author": {
+      "@type": "Organization",
+      "name": "Hollington Law Firm LLC"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hollington Law Firm LLC"
+      // You can add a logo field here if you want, matching the PDF
+    },
+    "datePublished": article.updatedAt,   // you may later add a true publishDate field
+    "dateModified": article.updatedAt,
+    "url": url
+    // You can add "image" later by pulling a URL from heroImage if needed
+  }
+
+  return (
+    <Seo 
+      title={seoTitle}
+      description={seoDescription}
+    >
+      <script type="application/ld+json">
+        {JSON.stringify(blogSchema)}
+      </script>
+    </Seo>
+  )
+}

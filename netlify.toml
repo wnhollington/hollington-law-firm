@@ -127,3 +127,53 @@
   from = "pro-bono-representation/"
   to = "/"
   status = 301
+
+[[redirects]]
+  from = "/areas-served/fort-collins-construction-defect-lawyer/hollingtonlawfirm.com"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/fort-collins-construction-defect-lawyer/hollingtonlawfirm.com/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/castle-rock-construction-defect-lawyer/hollingtonlawfirm.com/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/articles/understanding-the-costs-associated-with-"
+  to = "/articles/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/parker-construction-defect-lawyer/hollingtonlawfirm.com/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/pueblo-construction-defect-lawyer/hollingtonlawfirm/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/longmont-construction-defect-lawyer/hollingtonlawfirm.com/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/boulder-construction-defect-lawyer/hollingtonlawfirm.com/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/colorado-springs-construction-defect-lawyer/hollingtonlawfirm.com/schedule-consultation"
+  to = "/schedule-consultation/"
+  status = 301
+
+[[redirects]]
+  from = "/areas-served/colorado-springs-construction-defect-lawyer/hollingtonlawfirm.com"
+  to = "/schedule-consultation/"
+  status = 301
