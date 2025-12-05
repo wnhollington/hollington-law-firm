@@ -1,4 +1,4 @@
-const indexName = `Articles`
+const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME
 
 const articleQuery = `{
     articles: allContentfulArticles {
@@ -8,6 +8,9 @@ const articleQuery = `{
             title
             seoDescription
             slug
+            category {
+              name
+            }
             metadata {
               tags {
                 name
@@ -32,7 +35,8 @@ const queries = [
     indexName,
     settings: {
       attributesForFaceting: [
-        'searchable(metadata.tags.name)'
+        'searchable(metadata.tags.name)',
+        'searchable(category.name)'
       ]
     },
   },

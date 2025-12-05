@@ -1,4 +1,3 @@
-
 const path = require(`path`)
 
 // Create blog pages dynamically
@@ -34,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      attorneys: allContentfulAttorneys{
+      attorneys: allContentfulAttorneys {
         edges {
           node {
             id
@@ -47,6 +46,14 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             id
             slug
+            category {
+              name
+            }
+            metadata {
+              tags {
+                name
+              }
+            }
           }
         }
       }
@@ -86,7 +93,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         title: page.node.title,
         id: page.node.id,
-        slug: page.node.slug
+        slug: page.node.slug,
       },
     })
   })
@@ -100,7 +107,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         title: practiceArea.node.title,
         id: practiceArea.node.id,
-        slug: practiceArea.node.slug
+        slug: practiceArea.node.slug,
       },
     })
   })
@@ -114,7 +121,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         title: project.node.title,
         id: project.node.id,
-        slug: project.node.slug
+        slug: project.node.slug,
       },
     })
   })
@@ -128,29 +135,44 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         title: claim.node.title,
         id: claim.node.id,
-        slug: claim.node.slug
+        slug: claim.node.slug,
       },
     })
   })
 
-
   // Create Articles and Pagination
   const articles = result.data.articles.edges
   articles.forEach((article, index) => {
-      // Create prev and next pages
-      const previous = index === articles.length - 1 ? null: articles[index + 1].node
-      const next = index === 0 ? null : articles[index - 1].node
-      // Previous and next are object props sent as pageContext object to articleTemplate
-      createPage({
-          path: `/articles/${article.node.slug}`,
-          component: require.resolve(articleTemplate),
-          context: {
-              id: article.node.id,
-              slug: article.node.slug,
-              previous,
-              next,
-          },
-      })
+    // Previous & next
+    const previous =
+      index === articles.length - 1 ? null : articles[index + 1].node
+    const next = index === 0 ? null : articles[index - 1].node
+
+    const category =
+      article.node.category && article.node.category.name
+        ? article.node.category.name
+        : null
+
+    const tagsArray =
+      article.node.metadata && article.node.metadata.tags
+        ? article.node.metadata.tags
+        : []
+
+    const firstTag =
+      tagsArray.length > 0 && tagsArray[0].name ? tagsArray[0].name : null
+
+    createPage({
+      path: `/articles/${article.node.slug}`,
+      component: require.resolve(articleTemplate),
+      context: {
+        id: article.node.id,
+        slug: article.node.slug,
+        previous,
+        next,
+        category,
+        firstTag,
+      },
+    })
   })
 
   // Create Attorney Bios
@@ -161,7 +183,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve(attorneyBioTemplate),
       context: {
         id: attorney.node.id,
-        slug: attorney.node.slug
+        slug: attorney.node.slug,
       },
     })
   })
@@ -174,12 +196,11 @@ exports.createPages = async ({ graphql, actions }) => {
       component: require.resolve(areasServedTemplate),
       context: {
         id: area.node.id,
-        slug: area.node.slug
+        slug: area.node.slug,
       },
     })
   })
-
-};
+}
 
 // Add Reading Time to Articles
 const readingTime = require("reading-time");
@@ -188,25 +209,18 @@ const { documentToPlainTextString } =
 
 exports.createResolvers = ({ createResolvers }) => {
   createResolvers({
-    // 1️⃣  100 % match your node typename
     ContentfulArticles: {
-      // 2️⃣  new GraphQL field
       readingTime: {
         type: "Int",
         resolve(source) {
-          /* -------------------------------------------
-           *  Extract plain text from body.raw (Rich Text)
-           * ------------------------------------------- */
           let text = "";
 
           if (source.body && source.body.raw) {
             text = documentToPlainTextString(JSON.parse(source.body.raw));
           }
 
-          // Fallback keeps field from being pruned
           if (!text) return 1;
 
-          // reading‑time returns { minutes, words }
           return Math.ceil(readingTime(text).minutes);
         },
       },
